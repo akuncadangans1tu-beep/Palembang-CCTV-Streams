@@ -1,11 +1,11 @@
 {
   "summary": {
-    "generated_at": "2026-11-25T11:36:24Z",
-    "generated_wib": "25 Nov 2026 18:36 WIB",
+    "generated_at": "2026-11-25T12:41:13Z",
+    "generated_wib": "25 Nov 2026 19:41 WIB",
     "total": 44,
-    "live": 40,
-    "offline": 4,
-    "removed": 8,
+    "live": 41,
+    "offline": 3,
+    "removed": 5,
     "sources": {
       "palembang": true,
       "opencctv": true
@@ -28,11 +28,11 @@
       "name": "CCTV Jl Tembesu",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a95fdba392f3ee3ef741702/playback/index.m3u8",
-      "ok": true,
+      "ok": false,
       "lat": -2.975418791524916,
       "lng": 104.7582851612457,
       "web": false,
-      "uptime_pct": 100
+      "uptime_pct": 50
     },
     {
       "key": "plb-CCTV-TAMSIS-40",
@@ -72,11 +72,11 @@
       "name": "CCTV SP BANDARA",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a95f3ad392f3ee3ef741169/playback/index.m3u8",
-      "ok": false,
+      "ok": true,
       "lat": -2.9038701716938173,
       "lng": 104.72746849900544,
       "web": false,
-      "uptime_pct": 0
+      "uptime_pct": 50
     },
     {
       "key": "plb-CCTV-SPBB-42",
@@ -182,22 +182,22 @@
       "name": "CCTV KM 12",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6926bf54273b6e50c40eeca6/playback/index.m3u8",
-      "ok": false,
+      "ok": true,
       "lat": -2.913313005325259,
       "lng": 104.68819312611218,
       "web": false,
-      "uptime_pct": 0
+      "uptime_pct": 50
     },
     {
       "key": "plb-CCTV-MANDIRI-38",
       "name": "CCTV Lampu Merah Kol Atmo",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/69fed770f59e8fd90f67227e/playback/index.m3u8",
-      "ok": false,
+      "ok": true,
       "lat": -2.981811,
       "lng": 104.758485,
       "web": false,
-      "uptime_pct": 0
+      "uptime_pct": 50
     },
     {
       "key": "plb-CCTV-PASAR16-25",
@@ -226,11 +226,11 @@
       "name": "CCTV Pasar 16",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/69bd143ccc7bccc4b2dfa011/playback/index.m3u8",
-      "ok": true,
+      "ok": false,
       "lat": -2.989552,
       "lng": 104.763833,
       "web": false,
-      "uptime_pct": 100
+      "uptime_pct": 50
     },
     {
       "key": "plb-CCTV-PLAZA7-ULU-20",
