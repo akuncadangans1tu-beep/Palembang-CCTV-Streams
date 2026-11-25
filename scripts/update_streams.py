@@ -1,23 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-update_streams.py — Cek, update, dan hapus link CCTV Palembang & koridor Sumatera (.m3u8).
-
-Sumber (semua menghasilkan link HLS STABIL, bukan token/sementara):
-  1. API resmi Palembang : https://cctv.palembang.go.id/api/cctv
-                           https://cctv.palembang.go.id/api/cctv/{_id}/playback/index.m3u8
-  2. OpenCCTV (Hutama Karya / pub.hk-opt.com, Ant Media stream-id tetap):
-       - Tol Palindra  : https://opencctv.org/cameras/indonesia/sumatera-selatan
-       - Tol Lampung   : https://opencctv.org/cameras/indonesia/lampung
-     Kamera bertipe "windy" / proxy opencctv.org DITOLAK karena stream-nya sementara.
-
-Alur: scrape sumber -> kenali/migrasi entri lama (cocok URL/nama) -> cek semua link
-      -> update URL yang berubah -> hapus duplikat & yang gagal N hari beruntun -> tulis playlist.
-
-Output default: streams.m3u8 (bisa diganti lewat --playlist).
-Hanya butuh Python 3.9+ (tanpa pip install apa pun).
+update_streams.py — Cek, update, hapus link CCTV Palembang & koridor Sumatera (.m3u8).
+Menghasilkan: streams.m3u8, status.json (API mini + koordinat), history.json (uptime),
+REPORT.md, dan tabel status di README.md. Hanya Python 3.9+ (tanpa pip install).
 """
-
 import argparse
 import concurrent.futures as cf
 import html as htmlmod
@@ -28,37 +15,37 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
-# ============================ KONFIGURASI ============================
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 PALEMBANG_API    = "https://cctv.palembang.go.id/api/cctv"
 PALEMBANG_STREAM = "https://cctv.palembang.go.id/api/cctv/{id}/playback/index.m3u8"
-
-# (halaman region opencctv, group-title, prefix nama untuk kamera penanda KM)
 OPENCCTV_REGIONS = [
     ("https://opencctv.org/cameras/indonesia/sumatera-selatan", "Tol Palindra", "Palindra "),
     ("https://opencctv.org/cameras/indonesia/lampung",          "Tol Lampung",  "Lampung "),
-    # Region jambi / riau / tulang-bawang / south-sumatra di opencctv memakai webcam
-    # "Windy" (stream sementara lewat proxy) -> tidak memenuhi syarat link stabil.
 ]
-
-DEFAULT_MAX_FAILS = 3     # link baru dihapus setelah gagal 3 hari berturut-turut
-DEFAULT_TIMEOUT   = 12    # detik per request HTTP
-DEFAULT_WORKERS   = 10    # cek paralel
+CORS_HOSTS = ("hk-opt.com",)   # host yang bisa diputar langsung di browser
+DEFAULT_MAX_FAILS = 3
+DEFAULT_TIMEOUT   = 12
+DEFAULT_WORKERS   = 10
+HISTORY_LEN       = 30
 SSL_CTX = ssl.create_default_context()
 SSL_CTX.check_hostname = False
 SSL_CTX.verify_mode = ssl.CERT_NONE
-# Parameter khas URL bertoken / bertanda tangan (CloudFront, Akamai, dll.)
 TOKEN_RE = re.compile(r"[?&](token|expires?|expiration|signature|sig|auth|hdnts|hdnea|policy|key-pair-id)=", re.I)
-# =====================================================================
+README_START = "<!-- STATUS:START -->"
+README_END   = "<!-- STATUS:END -->"
 
 
 def now_iso():
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def wib_now():
+    return datetime.now(timezone(timedelta(hours=7))).strftime("%d %b %Y %H:%M WIB")
 
 
 def normalize_name(s):
@@ -66,30 +53,28 @@ def normalize_name(s):
 
 
 def referer_for(url):
-    if "palembang.go.id" in url:
-        return "https://cctv.palembang.go.id/"
-    return "https://opencctv.org/"
+    return "https://cctv.palembang.go.id/" if "palembang.go.id" in url else "https://opencctv.org/"
+
+
+def web_playable(url):
+    return any(h in urlsplit(url).netloc.lower() for h in CORS_HOSTS)
 
 
 def is_stable_stream(url):
-    """True hanya untuk URL HLS langsung yang tidak bertoken / bukan proxy sementara."""
     if not url or not url.lower().startswith(("http://", "https://")):
         return False
-    host = urlsplit(url).netloc.lower()
-    if "opencctv.org" in host:      # proxy/aggregator, bukan sumber langsung
+    if "opencctv.org" in urlsplit(url).netloc.lower():
         return False
-    if TOKEN_RE.search(url):        # ada parameter token/tanda tangan -> sementara
+    if TOKEN_RE.search(url):
         return False
     return True
 
 
 def http_get(url, timeout=DEFAULT_TIMEOUT, max_bytes=300000, retries=2):
-    """GET sederhana dengan retry. Return (status_code, bytes)."""
     last_err = None
     for attempt in range(retries + 1):
         try:
-            headers = {"User-Agent": UA, "Referer": referer_for(url), "Accept": "*/*"}
-            req = urllib.request.Request(url, headers=headers)
+            req = urllib.request.Request(url, headers={"User-Agent": UA, "Referer": referer_for(url), "Accept": "*/*"})
             with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as r:
                 return r.status, r.read(max_bytes)
         except urllib.error.HTTPError as e:
@@ -110,12 +95,10 @@ def http_get(url, timeout=DEFAULT_TIMEOUT, max_bytes=300000, retries=2):
 
 
 def first_uri_lines(text):
-    return [l.strip() for l in text.splitlines()
-            if l.strip() and not l.strip().startswith("#")]
+    return [l.strip() for l in text.splitlines() if l.strip() and not l.strip().startswith("#")]
 
 
 def check_stream(url, timeout=DEFAULT_TIMEOUT):
-    """Validasi HLS sungguhan: master -> media playlist -> segmen pertama."""
     try:
         st, body = http_get(url, timeout=timeout)
         if st != 200:
@@ -138,16 +121,13 @@ def check_stream(url, timeout=DEFAULT_TIMEOUT):
         segs = first_uri_lines(text)
         if not segs:
             return False, "playlist tanpa segmen (stream mati)"
-        seg_url = urljoin(base, segs[0])
-        st, _ = http_get(seg_url, timeout=timeout, max_bytes=2048, retries=1)
+        st, _ = http_get(urljoin(base, segs[0]), timeout=timeout, max_bytes=2048, retries=1)
         if st not in (200, 206):
             return False, f"segmen HTTP {st}"
         return True, "OK"
     except Exception as e:
         return False, f"{type(e).__name__}: {e}"[:120]
 
-
-# ---------------------------- SCRAPER ----------------------------
 
 def scrape_palembang(limit=None):
     st, body = http_get(PALEMBANG_API)
@@ -165,20 +145,16 @@ def scrape_palembang(limit=None):
         cid = cam.get("cctv_id") or cam.get("_id")
         name = (cam.get("cctv_title") or cid).strip()
         opd = (cam.get("cctv_opd") or {}).get("nama_opd", "")
-        if "Perhubungan" in opd:
-            group = "Dishub Palembang"
-        elif "Komunikasi" in opd:
-            group = "Diskominfo Palembang"
-        else:
-            group = "Palembang"
-        out.append({
-            "key": f"plb-{cid}",
-            "name": name,
-            "group": group,
-            "url": PALEMBANG_STREAM.format(id=cam["_id"]),
-            "extra": [f"#EXTVLCOPT:http-user-agent={UA}",
-                      "#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/"],
-        })
+        group = "Dishub Palembang" if "Perhubungan" in opd else ("Diskominfo Palembang" if "Komunikasi" in opd else "Palembang")
+        lat = lng = None
+        coords = (cam.get("location") or {}).get("coordinates") or []
+        if len(coords) >= 2:
+            lng, lat = coords[0], coords[1]
+        out.append({"key": f"plb-{cid}", "name": name, "group": group,
+                    "url": PALEMBANG_STREAM.format(id=cam["_id"]),
+                    "lat": lat, "lng": lng, "web": False,
+                    "extra": [f"#EXTVLCOPT:http-user-agent={UA}",
+                              "#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/"]})
         if limit and len(out) >= limit:
             break
     return out
@@ -208,7 +184,6 @@ def _opencctv_camera_links(region_url):
 
 
 def _extract_m3u8(html):
-    """Ambil URL .m3u8 langsung dari halaman kamera; tolak yang proxy/bertoken."""
     cands = []
     for typ, src in re.findall(r'data-type="([^"]+)"[^>]*?data-src="([^"]+)"', html):
         if typ == "m3u8":
@@ -216,8 +191,7 @@ def _extract_m3u8(html):
     for src, typ in re.findall(r'data-src="([^"]+)"[^>]*?data-type="([^"]+)"', html):
         if typ == "m3u8":
             cands.append(htmlmod.unescape(src))
-    cands += [htmlmod.unescape(m.group(0))
-              for m in re.finditer(r'https?://[^"\'\s]+\.m3u8[^"\'\s]*', html)]
+    cands += [htmlmod.unescape(m.group(0)) for m in re.finditer(r'https?://[^"\'\s]+\.m3u8[^"\'\s]*', html)]
     for u in cands:
         if is_stable_stream(u):
             return u
@@ -232,19 +206,22 @@ def _scrape_one_opencctv(link, group, prefix):
         html = body.decode("utf-8", "ignore")
         url = _extract_m3u8(html)
         if not url:
-            return None  # kamera windy / proxy / tidak ada stream stabil -> lewati
+            return None
         cam_id = re.search(r"-(\d+)$", link).group(1)
         m = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S)
         if m:
-            name = re.sub(r"<[^>]+>", "", m.group(1))
-            name = htmlmod.unescape(name).strip()
+            name = htmlmod.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip()
         else:
-            slug = link.rsplit("/", 1)[-1]
-            name = re.sub(r"-\d+$", "", slug).replace("-", " ").title()
+            name = re.sub(r"-\d+$", "", link.rsplit("/", 1)[-1]).replace("-", " ").title()
         if re.match(r"^[\d+\s]+[AB]?$", name):
             name = prefix + name
-        return {"key": f"oc-{cam_id}", "name": name, "group": group,
-                "url": url, "extra": []}
+        lat = lng = None
+        mlat = re.search(r'data-lat="([-\d.]+)"', html)
+        mlng = re.search(r'data-lng="([-\d.]+)"', html)
+        if mlat and mlng:
+            lat, lng = float(mlat.group(1)), float(mlng.group(1))
+        return {"key": f"oc-{cam_id}", "name": name, "group": group, "url": url,
+                "lat": lat, "lng": lng, "web": web_playable(url), "extra": []}
     except Exception:
         return None
 
@@ -257,7 +234,7 @@ def scrape_opencctv(limit=None, workers=DEFAULT_WORKERS):
                 seen.add(link)
                 jobs.append((link, group, prefix))
     if not jobs:
-        raise RuntimeError("tidak ada link kamera opencctv (situs down / struktur berubah)")
+        raise RuntimeError("tidak ada link kamera opencctv")
     if limit:
         jobs = jobs[:limit]
     out = []
@@ -268,11 +245,9 @@ def scrape_opencctv(limit=None, workers=DEFAULT_WORKERS):
             if res:
                 out.append(res)
     if not out:
-        raise RuntimeError("tidak ada stream stabil dari opencctv (semua windy/proxy/gagal)")
+        raise RuntimeError("tidak ada stream stabil dari opencctv")
     return out
 
-
-# ---------------------------- M3U ----------------------------
 
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
 
@@ -281,9 +256,8 @@ def parse_m3u(path):
     entries = []
     if not Path(path).exists():
         return entries
-    lines = Path(path).read_text(encoding="utf-8", errors="ignore").splitlines()
     cur = None
-    for line in lines:
+    for line in Path(path).read_text(encoding="utf-8", errors="ignore").splitlines():
         line = line.strip()
         if not line:
             continue
@@ -307,7 +281,9 @@ def parse_m3u(path):
 def entry_from_catalog(item):
     return {"attrs": {"tvg-id": item["key"], "group-title": item["group"]},
             "name": item["name"], "extra": list(item.get("extra", [])),
-            "url": item["url"], "key": item["key"]}
+            "url": item["url"], "key": item["key"],
+            "lat": item.get("lat"), "lng": item.get("lng"),
+            "web": item.get("web", web_playable(item["url"]))}
 
 
 def write_m3u(path, entries):
@@ -320,18 +296,21 @@ def write_m3u(path, entries):
     Path(path).write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-# ---------------------- MERGE & DEDUP ----------------------
-
 def merge_catalog(entries, catalog):
-    """Gabungkan katalog sumber dengan entri lama.
-    Nama yang sudah ada TIDAK ditimpa; hanya URL, tvg-id, grup, dan opsi yang di-sync."""
     report = []
     by_key = {e["key"]: e for e in entries}
     by_url, by_name = {}, {}
     for e in entries:
-        if not e["attrs"].get("tvg-id"):  # hanya entri lama/manual yang boleh diadopsi
+        if not e["attrs"].get("tvg-id"):
             by_url.setdefault(e["url"], e)
             by_name.setdefault(normalize_name(e["name"]), e)
+
+    def sync(e, item):
+        e["attrs"]["group-title"] = item["group"]
+        e["extra"] = list(item.get("extra", []))
+        e["lat"], e["lng"] = item.get("lat"), item.get("lng")
+        e["web"] = item.get("web", web_playable(item["url"]))
+
     seen_urls = set()
     for key, item in catalog.items():
         if item["url"] in seen_urls:
@@ -342,19 +321,16 @@ def merge_catalog(entries, catalog):
             if e["url"] != item["url"]:
                 report.append((e["name"], "UPDATED", f"URL diganti ke {item['url']}"))
                 e["url"] = item["url"]
-            e["attrs"]["group-title"] = item["group"]
-            e["extra"] = list(item.get("extra", []))
+            sync(e, item)
             continue
         e = by_url.pop(item["url"], None)
         if e is not None:
             by_name.pop(normalize_name(e["name"]), None)
             e["key"] = key
             e["attrs"]["tvg-id"] = key
-            e["attrs"]["group-title"] = item["group"]
-            e["extra"] = list(item.get("extra", []))
+            sync(e, item)
             by_key[key] = e
-            report.append((e["name"], "ADOPTED",
-                           f"link lama dikenali sebagai '{item['name']}' (tvg-id {key})"))
+            report.append((e["name"], "ADOPTED", f"link lama = '{item['name']}' ({key})"))
             continue
         e = by_name.pop(normalize_name(item["name"]), None)
         if e is not None:
@@ -363,8 +339,7 @@ def merge_catalog(entries, catalog):
             e["key"] = key
             e["url"] = item["url"]
             e["attrs"]["tvg-id"] = key
-            e["attrs"]["group-title"] = item["group"]
-            e["extra"] = list(item.get("extra", []))
+            sync(e, item)
             by_key[key] = e
             report.append((e["name"], "MIGRATED", f"{old} -> {item['url']}"))
             continue
@@ -376,7 +351,6 @@ def merge_catalog(entries, catalog):
 
 
 def dedup_urls(entries):
-    """Satu URL hanya boleh muncul sekali; entri pertama dipertahankan."""
     seen, kept, removed = {}, [], []
     for e in entries:
         if e["url"] in seen:
@@ -387,19 +361,67 @@ def dedup_urls(entries):
     return kept, removed
 
 
-# ---------------------------- UTAMA ----------------------------
+def load_history(path):
+    if Path(path).exists():
+        try:
+            return json.loads(Path(path).read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    return {}
+
+
+def update_history(history, kept, results):
+    for e in kept:
+        ok = results.get(e["key"], (False, ""))[0]
+        h = history.setdefault(e["key"], {"total": 0, "ok": 0, "recent": []})
+        h["total"] += 1
+        h["ok"] += 1 if ok else 0
+        h["recent"] = (h.get("recent", []) + [bool(ok)])[-HISTORY_LEN:]
+        h["uptime_pct"] = round(100.0 * h["ok"] / h["total"]) if h["total"] else 0
+    return history
+
+
+def build_status_block(kept, results, history):
+    live = sum(1 for e in kept if results.get(e["key"], (False, ""))[0])
+    off = len(kept) - live
+    lines = [f"> 🕒 Diperbarui: **{wib_now()}** · Total **{len(kept)}** · 🟢 **{live}** live · 🔴 **{off}** offline",
+             "", "| Kamera | Grup | Status | Uptime |", "|---|---|:--:|:--:|"]
+    for e in sorted(kept, key=lambda x: (x["attrs"].get("group-title", ""), x["name"].lower())):
+        ok = results.get(e["key"], (False, ""))[0]
+        up = history.get(e["key"], {}).get("uptime_pct", 100 if ok else 0)
+        name = e["name"].replace("|", "\\|")
+        group = e["attrs"].get("group-title", "").replace("|", "\\|")
+        lines.append(f"| {name} | {group} | {'🟢 Live' if ok else '🔴 Offline'} | {up}% |")
+    lines += ["", "_🔴 Offline = gagal cek terakhir; dipertahankan maks 3 hari berturut-turut sebelum dihapus._"]
+    return "\n".join(lines)
+
+
+def update_readme(path, kept, results, history):
+    p = Path(path)
+    if not p.exists():
+        return False
+    text = p.read_text(encoding="utf-8")
+    if README_START not in text or README_END not in text:
+        return False
+    block = build_status_block(kept, results, history)
+    pre = text.split(README_START, 1)[0]
+    post = text.split(README_END, 1)[1]
+    p.write_text(pre + README_START + "\n" + block + "\n" + README_END + post, encoding="utf-8")
+    return True
+
 
 def main():
-    ap = argparse.ArgumentParser(description="Cek/update/hapus stream CCTV Palembang & Sumatera")
+    ap = argparse.ArgumentParser()
     ap.add_argument("--playlist", default="streams.m3u8")
     ap.add_argument("--state", default="scripts/state.json")
+    ap.add_argument("--history", default="history.json")
     ap.add_argument("--max-fails", type=int, default=DEFAULT_MAX_FAILS)
     ap.add_argument("--workers", type=int, default=DEFAULT_WORKERS)
     ap.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT)
-    ap.add_argument("--limit", type=int, default=None, help="batasi jumlah kamera per sumber (untuk tes)")
+    ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--skip-palembang", action="store_true")
     ap.add_argument("--skip-opencctv", action="store_true")
-    ap.add_argument("--dry-run", action="store_true", help="jangan tulis file apa pun")
+    ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
     state = {}
@@ -408,11 +430,10 @@ def main():
             state = json.loads(Path(args.state).read_text(encoding="utf-8"))
         except Exception:
             state = {}
+    history = load_history(args.history)
 
     entries = parse_m3u(args.playlist)
     print(f"[i] Playlist lama: {len(entries)} entri")
-
-    # 1) Scrape sumber (kalau gagal, entri lama dari sumber itu DIPERTAHANKAN)
     catalog, source_ok = {}, {"palembang": False, "opencctv": False}
     if not args.skip_palembang:
         try:
@@ -420,30 +441,27 @@ def main():
             for it in items:
                 catalog[it["key"]] = it
             source_ok["palembang"] = True
-            print(f"[+] Sumber palembang.go.id: {len(items)} kamera")
+            print(f"[+] palembang.go.id: {len(items)} kamera")
         except Exception as e:
-            print(f"[!] Gagal scrape palembang.go.id: {e} -> entri lama dipertahankan")
+            print(f"[!] Gagal scrape palembang: {e}")
     if not args.skip_opencctv:
         try:
             items = scrape_opencctv(limit=args.limit, workers=args.workers)
             for it in items:
                 catalog[it["key"]] = it
             source_ok["opencctv"] = True
-            print(f"[+] Sumber opencctv.org (stream stabil): {len(items)} kamera")
+            print(f"[+] opencctv (stabil): {len(items)} kamera")
         except Exception as e:
-            print(f"[!] Gagal scrape opencctv.org: {e} -> entri lama dipertahankan")
+            print(f"[!] Gagal scrape opencctv: {e}")
 
-    # 2) Merge: adopsi link lama yang cocok URL/nama, migrasi URL lama, tambah kamera baru
     report = merge_catalog(entries, catalog)
-
-    # 3) Buang duplikat URL (entri pertama menang)
     entries, dup_removed = dedup_urls(entries)
     for e, why in dup_removed:
         report.append((e["name"], "REMOVED", why))
         state.pop(e["key"], None)
+        history.pop(e["key"], None)
         print(f"[-] HAPUS: {e['name']} — {why}")
 
-    # 4) Tandai entri sumber yang hilang dari katalog (belum langsung dihapus)
     for e in entries:
         src = "palembang" if e["key"].startswith("plb-") else ("opencctv" if e["key"].startswith("oc-") else None)
         if src and source_ok[src] and e["key"] not in catalog:
@@ -452,8 +470,7 @@ def main():
         elif src:
             state.setdefault(e["key"], {"fail": 0, "missing": 0})["missing"] = 0
 
-    # 5) Cek semua link paralel
-    print(f"[i] Mengecek {len(entries)} link (workers={args.workers}, timeout={args.timeout}s)...")
+    print(f"[i] Mengecek {len(entries)} link...")
     results = {}
     with cf.ThreadPoolExecutor(max_workers=args.workers) as ex:
         futs = {ex.submit(check_stream, e["url"], args.timeout): e for e in entries}
@@ -463,13 +480,10 @@ def main():
             results[e["key"]] = (ok, reason)
             print(f"    {'OK ' if ok else 'FAIL'} | {e['name']} | {reason}")
 
-    # 6) Pengaman: kalau SEMUA gagal, kemungkinan IP runner diblokir / jaringan bermasalah.
     if len(entries) >= 5 and not any(ok for ok, _ in results.values()):
-        print("[!!] SEMUA link gagal — kemungkinan masalah jaringan/geo-block.")
-        print("[!!] Playlist & state TIDAK diubah supaya tidak terhapus massal.")
+        print("[!!] SEMUA gagal — kemungkinan geo-block/jaringan. Tidak ada perubahan.")
         return 0
 
-    # 7) Hitung gagal beruntun, hapus yang lewat ambang
     kept, removed = [], []
     for e in entries:
         key = e["key"]
@@ -493,39 +507,42 @@ def main():
         else:
             kept.append(e)
             report.append((e["name"], "FAIL", f"{reason} (gagal {st['fail']}/{args.max_fails})"))
-
     for e, why in removed:
         report.append((e["name"], "REMOVED", why))
         state.pop(e["key"], None)
+        history.pop(e["key"], None)
         print(f"[-] HAPUS: {e['name']} — {why}")
 
-    # 8) Tulis hasil
-    summary = {"generated_at": now_iso(), "total": len(kept),
-               "ok": sum(1 for ok, _ in results.values() if ok),
-               "removed": len(removed) + len(dup_removed),
-               "sources": source_ok}
+    history = update_history(history, kept, results)
+    live = sum(1 for e in kept if results.get(e["key"], (False, ""))[0])
+    summary = {"generated_at": now_iso(), "generated_wib": wib_now(),
+               "total": len(kept), "live": live, "offline": len(kept) - live,
+               "removed": len(removed) + len(dup_removed), "sources": source_ok}
     print(f"[i] Ringkasan: {summary}")
     if args.dry_run:
-        print("[i] DRY-RUN: tidak ada file yang ditulis.")
+        print("[i] DRY-RUN: tidak menulis file.")
         return 0
 
     write_m3u(args.playlist, kept)
     Path(args.state).parent.mkdir(parents=True, exist_ok=True)
     Path(args.state).write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
-    Path("status.json").write_text(json.dumps(
-        {"summary": summary,
-         "streams": [{"name": e["name"], "group": e["attrs"].get("group-title", ""),
-                      "url": e["url"], "ok": results.get(e["key"], (False,))[0]} for e in kept]},
-        indent=2, ensure_ascii=False), encoding="utf-8")
+    Path(args.history).write_text(json.dumps(history, indent=2, ensure_ascii=False), encoding="utf-8")
+    streams = [{"key": e["key"], "name": e["name"], "group": e["attrs"].get("group-title", ""),
+                "url": e["url"], "ok": results.get(e["key"], (False, ""))[0],
+                "lat": e.get("lat"), "lng": e.get("lng"),
+                "web": e.get("web", web_playable(e["url"])),
+                "uptime_pct": history.get(e["key"], {}).get("uptime_pct", 100)} for e in kept]
+    Path("status.json").write_text(json.dumps({"summary": summary, "streams": streams}, indent=2, ensure_ascii=False), encoding="utf-8")
     md = [f"# Laporan Update Stream — {summary['generated_at']}", "",
-          f"- Total aktif: **{summary['total']}** | OK: **{summary['ok']}** | Dihapus: **{summary['removed']}**", "",
+          f"- Total: **{summary['total']}** | Live: **{summary['live']}** | Offline: **{summary['offline']}** | Dihapus: **{summary['removed']}**", "",
           "| Nama | Status | Keterangan |", "|---|---|---|"]
-    icon = {"NEW": "🆕", "UPDATED": "🔁", "ADOPTED": "🔗", "MIGRATED": "🔁",
-            "FAIL": "⚠️", "REMOVED": "❌"}
+    icon = {"NEW": "🆕", "UPDATED": "🔁", "ADOPTED": "🔗", "MIGRATED": "🔁", "FAIL": "⚠️", "REMOVED": "❌"}
     for name, status, note in report:
         md.append(f"| {name} | {icon.get(status, '')} {status} | {note} |")
     Path("REPORT.md").write_text("\n".join(md) + "\n", encoding="utf-8")
-    print(f"[✓] Selesai. {len(kept)} entri ditulis ke {args.playlist}")
+    if update_readme("README.md", kept, results, history):
+        print("[✓] README.md diperbarui.")
+    print(f"[✓] Selesai. {len(kept)} entri -> {args.playlist}")
     return 0
 
 
