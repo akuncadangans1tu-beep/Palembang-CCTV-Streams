@@ -1,0 +1,354 @@
+{
+  "plb-CCTV-CINDE-06": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-TBS-49": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-TAMSIS-40": {
+    "total": 1,
+    "ok": 0,
+    "recent": [
+      false
+    ],
+    "uptime_pct": 0
+  },
+  "plb-CCTV-VTR-41": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-VTR-50": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-SPB-45": {
+    "total": 1,
+    "ok": 0,
+    "recent": [
+      false
+    ],
+    "uptime_pct": 0
+  },
+  "plb-CCTV-SPBB-42": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-DPR-44": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-SPIP-30": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-PARAM-43": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-SPSH-48": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-TAMSIS-47": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-BSA-39": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-BKB-02": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-DA-24": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-KM12-13": {
+    "total": 1,
+    "ok": 0,
+    "recent": [
+      false
+    ],
+    "uptime_pct": 0
+  },
+  "plb-CCTV-MANDIRI-38": {
+    "total": 1,
+    "ok": 0,
+    "recent": [
+      false
+    ],
+    "uptime_pct": 0
+  },
+  "plb-CCTV-PASAR16-25": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-MASJID-AGUNG-09": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-P16-36": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-PLAZA7-ULU-20": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-SIMPANG-ANGKATAN-45-05": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-SIMPANG-POLDA-03": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-CHARITAS-08": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-SPSAMSAT-21": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105303": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105304": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105305": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105306": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105274": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105275": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105276": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105277": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105278": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105279": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105280": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105281": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105282": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105283": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105284": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105285": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105286": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "oc-105287": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  }
+}

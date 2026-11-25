@@ -1,8 +1,10 @@
 {
   "summary": {
-    "generated_at": "2026-11-25T09:48:45Z",
+    "generated_at": "2026-11-25T11:36:24Z",
+    "generated_wib": "25 Nov 2026 18:36 WIB",
     "total": 44,
-    "ok": 38,
+    "live": 40,
+    "offline": 4,
     "removed": 8,
     "sources": {
       "palembang": true,
@@ -11,268 +13,488 @@
   },
   "streams": [
     {
+      "key": "plb-CCTV-CINDE-06",
       "name": "CCTV Cinde",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/68f9f32d57309f82669542ca/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.979976,
+      "lng": 104.755865,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-TBS-49",
       "name": "CCTV Jl Tembesu",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a95fdba392f3ee3ef741702/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.975418791524916,
+      "lng": 104.7582851612457,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-TAMSIS-40",
       "name": "CCTV JL VETERAN",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a8871102840d934ee905928/playback/index.m3u8",
-      "ok": true
+      "ok": false,
+      "lat": -2.975561070774235,
+      "lng": 104.75792831753658,
+      "web": false,
+      "uptime_pct": 0
     },
     {
+      "key": "plb-CCTV-VTR-41",
       "name": "CCTV JL VETERAN 1",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a95f17c392f3ee3ef741052/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.9756015525367507,
+      "lng": 104.7574997133,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-VTR-50",
       "name": "CCTV JL VETERAN 2",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a95febc392f3ee3ef741775/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.9756908710488026,
+      "lng": 104.75803218497177,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-SPB-45",
       "name": "CCTV SP BANDARA",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a95f3ad392f3ee3ef741169/playback/index.m3u8",
-      "ok": true
+      "ok": false,
+      "lat": -2.9038701716938173,
+      "lng": 104.72746849900544,
+      "web": false,
+      "uptime_pct": 0
     },
     {
+      "key": "plb-CCTV-SPBB-42",
       "name": "CCTV SP BOM BARU",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a95112a2840d934ee9802de/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.977623404813833,
+      "lng": 104.7788168618242,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-DPR-44",
       "name": "CCTV SP DPRD PROV",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a958ffe392f3ee3ef73e88c/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.980102,
+      "lng": 104.745707,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-SPIP-30",
       "name": "CCTV SP IP",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/692fd900a611d6b78f1aef5e/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.9834553292649675,
+      "lng": 104.7581219930195,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-PARAM-43",
       "name": "CCTV SP Parameswara",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a9602a9392f3ee3ef741a0d/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.988164860621555,
+      "lng": 104.71905091893788,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-SPSH-48",
       "name": "CCTV SP Soekarno Hatta",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a95f507392f3ee3ef741282/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.9362660543407957,
+      "lng": 104.70212465910649,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-TAMSIS-47",
       "name": "CCTV TAMAN SISWA",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a95fc29392f3ee3ef741647/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.9759372517847904,
+      "lng": 104.75797240712888,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-BSA-39",
       "name": "CCTV Bank Sumsel Atmo",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a8866f32840d934ee905309/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.9807292478454235,
+      "lng": 104.75699830153796,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-BKB-02",
       "name": "CCTV Benteng Kuto Besak",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/68f09d50b4545109d5349b12/playback/index.m3u8",
-      "ok": false
+      "ok": true,
+      "lat": -2.9913,
+      "lng": 104.761266,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-DA-24",
       "name": "CCTV Darma Agung",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/69281931273b6e50c416536d/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.9388134892468485,
+      "lng": 104.72125000000001,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-KM12-13",
       "name": "CCTV KM 12",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6926bf54273b6e50c40eeca6/playback/index.m3u8",
-      "ok": true
+      "ok": false,
+      "lat": -2.913313005325259,
+      "lng": 104.68819312611218,
+      "web": false,
+      "uptime_pct": 0
     },
     {
+      "key": "plb-CCTV-MANDIRI-38",
       "name": "CCTV Lampu Merah Kol Atmo",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/69fed770f59e8fd90f67227e/playback/index.m3u8",
-      "ok": false
+      "ok": false,
+      "lat": -2.981811,
+      "lng": 104.758485,
+      "web": false,
+      "uptime_pct": 0
     },
     {
+      "key": "plb-CCTV-PASAR16-25",
       "name": "CCTV Lapangan Parkir Pasar 16",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/692819c6273b6e50c4165871/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.9898965009699703,
+      "lng": 104.76184254232889,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-MASJID-AGUNG-09",
       "name": "CCTV Masjid Agung",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/69258794273b6e50c40e515c/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.98819,
+      "lng": 104.760447,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-P16-36",
       "name": "CCTV Pasar 16",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/69bd143ccc7bccc4b2dfa011/playback/index.m3u8",
-      "ok": false
+      "ok": true,
+      "lat": -2.989552,
+      "lng": 104.763833,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-PLAZA7-ULU-20",
       "name": "CCTV Plaza 7 Ulu",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/69281276273b6e50c4162201/playback/index.m3u8",
-      "ok": false
+      "ok": true,
+      "lat": -2.993604358377516,
+      "lng": 104.76330599999999,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-SIMPANG-ANGKATAN-45-05",
       "name": "CCTV Simpang Angkatan 45",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/68f59d6857309f826693741a/playback/index.m3u8",
-      "ok": false
+      "ok": true,
+      "lat": -2.969155,
+      "lng": 104.732837,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04",
       "name": "CCTV Simpang Macan Lindungan",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/68f59cab57309f8266937417/playback/index.m3u8",
-      "ok": false
+      "ok": true,
+      "lat": -2.988056,
+      "lng": 104.718564,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-SIMPANG-POLDA-03",
       "name": "CCTV Simpang Polda",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/68f599c557309f826693740c/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.961082,
+      "lng": 104.737709,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-CHARITAS-08",
       "name": "CCTV SP Charitas",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6925871c273b6e50c40e50e1/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.976768,
+      "lng": 104.75434,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "plb-CCTV-SPSAMSAT-21",
       "name": "CCTV SP Samsat",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6928176c273b6e50c41642e7/playback/index.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -2.986829357668499,
+      "lng": 104.7439515423289,
+      "web": false,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105303",
       "name": "Lampung 180+000 A",
       "group": "Tol Lampung",
       "url": "https://pub.hk-opt.com/LiveApp/streams/Sz66S9K9q8wO1676355519747.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -4.536363,
+      "lng": 105.183082,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105304",
       "name": "Lampung 180+000 B",
       "group": "Tol Lampung",
       "url": "https://pub.hk-opt.com/LiveApp/streams/OYvGskpG5Xgx1675840402605.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -4.536363,
+      "lng": 105.183082,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105305",
       "name": "Lampung 181+000 A",
       "group": "Tol Lampung",
       "url": "https://pub.hk-opt.com/LiveApp/streams/t8nGJjBmGrrn1675840443964.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -4.528207,
+      "lng": 105.184727,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105306",
       "name": "Lampung 181+000 B",
       "group": "Tol Lampung",
       "url": "https://pub.hk-opt.com/LiveApp/streams/OAAGJkYZD1c41675840461119.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -4.528207,
+      "lng": 105.184727,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105274",
       "name": "Palindra 01+600 A",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/267565493547947969759647.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.064083,
+      "lng": 104.752452,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105275",
       "name": "Palindra 01+600 B",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/000873119738804749935559.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.064083,
+      "lng": 104.752452,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105276",
       "name": "Palindra 02+600 A",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/512039039195007414780648.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.072737,
+      "lng": 104.750296,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105277",
       "name": "Palindra 02+600 B",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/098395992445733487844660.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.072737,
+      "lng": 104.750296,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105278",
       "name": "Palindra 03+600 A",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/694712410636759959803663.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.081023,
+      "lng": 104.747069,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105279",
       "name": "Palindra 03+600 B",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/823069182482598599051789.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.081023,
+      "lng": 104.747069,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105280",
       "name": "Palindra 04+600 B",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/530233880268202462634796.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.088107,
+      "lng": 104.741675,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105281",
       "name": "Palindra 05+600 A",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/156545412556986213279533.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.094931,
+      "lng": 104.735924,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105282",
       "name": "Palindra 05+600 B",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/620290052888606951595901.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.094931,
+      "lng": 104.735924,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105283",
       "name": "PALINDRA Gate Pemulutan",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/648176351556242758398370.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.105691,
+      "lng": 104.722489,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105284",
       "name": "PALINDRA GT Indralaya",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/425149463316515625544601.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.212218,
+      "lng": 104.679816,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105285",
       "name": "PALINDRA GT KTM RAMBUTAN",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/953617100779184492903430.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.147033,
+      "lng": 104.703918,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105286",
       "name": "PALINDRA IC KTM",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/481851734189142298210171.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.148842,
+      "lng": 104.710146,
+      "web": true,
+      "uptime_pct": 100
     },
     {
+      "key": "oc-105287",
       "name": "PALINDRA IC Pemulutan",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/100831563641835272155645.m3u8",
-      "ok": true
+      "ok": true,
+      "lat": -3.107979,
+      "lng": 104.72642,
+      "web": true,
+      "uptime_pct": 100
     }
   ]
 }
