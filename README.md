@@ -33,3 +33,4 @@ https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/raw/refs/heads/m
 ## 🤝 Kontribusi
 
 Jika Anda menemukan tautan CCTV yang mati atau ingin menambahkan kamera baru, silakan buka laporan di menu **Issues** atau kirimkan **Pull Request**.
+⚠️ **Harus kamera di Palembang dan kamera publik! Kamera pribadi (Kantor, rumah, dll..) dilarang, kecuali memang untuk publik**
