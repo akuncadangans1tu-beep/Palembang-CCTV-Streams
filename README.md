@@ -2,13 +2,15 @@
 
 [![Update CCTV Streams](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/actions/workflows/update-streams.yml/badge.svg)](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/actions/workflows/update-streams.yml)
 
-Daftar putar (*playlist*) aliran video CCTV langsung dari berbagai sudut Kota Palembang dan koridor jalan tol sekitarnya, mirip dengan konsep proyek IPTV-Org. Semua tautan berupa HLS (`.m3u8`) stabil yang diperiksa dan diperbarui **otomatis setiap hari**.
+Daftar putar (*playlist*) aliran video CCTV langsung dari berbagai sudut Kota Palembang dan koridor jalan tol sekitarnya, mirip konsep IPTV-Org. Semua tautan HLS (`.m3u8`) stabil, diperiksa & diperbarui **otomatis setiap hari**.
+
+### 🌐 [Buka Aplikasi Pantau Langsung →](https://akuncadangans1tu-beep.github.io/Palembang-CCTV-Streams/)
+
+Galeri video + peta kamera + pencarian + tombol acak, langsung di browser. Kamera tol bisa diputar langsung; kamera kota lewat VLC/app IPTV.
 
 ## 🚧 Status Proyek
 
-Playlist ini **dirawat otomatis** tiap hari (cek, perbarui, dan hapus tautan mati). Meski begitu:
-* Sebagian kamera bisa offline sesaat (pemeliharaan/gangguan) — wajar dan biasanya pulih sendiri.
-* Cakupan kamera masih terus bertambah secara bertahap.
+Playlist ini **dirawat otomatis** tiap hari. Sebagian kamera bisa offline sesaat (wajar, biasanya pulih sendiri), dan cakupan kamera terus bertambah bertahap.
 
 ## ⚠️ Disclaimer Penting (Sanggahan)
 
@@ -30,13 +32,13 @@ Hanya tautan HLS langsung yang **stabil** (tanpa token/sementara) yang dimasukka
 ## 🚀 Fitur Utama
 
 * Tautan *stream* langsung dari jalan protokol Palembang dan jalan tol sekitarnya.
-* Format ramah pemutar video m3u/m3u8 (HLS).
-* **Pembaruan otomatis tiap hari** (03:00 WIB) via GitHub Actions: cek kesehatan stream, perbarui URL yang berubah, hapus yang mati 3 hari berturut-turut.
-* Tabel status kamera live/offline di bawah ini, ikut diperbarui otomatis.
+* **Aplikasi web** (GitHub Pages): galeri video, peta kamera, pencarian, tombol acak.
+* **Pembaruan otomatis tiap hari** (03:00 WIB): cek stream, perbarui URL, hapus yang mati 3 hari beruntun.
+* **Riwayat uptime** per kamera + tabel status live/offline di bawah ini.
 
 ## 🛠️ Cara Penggunaan
 
-Anda dapat memutar daftar CCTV ini menggunakan pemutar video favorit Anda seperti VLC, PotPlayer, atau aplikasi IPTV Player lainnya. Salin tautan di bawah ini:
+Putar dengan VLC, PotPlayer, atau aplikasi IPTV lainnya. Salin tautan ini:
 
 ```text
 https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/raw/refs/heads/main/streams.m3u8
