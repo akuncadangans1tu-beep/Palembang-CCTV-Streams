@@ -2,8 +2,8 @@ name: Update CCTV Streams
 
 on:
   schedule:
-    - cron: "0 20 * * *"   # 03:00 WIB
-  workflow_dispatch:
+    - cron: "0 20 * * *"   # 20:00 UTC = 03:00 WIB, setiap hari
+  workflow_dispatch:        # bisa dijalankan manual dari tab Actions
 
 permissions:
   contents: write
@@ -21,19 +21,22 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Cek, update & hapus stream
         run: python scripts/update_streams.py --playlist streams.m3u8
+
       - name: Commit & push kalau ada perubahan
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add streams.m3u8 scripts/state.json status.json history.json REPORT.md README.md
+          git add streams.m3u8 scripts/state.json status.json REPORT.md
           if git diff --cached --quiet; then
-            echo "Tidak ada perubahan."
+            echo "Tidak ada perubahan, tidak perlu commit."
           else
             git commit -m "chore: auto-update streams $(date -u '+%Y-%m-%d %H:%M UTC')"
             git push
