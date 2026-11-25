@@ -1,226 +1,268 @@
 {
   "plb-CCTV-BSA-39": {
-    "fail": 0,
+    "fail": 1,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6a8866f32840d934ee905309/playback/index.m3u8",
     "last_ok": "2026-11-25T08:36:20Z"
   },
   "plb-CCTV-SPBB-42": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6a95112a2840d934ee9802de/playback/index.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "plb-CCTV-DPR-44": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6a958ffe392f3ee3ef73e88c/playback/index.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "plb-CCTV-SPB-45": {
-    "fail": 0,
+    "fail": 1,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6a95f3ad392f3ee3ef741169/playback/index.m3u8",
     "last_ok": "2026-11-25T08:36:20Z"
   },
   "plb-CCTV-VTR-41": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6a95f17c392f3ee3ef741052/playback/index.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "plb-CCTV-TAMSIS-47": {
-    "fail": 0,
+    "fail": 1,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6a95fc29392f3ee3ef741647/playback/index.m3u8",
     "last_ok": "2026-11-25T08:36:20Z"
   },
   "plb-CCTV-VTR-50": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6a95febc392f3ee3ef741775/playback/index.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "plb-CCTV-PARAM-43": {
-    "fail": 0,
+    "fail": 1,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6a9602a9392f3ee3ef741a0d/playback/index.m3u8",
     "last_ok": "2026-11-25T08:36:20Z"
   },
   "plb-CCTV-SPIP-30": {
-    "fail": 0,
+    "fail": 1,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/692fd900a611d6b78f1aef5e/playback/index.m3u8",
     "last_ok": "2026-11-25T08:36:20Z"
   },
   "plb-CCTV-MANDIRI-38": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/69fed770f59e8fd90f67227e/playback/index.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "plb-CCTV-SIMPANG-ANGKATAN-45-05": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/68f59d6857309f826693741a/playback/index.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "plb-CCTV-DA-24": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/69281931273b6e50c416536d/playback/index.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "plb-CCTV-SPSAMSAT-21": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6928176c273b6e50c41642e7/playback/index.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "plb-CCTV-PASAR16-25": {
-    "fail": 0,
+    "fail": 1,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/692819c6273b6e50c4165871/playback/index.m3u8",
     "last_ok": "2026-11-25T08:36:20Z"
   },
   "plb-CCTV-KM12-13": {
-    "fail": 0,
+    "fail": 1,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6926bf54273b6e50c40eeca6/playback/index.m3u8",
     "last_ok": "2026-11-25T08:36:20Z"
   },
   "plb-CCTV-MASJID-AGUNG-09": {
-    "fail": 0,
+    "fail": 1,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/69258794273b6e50c40e515c/playback/index.m3u8",
     "last_ok": "2026-11-25T08:36:20Z"
   },
   "plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/68f59cab57309f8266937417/playback/index.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "plb-CCTV-BKB-02": {
-    "fail": 0,
+    "fail": 1,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://cctv.palembang.go.id/api/cctv/68f09d50b4545109d5349b12/playback/index.m3u8",
     "last_ok": "2026-11-25T08:36:20Z"
   },
   "oc-105274": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/267565493547947969759647.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105275": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/000873119738804749935559.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105276": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/512039039195007414780648.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105277": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/098395992445733487844660.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105278": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/694712410636759959803663.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105279": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/823069182482598599051789.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105280": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/530233880268202462634796.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105281": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/156545412556986213279533.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105282": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/620290052888606951595901.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105283": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/648176351556242758398370.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105284": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/425149463316515625544601.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105285": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/953617100779184492903430.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105286": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/481851734189142298210171.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
   },
   "oc-105287": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-25T08:36:20Z",
+    "last_check": "2026-11-25T08:38:17Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/100831563641835272155645.m3u8",
-    "last_ok": "2026-11-25T08:36:20Z"
+    "last_ok": "2026-11-25T08:38:17Z"
+  },
+  "plb-CCTV-TAMSIS-40": {
+    "fail": 0,
+    "missing": 0,
+    "last_check": "2026-11-25T08:38:17Z",
+    "url": "https://cctv.palembang.go.id/api/cctv/6a8871102840d934ee905928/playback/index.m3u8",
+    "last_ok": "2026-11-25T08:38:17Z"
+  },
+  "plb-CCTV-SPSH-48": {
+    "fail": 0,
+    "missing": 0,
+    "last_check": "2026-11-25T08:38:17Z",
+    "url": "https://cctv.palembang.go.id/api/cctv/6a95f507392f3ee3ef741282/playback/index.m3u8",
+    "last_ok": "2026-11-25T08:38:17Z"
+  },
+  "plb-CCTV-TBS-49": {
+    "fail": 0,
+    "missing": 0,
+    "last_check": "2026-11-25T08:38:17Z",
+    "url": "https://cctv.palembang.go.id/api/cctv/6a95fdba392f3ee3ef741702/playback/index.m3u8",
+    "last_ok": "2026-11-25T08:38:17Z"
+  },
+  "plb-CCTV-CINDE-06": {
+    "fail": 0,
+    "missing": 0,
+    "last_check": "2026-11-25T08:38:17Z",
+    "url": "https://cctv.palembang.go.id/api/cctv/68f9f32d57309f82669542ca/playback/index.m3u8",
+    "last_ok": "2026-11-25T08:38:17Z"
+  },
+  "plb-CCTV-P16-36": {
+    "fail": 0,
+    "missing": 0,
+    "last_check": "2026-11-25T08:38:17Z",
+    "url": "https://cctv.palembang.go.id/api/cctv/69bd143ccc7bccc4b2dfa011/playback/index.m3u8",
+    "last_ok": "2026-11-25T08:38:17Z"
+  },
+  "plb-CCTV-CHARITAS-08": {
+    "fail": 0,
+    "missing": 0,
+    "last_check": "2026-11-25T08:38:17Z",
+    "url": "https://cctv.palembang.go.id/api/cctv/6925871c273b6e50c40e50e1/playback/index.m3u8",
+    "last_ok": "2026-11-25T08:38:17Z"
   }
 }

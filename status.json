@@ -1,9 +1,9 @@
 {
   "summary": {
-    "generated_at": "2026-11-25T08:36:20Z",
-    "total": 32,
-    "ok": 32,
-    "removed": 12,
+    "generated_at": "2026-11-25T08:38:17Z",
+    "total": 38,
+    "ok": 29,
+    "removed": 6,
     "sources": {
       "palembang": true,
       "opencctv": true
@@ -11,10 +11,22 @@
   },
   "streams": [
     {
-      "name": "CCTV Bank Sumsel Atmo",
-      "group": "Diskominfo Palembang",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a8866f32840d934ee905309/playback/index.m3u8",
+      "name": "CCTV JL VETERAN 1",
+      "group": "Dishub Palembang",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a95f17c392f3ee3ef741052/playback/index.m3u8",
       "ok": true
+    },
+    {
+      "name": "CCTV JL VETERAN 2",
+      "group": "Dishub Palembang",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a95febc392f3ee3ef741775/playback/index.m3u8",
+      "ok": true
+    },
+    {
+      "name": "CCTV SP BANDARA",
+      "group": "Dishub Palembang",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a95f3ad392f3ee3ef741169/playback/index.m3u8",
+      "ok": false
     },
     {
       "name": "CCTV SP BOM BARU",
@@ -29,52 +41,34 @@
       "ok": true
     },
     {
-      "name": "CCTV SP BANDARA",
+      "name": "CCTV SP IP",
       "group": "Dishub Palembang",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95f3ad392f3ee3ef741169/playback/index.m3u8",
-      "ok": true
-    },
-    {
-      "name": "CCTV JL VETERAN 1",
-      "group": "Dishub Palembang",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95f17c392f3ee3ef741052/playback/index.m3u8",
-      "ok": true
-    },
-    {
-      "name": "CCTV TAMAN SISWA",
-      "group": "Dishub Palembang",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95fc29392f3ee3ef741647/playback/index.m3u8",
-      "ok": true
-    },
-    {
-      "name": "CCTV JL VETERAN 2",
-      "group": "Dishub Palembang",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95febc392f3ee3ef741775/playback/index.m3u8",
-      "ok": true
+      "url": "https://cctv.palembang.go.id/api/cctv/692fd900a611d6b78f1aef5e/playback/index.m3u8",
+      "ok": false
     },
     {
       "name": "CCTV SP Parameswara",
       "group": "Dishub Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/6a9602a9392f3ee3ef741a0d/playback/index.m3u8",
-      "ok": true
+      "ok": false
     },
     {
-      "name": "CCTV SP IP",
+      "name": "CCTV TAMAN SISWA",
       "group": "Dishub Palembang",
-      "url": "https://cctv.palembang.go.id/api/cctv/692fd900a611d6b78f1aef5e/playback/index.m3u8",
-      "ok": true
+      "url": "https://cctv.palembang.go.id/api/cctv/6a95fc29392f3ee3ef741647/playback/index.m3u8",
+      "ok": false
     },
     {
-      "name": "CCTV Lampu Merah Kol Atmo",
+      "name": "CCTV Bank Sumsel Atmo",
       "group": "Diskominfo Palembang",
-      "url": "https://cctv.palembang.go.id/api/cctv/69fed770f59e8fd90f67227e/playback/index.m3u8",
-      "ok": true
+      "url": "https://cctv.palembang.go.id/api/cctv/6a8866f32840d934ee905309/playback/index.m3u8",
+      "ok": false
     },
     {
-      "name": "CCTV Simpang Angkatan 45",
+      "name": "CCTV Benteng Kuto Besak",
       "group": "Diskominfo Palembang",
-      "url": "https://cctv.palembang.go.id/api/cctv/68f59d6857309f826693741a/playback/index.m3u8",
-      "ok": true
+      "url": "https://cctv.palembang.go.id/api/cctv/68f09d50b4545109d5349b12/playback/index.m3u8",
+      "ok": false
     },
     {
       "name": "CCTV Darma Agung",
@@ -83,27 +77,33 @@
       "ok": true
     },
     {
-      "name": "CCTV SP Samsat",
+      "name": "CCTV KM 12",
       "group": "Diskominfo Palembang",
-      "url": "https://cctv.palembang.go.id/api/cctv/6928176c273b6e50c41642e7/playback/index.m3u8",
+      "url": "https://cctv.palembang.go.id/api/cctv/6926bf54273b6e50c40eeca6/playback/index.m3u8",
+      "ok": false
+    },
+    {
+      "name": "CCTV Lampu Merah Kol Atmo",
+      "group": "Diskominfo Palembang",
+      "url": "https://cctv.palembang.go.id/api/cctv/69fed770f59e8fd90f67227e/playback/index.m3u8",
       "ok": true
     },
     {
       "name": "CCTV Lapangan Parkir Pasar 16",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/692819c6273b6e50c4165871/playback/index.m3u8",
-      "ok": true
-    },
-    {
-      "name": "CCTV KM 12",
-      "group": "Diskominfo Palembang",
-      "url": "https://cctv.palembang.go.id/api/cctv/6926bf54273b6e50c40eeca6/playback/index.m3u8",
-      "ok": true
+      "ok": false
     },
     {
       "name": "CCTV Masjid Agung",
       "group": "Diskominfo Palembang",
       "url": "https://cctv.palembang.go.id/api/cctv/69258794273b6e50c40e515c/playback/index.m3u8",
+      "ok": false
+    },
+    {
+      "name": "CCTV Simpang Angkatan 45",
+      "group": "Diskominfo Palembang",
+      "url": "https://cctv.palembang.go.id/api/cctv/68f59d6857309f826693741a/playback/index.m3u8",
       "ok": true
     },
     {
@@ -113,9 +113,9 @@
       "ok": true
     },
     {
-      "name": "CCTV Benteng Kuto Besak",
+      "name": "CCTV SP Samsat",
       "group": "Diskominfo Palembang",
-      "url": "https://cctv.palembang.go.id/api/cctv/68f09d50b4545109d5349b12/playback/index.m3u8",
+      "url": "https://cctv.palembang.go.id/api/cctv/6928176c273b6e50c41642e7/playback/index.m3u8",
       "ok": true
     },
     {
@@ -200,6 +200,42 @@
       "name": "PALINDRA IC Pemulutan",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/100831563641835272155645.m3u8",
+      "ok": true
+    },
+    {
+      "name": "CCTV JL VETERAN",
+      "group": "Dishub Palembang",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a8871102840d934ee905928/playback/index.m3u8",
+      "ok": true
+    },
+    {
+      "name": "CCTV SP Soekarno Hatta",
+      "group": "Dishub Palembang",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a95f507392f3ee3ef741282/playback/index.m3u8",
+      "ok": true
+    },
+    {
+      "name": "CCTV Jl Tembesu",
+      "group": "Dishub Palembang",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a95fdba392f3ee3ef741702/playback/index.m3u8",
+      "ok": true
+    },
+    {
+      "name": "CCTV Cinde",
+      "group": "Dishub Palembang",
+      "url": "https://cctv.palembang.go.id/api/cctv/68f9f32d57309f82669542ca/playback/index.m3u8",
+      "ok": true
+    },
+    {
+      "name": "CCTV Pasar 16",
+      "group": "Diskominfo Palembang",
+      "url": "https://cctv.palembang.go.id/api/cctv/69bd143ccc7bccc4b2dfa011/playback/index.m3u8",
+      "ok": true
+    },
+    {
+      "name": "CCTV SP Charitas",
+      "group": "Diskominfo Palembang",
+      "url": "https://cctv.palembang.go.id/api/cctv/6925871c273b6e50c40e50e1/playback/index.m3u8",
       "ok": true
     }
   ]

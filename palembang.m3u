@@ -1,4 +1,16 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="plb-CCTV-CINDE-06" group-title="Dishub Palembang",CCTV Cinde
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/68f9f32d57309f82669542ca/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-TBS-49" group-title="Dishub Palembang",CCTV Jl Tembesu
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6a95fdba392f3ee3ef741702/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-TAMSIS-40" group-title="Dishub Palembang",CCTV JL VETERAN
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6a8871102840d934ee905928/playback/index.m3u8
 #EXTINF:-1 tvg-id="plb-CCTV-VTR-41" group-title="Dishub Palembang",CCTV JL VETERAN 1
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
@@ -27,6 +39,10 @@ https://cctv.palembang.go.id/api/cctv/692fd900a611d6b78f1aef5e/playback/index.m3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/6a9602a9392f3ee3ef741a0d/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-SPSH-48" group-title="Dishub Palembang",CCTV SP Soekarno Hatta
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6a95f507392f3ee3ef741282/playback/index.m3u8
 #EXTINF:-1 tvg-id="plb-CCTV-TAMSIS-47" group-title="Dishub Palembang",CCTV TAMAN SISWA
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
@@ -59,6 +75,10 @@ https://cctv.palembang.go.id/api/cctv/692819c6273b6e50c4165871/playback/index.m3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/69258794273b6e50c40e515c/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-P16-36" group-title="Diskominfo Palembang",CCTV Pasar 16
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/69bd143ccc7bccc4b2dfa011/playback/index.m3u8
 #EXTINF:-1 tvg-id="plb-CCTV-SIMPANG-ANGKATAN-45-05" group-title="Diskominfo Palembang",CCTV Simpang Angkatan 45
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
@@ -67,6 +87,10 @@ https://cctv.palembang.go.id/api/cctv/68f59d6857309f826693741a/playback/index.m3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/68f59cab57309f8266937417/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-CHARITAS-08" group-title="Diskominfo Palembang",CCTV SP Charitas
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6925871c273b6e50c40e50e1/playback/index.m3u8
 #EXTINF:-1 tvg-id="plb-CCTV-SPSAMSAT-21" group-title="Diskominfo Palembang",CCTV SP Samsat
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
