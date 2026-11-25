@@ -1,12 +1,14 @@
 # 📹 Palembang CCTV Streams (Unofficial)
 
-Proyek ini menyediakan daftar putar (*playlist*) aliran video CCTV langsung dari berbagai sudut Kota Palembang, mirip dengan konsep proyek IPTV-Org.
+![Update CCTV Streams](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/actions/workflows/update-streams.yml/badge.svg)
 
-## 🚧 Status Proyek: Dalam Tahap Pembuatan (Under Development)
+Daftar putar (*playlist*) aliran video CCTV langsung dari berbagai sudut Kota Palembang dan koridor jalan tol sekitarnya, mirip dengan konsep proyek IPTV-Org. Semua tautan berupa HLS (`.m3u8`) stabil yang diperiksa dan diperbarui **otomatis setiap hari**.
 
-Aplikasi dan daftar putar ini **masih dalam tahap pembuatan serta uji coba**. 
-* Beberapa tautan video mungkin belum stabil atau berubah sewaktu-waktu.
-* Pengumpulan data kamera jalanan masih terus dilakukan secara bertahap.
+## 🚧 Status Proyek
+
+Playlist ini **dirawat otomatis** tiap hari (cek, perbarui, dan hapus tautan mati). Meski begitu:
+* Sebagian kamera bisa offline sesaat (pemeliharaan/gangguan) — wajar dan biasanya pulih sendiri.
+* Cakupan kamera masih terus bertambah secara bertahap.
 
 ## ⚠️ Disclaimer Penting (Sanggahan)
 
@@ -16,11 +18,21 @@ Proyek ini adalah pengembangan independen dan **tidak memiliki hubungan resmi** 
 * **Tidak Terafiliasi dengan Gubernur**: Proyek ini **tidak** terikat dengan Gubernur Sumatera Selatan atau Pemerintah Kota Palembang.
 * **Sumber Data**: Seluruh tautan *stream* diambil dari sumber publik yang tersedia secara terbuka di internet.
 
+## 📡 Sumber
+
+| Sumber | Cakupan |
+|---|---|
+| `cctv.palembang.go.id` (API publik) | Kamera kota Palembang (Diskominfo & Dishub) |
+| `opencctv.org` → `pub.hk-opt.com` (Hutama Karya) | Kamera Tol Palindra & Tol Lampung (JTTS) |
+
+Hanya tautan HLS langsung yang **stabil** (tanpa token/sementara) yang dimasukkan.
+
 ## 🚀 Fitur Utama
 
-* Tautan *stream* langsung dari jalan protokol Palembang.
-* Format ramah pemutar video m3u/m3u8.
-* Pembaruan otomatis secara berkala.
+* Tautan *stream* langsung dari jalan protokol Palembang dan jalan tol sekitarnya.
+* Format ramah pemutar video m3u/m3u8 (HLS).
+* **Pembaruan otomatis tiap hari** (03:00 WIB) via GitHub Actions: cek kesehatan stream, perbarui URL yang berubah, hapus yang mati 3 hari berturut-turut.
+* Tabel status kamera live/offline di bawah ini, ikut diperbarui otomatis.
 
 ## 🛠️ Cara Penggunaan
 
@@ -28,9 +40,3 @@ Anda dapat memutar daftar CCTV ini menggunakan pemutar video favorit Anda sepert
 
 ```text
 https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/raw/refs/heads/main/streams.m3u8
-```
-
-## 🤝 Kontribusi
-
-Jika Anda menemukan tautan CCTV yang mati atau ingin menambahkan kamera baru, silakan buka laporan di menu **Issues** atau kirimkan **Pull Request**.
-⚠️ **Harus kamera di Palembang dan kamera publik! Kamera pribadi (Kantor, rumah, dll..) dilarang, kecuali memang untuk publik**
