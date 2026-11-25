@@ -1,6 +1,6 @@
 # 📹 Palembang CCTV Streams (Unofficial)
 
-![Update CCTV Streams](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/actions/workflows/update-streams.yml/badge.svg)
+[![Update CCTV Streams](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/actions/workflows/update-streams.yml/badge.svg)](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/actions/workflows/update-streams.yml)
 
 Daftar putar (*playlist*) aliran video CCTV langsung dari berbagai sudut Kota Palembang dan koridor jalan tol sekitarnya, mirip dengan konsep proyek IPTV-Org. Semua tautan berupa HLS (`.m3u8`) stabil yang diperiksa dan diperbarui **otomatis setiap hari**.
 
