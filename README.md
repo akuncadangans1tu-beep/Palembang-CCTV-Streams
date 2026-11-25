@@ -27,7 +27,7 @@ Proyek ini adalah pengembangan independen dan **tidak memiliki hubungan resmi** 
 Anda dapat memutar daftar CCTV ini menggunakan pemutar video favorit Anda seperti VLC, PotPlayer, atau aplikasi IPTV Player lainnya. Salin tautan di bawah ini:
 
 ```text
-https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/raw/refs/heads/main/palembang.m3u
+https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/raw/refs/heads/main/streams.m3u8
 ```
 
 ## 🤝 Kontribusi
