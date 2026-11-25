@@ -4,10 +4,6 @@
 
 Daftar putar (*playlist*) aliran video CCTV langsung dari berbagai sudut Kota Palembang dan koridor jalan tol sekitarnya, mirip konsep IPTV-Org. Semua tautan HLS (`.m3u8`) stabil, diperiksa & diperbarui **otomatis setiap hari**.
 
-### 🌐 [Buka Aplikasi Pantau Langsung →](https://akuncadangans1tu-beep.github.io/Palembang-CCTV-Streams/)
-
-Galeri video + peta kamera + pencarian + tombol acak, langsung di browser. Kamera tol bisa diputar langsung; kamera kota lewat VLC/app IPTV.
-
 ## 🚧 Status Proyek
 
 Playlist ini **dirawat otomatis** tiap hari. Sebagian kamera bisa offline sesaat (wajar, biasanya pulih sendiri), dan cakupan kamera terus bertambah bertahap.
