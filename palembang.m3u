@@ -1,0 +1,101 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="plb-CCTV-VTR-41" group-title="Dishub Palembang",CCTV JL VETERAN 1
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6a95f17c392f3ee3ef741052/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-VTR-50" group-title="Dishub Palembang",CCTV JL VETERAN 2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6a95febc392f3ee3ef741775/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-SPB-45" group-title="Dishub Palembang",CCTV SP BANDARA
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6a95f3ad392f3ee3ef741169/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-SPBB-42" group-title="Dishub Palembang",CCTV SP BOM BARU
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6a95112a2840d934ee9802de/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-DPR-44" group-title="Dishub Palembang",CCTV SP DPRD PROV
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6a958ffe392f3ee3ef73e88c/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-SPIP-30" group-title="Dishub Palembang",CCTV SP IP
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/692fd900a611d6b78f1aef5e/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-PARAM-43" group-title="Dishub Palembang",CCTV SP Parameswara
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6a9602a9392f3ee3ef741a0d/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-TAMSIS-47" group-title="Dishub Palembang",CCTV TAMAN SISWA
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6a95fc29392f3ee3ef741647/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-BSA-39" group-title="Diskominfo Palembang",CCTV Bank Sumsel Atmo
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6a8866f32840d934ee905309/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-BKB-02" group-title="Diskominfo Palembang",CCTV Benteng Kuto Besak
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/68f09d50b4545109d5349b12/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-DA-24" group-title="Diskominfo Palembang",CCTV Darma Agung
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/69281931273b6e50c416536d/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-KM12-13" group-title="Diskominfo Palembang",CCTV KM 12
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6926bf54273b6e50c40eeca6/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-MANDIRI-38" group-title="Diskominfo Palembang",CCTV Lampu Merah Kol Atmo
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/69fed770f59e8fd90f67227e/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-PASAR16-25" group-title="Diskominfo Palembang",CCTV Lapangan Parkir Pasar 16
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/692819c6273b6e50c4165871/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-MASJID-AGUNG-09" group-title="Diskominfo Palembang",CCTV Masjid Agung
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/69258794273b6e50c40e515c/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-SIMPANG-ANGKATAN-45-05" group-title="Diskominfo Palembang",CCTV Simpang Angkatan 45
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/68f59d6857309f826693741a/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04" group-title="Diskominfo Palembang",CCTV Simpang Macan Lindungan
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/68f59cab57309f8266937417/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-SPSAMSAT-21" group-title="Diskominfo Palembang",CCTV SP Samsat
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/6928176c273b6e50c41642e7/playback/index.m3u8
+#EXTINF:-1 tvg-id="oc-105274" group-title="Tol Palindra",Palindra 01+600 A
+https://pub.hk-opt.com/LiveApp/streams/267565493547947969759647.m3u8
+#EXTINF:-1 tvg-id="oc-105275" group-title="Tol Palindra",Palindra 01+600 B
+https://pub.hk-opt.com/LiveApp/streams/000873119738804749935559.m3u8
+#EXTINF:-1 tvg-id="oc-105276" group-title="Tol Palindra",Palindra 02+600 A
+https://pub.hk-opt.com/LiveApp/streams/512039039195007414780648.m3u8
+#EXTINF:-1 tvg-id="oc-105277" group-title="Tol Palindra",Palindra 02+600 B
+https://pub.hk-opt.com/LiveApp/streams/098395992445733487844660.m3u8
+#EXTINF:-1 tvg-id="oc-105278" group-title="Tol Palindra",Palindra 03+600 A
+https://pub.hk-opt.com/LiveApp/streams/694712410636759959803663.m3u8
+#EXTINF:-1 tvg-id="oc-105279" group-title="Tol Palindra",Palindra 03+600 B
+https://pub.hk-opt.com/LiveApp/streams/823069182482598599051789.m3u8
+#EXTINF:-1 tvg-id="oc-105280" group-title="Tol Palindra",Palindra 04+600 B
+https://pub.hk-opt.com/LiveApp/streams/530233880268202462634796.m3u8
+#EXTINF:-1 tvg-id="oc-105281" group-title="Tol Palindra",Palindra 05+600 A
+https://pub.hk-opt.com/LiveApp/streams/156545412556986213279533.m3u8
+#EXTINF:-1 tvg-id="oc-105282" group-title="Tol Palindra",Palindra 05+600 B
+https://pub.hk-opt.com/LiveApp/streams/620290052888606951595901.m3u8
+#EXTINF:-1 tvg-id="oc-105283" group-title="Tol Palindra",PALINDRA Gate Pemulutan
+https://pub.hk-opt.com/LiveApp/streams/648176351556242758398370.m3u8
+#EXTINF:-1 tvg-id="oc-105284" group-title="Tol Palindra",PALINDRA GT Indralaya
+https://pub.hk-opt.com/LiveApp/streams/425149463316515625544601.m3u8
+#EXTINF:-1 tvg-id="oc-105285" group-title="Tol Palindra",PALINDRA GT KTM RAMBUTAN
+https://pub.hk-opt.com/LiveApp/streams/953617100779184492903430.m3u8
+#EXTINF:-1 tvg-id="oc-105286" group-title="Tol Palindra",PALINDRA IC KTM
+https://pub.hk-opt.com/LiveApp/streams/481851734189142298210171.m3u8
+#EXTINF:-1 tvg-id="oc-105287" group-title="Tol Palindra",PALINDRA IC Pemulutan
+https://pub.hk-opt.com/LiveApp/streams/100831563641835272155645.m3u8
