@@ -29,13 +29,14 @@
  .fallback{display:flex;flex-direction:column;gap:6px;align-items:center;color:var(--mut);font-size:12px;padding:8px;text-align:center}
  .fallback .row{display:flex;gap:6px}.mini{padding:5px 8px;font-size:12px}
  #map{height:70vh;border-radius:12px;border:1px solid var(--line)}
- .hidden{display:none}
  .modal{position:fixed;inset:0;background:#000c;z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px}
  .modal .box{background:var(--card);border:1px solid var(--line);border-radius:12px;max-width:900px;width:100%;overflow:hidden}
  .modal video{width:100%;aspect-ratio:16/9;background:#000}
  .modal .bar{display:flex;gap:8px;align-items:center;padding:10px;flex-wrap:wrap}.modal .ttl{font-weight:600;margin-right:auto}
  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--grn);color:#04220e;padding:10px 16px;border-radius:8px;font-weight:600;z-index:2000;opacity:0;transition:opacity .3s}.toast.show{opacity:1}
  .empty{color:var(--mut);text-align:center;padding:40px}a{color:var(--acc)}
+ /* FIX: harus menang atas aturan display lain, makanya !important & di akhir */
+ .hidden{display:none !important}
 </style>
 </head>
 <body>
@@ -133,6 +134,7 @@ function closeModal(){document.getElementById('modal').classList.add('hidden');
  if(modalHls){try{modalHls.destroy()}catch(_){}modalHls=null;}const vid=document.getElementById('mvideo');vid.removeAttribute('src');vid.load();}
 document.getElementById('mclose').onclick=closeModal;
 document.getElementById('modal').onclick=e=>{if(e.target.id==='modal')closeModal();};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 document.getElementById('rnd').onclick=()=>{const live=DATA.streams.filter(s=>s.ok);
  if(!live.length){toast('Tidak ada kamera live');return;}openModal(live[Math.floor(Math.random()*live.length)]);};
 document.getElementById('viewGal').onclick=()=>{document.getElementById('gallery').classList.remove('hidden');document.getElementById('map').classList.add('hidden');document.getElementById('viewGal').classList.add('btn-acc');document.getElementById('viewMap').classList.remove('btn-acc');};
