@@ -28,7 +28,6 @@ Hanya tautan HLS langsung yang **stabil** (tanpa token/sementara) yang dimasukka
 ## 🚀 Fitur Utama
 
 * Tautan *stream* langsung dari jalan protokol Palembang dan jalan tol sekitarnya.
-* **Aplikasi web** (GitHub Pages): galeri video, peta kamera, pencarian, tombol acak.
 * **Pembaruan otomatis tiap hari** (03:00 WIB): cek stream, perbarui URL, hapus yang mati 3 hari beruntun.
 * **Riwayat uptime** per kamera + tabel status live/offline di bawah ini.
 
