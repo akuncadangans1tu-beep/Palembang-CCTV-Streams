@@ -1,21 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-update_streams.py — Cek, update, dan hapus link CCTV Palembang (.m3u8) otomatis.
+update_streams.py — Cek, update, dan hapus link CCTV Palembang & koridor Sumatera (.m3u8).
 
-Sumber:
-  1. API resmi  : https://cctv.palembang.go.id/api/cctv
-                  Stream  : https://cctv.palembang.go.id/api/cctv/{_id}/playback/index.m3u8
-  2. OpenCCTV   : https://opencctv.org/cameras/indonesia/sumatera-selatan
-                  https://opencctv.org/cameras/indonesia/south-sumatra
+Sumber (semua menghasilkan link HLS STABIL, bukan token/sementara):
+  1. API resmi Palembang : https://cctv.palembang.go.id/api/cctv
+                           https://cctv.palembang.go.id/api/cctv/{_id}/playback/index.m3u8
+  2. OpenCCTV (Hutama Karya / pub.hk-opt.com, Ant Media stream-id tetap):
+       - Tol Palindra  : https://opencctv.org/cameras/indonesia/sumatera-selatan
+       - Tol Lampung   : https://opencctv.org/cameras/indonesia/lampung
+     Kamera bertipe "windy" / proxy opencctv.org DITOLAK karena stream-nya sementara.
 
-Alur: scrape sumber -> kenali/migrasi entri lama (cocok URL atau nama) -> cek semua link
+Alur: scrape sumber -> kenali/migrasi entri lama (cocok URL/nama) -> cek semua link
       -> update URL yang berubah -> hapus duplikat & yang gagal N hari beruntun -> tulis playlist.
-
-Entri lama (tanpa tvg-id) otomatis dikenali:
-  - URL sama dengan katalog  -> diadopsi (diberi tvg-id, nama kamu DIPERTAHANKAN)
-  - nama sama dengan katalog -> dimigrasi ke URL resmi terbaru (nama DIPERTAHANKAN)
-  - tidak cocok keduanya     -> diperlakukan sebagai entri manual (tetap dicek harian)
 
 Output default: streams.m3u8 (bisa diganti lewat --playlist).
 Hanya butuh Python 3.9+ (tanpa pip install apa pun).
@@ -33,23 +30,30 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 
 # ============================ KONFIGURASI ============================
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 PALEMBANG_API    = "https://cctv.palembang.go.id/api/cctv"
 PALEMBANG_STREAM = "https://cctv.palembang.go.id/api/cctv/{id}/playback/index.m3u8"
+
+# (halaman region opencctv, group-title, prefix nama untuk kamera penanda KM)
 OPENCCTV_REGIONS = [
-    "https://opencctv.org/cameras/indonesia/sumatera-selatan",
-    "https://opencctv.org/cameras/indonesia/south-sumatra",
+    ("https://opencctv.org/cameras/indonesia/sumatera-selatan", "Tol Palindra", "Palindra "),
+    ("https://opencctv.org/cameras/indonesia/lampung",          "Tol Lampung",  "Lampung "),
+    # Region jambi / riau / tulang-bawang / south-sumatra di opencctv memakai webcam
+    # "Windy" (stream sementara lewat proxy) -> tidak memenuhi syarat link stabil.
 ]
+
 DEFAULT_MAX_FAILS = 3     # link baru dihapus setelah gagal 3 hari berturut-turut
 DEFAULT_TIMEOUT   = 12    # detik per request HTTP
 DEFAULT_WORKERS   = 10    # cek paralel
 SSL_CTX = ssl.create_default_context()
 SSL_CTX.check_hostname = False
 SSL_CTX.verify_mode = ssl.CERT_NONE
+# Parameter khas URL bertoken / bertanda tangan (CloudFront, Akamai, dll.)
+TOKEN_RE = re.compile(r"[?&](token|expires?|expiration|signature|sig|auth|hdnts|hdnea|policy|key-pair-id)=", re.I)
 # =====================================================================
 
 
@@ -65,6 +69,18 @@ def referer_for(url):
     if "palembang.go.id" in url:
         return "https://cctv.palembang.go.id/"
     return "https://opencctv.org/"
+
+
+def is_stable_stream(url):
+    """True hanya untuk URL HLS langsung yang tidak bertoken / bukan proxy sementara."""
+    if not url or not url.lower().startswith(("http://", "https://")):
+        return False
+    host = urlsplit(url).netloc.lower()
+    if "opencctv.org" in host:      # proxy/aggregator, bukan sumber langsung
+        return False
+    if TOKEN_RE.search(url):        # ada parameter token/tanda tangan -> sementara
+        return False
+    return True
 
 
 def http_get(url, timeout=DEFAULT_TIMEOUT, max_bytes=300000, retries=2):
@@ -192,17 +208,23 @@ def _opencctv_camera_links(region_url):
 
 
 def _extract_m3u8(html):
+    """Ambil URL .m3u8 langsung dari halaman kamera; tolak yang proxy/bertoken."""
+    cands = []
     for typ, src in re.findall(r'data-type="([^"]+)"[^>]*?data-src="([^"]+)"', html):
         if typ == "m3u8":
-            return htmlmod.unescape(src)
+            cands.append(htmlmod.unescape(src))
     for src, typ in re.findall(r'data-src="([^"]+)"[^>]*?data-type="([^"]+)"', html):
         if typ == "m3u8":
-            return htmlmod.unescape(src)
-    m = re.search(r'https?://[^"\'\s]+\.m3u8[^"\'\s]*', html)
-    return htmlmod.unescape(m.group(0)) if m else None
+            cands.append(htmlmod.unescape(src))
+    cands += [htmlmod.unescape(m.group(0))
+              for m in re.finditer(r'https?://[^"\'\s]+\.m3u8[^"\'\s]*', html)]
+    for u in cands:
+        if is_stable_stream(u):
+            return u
+    return None
 
 
-def _scrape_one_opencctv(link):
+def _scrape_one_opencctv(link, group, prefix):
     try:
         st, body = http_get(link)
         if st != 200:
@@ -210,7 +232,7 @@ def _scrape_one_opencctv(link):
         html = body.decode("utf-8", "ignore")
         url = _extract_m3u8(html)
         if not url:
-            return None
+            return None  # kamera windy / proxy / tidak ada stream stabil -> lewati
         cam_id = re.search(r"-(\d+)$", link).group(1)
         m = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S)
         if m:
@@ -220,29 +242,33 @@ def _scrape_one_opencctv(link):
             slug = link.rsplit("/", 1)[-1]
             name = re.sub(r"-\d+$", "", slug).replace("-", " ").title()
         if re.match(r"^[\d+\s]+[AB]?$", name):
-            name = "Palindra " + name
-        return {"key": f"oc-{cam_id}", "name": name, "group": "Tol Palindra",
+            name = prefix + name
+        return {"key": f"oc-{cam_id}", "name": name, "group": group,
                 "url": url, "extra": []}
     except Exception:
         return None
 
 
 def scrape_opencctv(limit=None, workers=DEFAULT_WORKERS):
-    links = []
-    for region in OPENCCTV_REGIONS:
-        links.extend(_opencctv_camera_links(region))
-    links = sorted(set(links))
-    if not links:
+    jobs, seen = [], set()
+    for region_url, group, prefix in OPENCCTV_REGIONS:
+        for link in _opencctv_camera_links(region_url):
+            if link not in seen:
+                seen.add(link)
+                jobs.append((link, group, prefix))
+    if not jobs:
         raise RuntimeError("tidak ada link kamera opencctv (situs down / struktur berubah)")
     if limit:
-        links = links[:limit]
+        jobs = jobs[:limit]
     out = []
     with cf.ThreadPoolExecutor(max_workers=workers) as ex:
-        for res in ex.map(_scrape_one_opencctv, links):
+        futs = [ex.submit(_scrape_one_opencctv, l, g, p) for l, g, p in jobs]
+        for fut in cf.as_completed(futs):
+            res = fut.result()
             if res:
                 out.append(res)
     if not out:
-        raise RuntimeError("semua halaman kamera opencctv gagal di-scrape")
+        raise RuntimeError("tidak ada stream stabil dari opencctv (semua windy/proxy/gagal)")
     return out
 
 
@@ -313,7 +339,6 @@ def merge_catalog(entries, catalog):
         seen_urls.add(item["url"])
         e = by_key.get(key)
         if e is not None:
-            # sudah terdaftar dari run sebelumnya -> sync URL & grup
             if e["url"] != item["url"]:
                 report.append((e["name"], "UPDATED", f"URL diganti ke {item['url']}"))
                 e["url"] = item["url"]
@@ -322,7 +347,6 @@ def merge_catalog(entries, catalog):
             continue
         e = by_url.pop(item["url"], None)
         if e is not None:
-            # link lama dengan URL yang sama persis -> adopsi (nama dipertahankan)
             by_name.pop(normalize_name(e["name"]), None)
             e["key"] = key
             e["attrs"]["tvg-id"] = key
@@ -334,7 +358,6 @@ def merge_catalog(entries, catalog):
             continue
         e = by_name.pop(normalize_name(item["name"]), None)
         if e is not None:
-            # nama cocok (mis. link stream.palembang.go.id/camN) -> migrasi ke URL resmi
             by_url.pop(e["url"], None)
             old = e["url"]
             e["key"] = key
@@ -367,7 +390,7 @@ def dedup_urls(entries):
 # ---------------------------- UTAMA ----------------------------
 
 def main():
-    ap = argparse.ArgumentParser(description="Cek/update/hapus stream CCTV Palembang")
+    ap = argparse.ArgumentParser(description="Cek/update/hapus stream CCTV Palembang & Sumatera")
     ap.add_argument("--playlist", default="streams.m3u8")
     ap.add_argument("--state", default="scripts/state.json")
     ap.add_argument("--max-fails", type=int, default=DEFAULT_MAX_FAILS)
@@ -406,7 +429,7 @@ def main():
             for it in items:
                 catalog[it["key"]] = it
             source_ok["opencctv"] = True
-            print(f"[+] Sumber opencctv.org: {len(items)} kamera")
+            print(f"[+] Sumber opencctv.org (stream stabil): {len(items)} kamera")
         except Exception as e:
             print(f"[!] Gagal scrape opencctv.org: {e} -> entri lama dipertahankan")
 
