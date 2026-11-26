@@ -1,46 +1,46 @@
-# UPTIME & Kualitas — 27 Nov 2026 05:42 WIB
+# UPTIME & Kualitas — 27 Nov 2026 06:12 WIB
 
 ## 🏆 Paling stabil
 | Kamera | Uptime | Riwayat |
 |---|---|---|
-| CCTV Bank Sumsel Atmo | 100% | ▰▰▰▰▰▰ |
-| CCTV Benteng Kuto Besak | 100% | ▰▰▰▰▰▰ |
-| CCTV JL VETERAN 1 | 100% | ▰▰▰▰▰▰ |
-| CCTV Simpang Angkatan 45 | 100% | ▰▰▰▰▰▰ |
-| CCTV SP BOM BARU | 100% | ▰▰▰▰▰▰ |
-| CCTV SP IP | 100% | ▰▰▰▰▰▰ |
-| CCTV SP Samsat | 100% | ▰▰▰▰▰▰ |
-| CCTV Darma Agung | 100% | ▰▰▰▰▰▰ |
-| CCTV Lapangan Parkir Pasar 16 | 100% | ▰▰▰▰▰▰ |
-| CCTV TAMAN SISWA | 100% | ▰▰▰▰▰▰ |
+| CCTV Bank Sumsel Atmo | 100% | ▰▰▰▰▰▰▰ |
+| CCTV Benteng Kuto Besak | 100% | ▰▰▰▰▰▰▰ |
+| CCTV JL VETERAN 1 | 100% | ▰▰▰▰▰▰▰ |
+| CCTV Simpang Angkatan 45 | 100% | ▰▰▰▰▰▰▰ |
+| CCTV SP BOM BARU | 100% | ▰▰▰▰▰▰▰ |
+| CCTV SP IP | 100% | ▰▰▰▰▰▰▰ |
+| CCTV Darma Agung | 100% | ▰▰▰▰▰▰▰ |
+| CCTV Lapangan Parkir Pasar 16 | 100% | ▰▰▰▰▰▰▰ |
+| CCTV TAMAN SISWA | 100% | ▰▰▰▰▰▰▰ |
+| CCTV Plaza 7 Ulu | 100% | ▰▰▰▰▰▰▰ |
 
 ## ⚠️ Paling sering mati
 | Kamera | Uptime | Riwayat |
 |---|---|---|
-| CCTV KM 12 | 33% | ▱▰▱▰▱▱ |
-| CCTV JL VETERAN | 33% | ▱▱▱▰▱▰ |
-| CCTV Lampu Merah Kol Atmo | 50% | ▱▰▰▱▱▰ |
-| CCTV SP BANDARA | 67% | ▱▰▰▰▱▰ |
-| CCTV Pasar 16 | 67% | ▰▱▰▰▰▱ |
-| CCTV Simpang Macan Lindungan | 67% | ▰▰▱▰▱▰ |
-| Palindra 03+600 A | 83% | ▰▰▰▰▰▱ |
-| CCTV SP Parameswara | 83% | ▰▰▰▱▰▰ |
-| CCTV SP Charitas | 83% | ▰▰▰▱▰▰ |
-| CCTV Masjid Agung | 83% | ▰▰▰▰▱▰ |
+| CCTV KM 12 | 43% | ▱▰▱▰▱▱▰ |
+| CCTV JL VETERAN | 43% | ▱▱▱▰▱▰▰ |
+| CCTV Lampu Merah Kol Atmo | 57% | ▱▰▰▱▱▰▰ |
+| CCTV SP Parameswara | 71% | ▰▰▰▱▰▰▱ |
+| CCTV SP BANDARA | 71% | ▱▰▰▰▱▰▰ |
+| CCTV Pasar 16 | 71% | ▰▱▰▰▰▱▰ |
+| CCTV Masjid Agung | 71% | ▰▰▰▰▱▰▱ |
+| CCTV Simpang Polda | 71% | ▰▰▰▰▱▰▱ |
+| CCTV Simpang Macan Lindungan | 71% | ▰▰▱▰▱▰▰ |
+| Palindra 03+600 A | 86% | ▰▰▰▰▰▱▰ |
 
 ## 🔁 Flapping (hidup-mati terus)
 - (tidak ada)
 
 ## 📺 Kualitas
-- Total bitrate ≈ **36624 kbps**
+- Total bitrate ≈ **37642 kbps**
 | Resolusi | Jumlah |
 |---|---|
-| ? | 18 |
+| ? | 19 |
 | 704x576 | 11 |
-| 1920x1080 | 10 |
+| 1920x1080 | 9 |
 | 1280x720 | 4 |
 
 ## 🕐 Jam rawan offline (WIB)
 | Jam | Offline |
 |---|---|
-| 07:00 | 4% |
+| 07:00 | 3% |
