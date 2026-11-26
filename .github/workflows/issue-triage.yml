@@ -1,0 +1,27 @@
+name: Issue Triage
+on:
+  issues: {types: [opened]}
+  schedule: [{cron: "0 23 * * 1"}]
+permissions: {issues: write}
+jobs:
+  label:
+    if: github.event_name == 'issues'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const t=context.payload.issue.title;
+            const lab=t.startsWith('[kamera-baru]')?'kamera-baru':t.startsWith('[kamera-mati]')?'kamera-mati':null;
+            if(lab) await github.rest.issues.addLabels({owner:context.repo.owner,repo:context.repo.repo,issue_number:context.issue.number,labels:[lab]});
+  stale:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 30
+          days-before-close: 7
+          stale-issue-label: stale
+          exempt-issue-labels: pinned,kamera-baru
+          stale-issue-message: "Issue ini tidak aktif 30 hari; akan ditutup 7 hari lagi jika tidak ada respons."
