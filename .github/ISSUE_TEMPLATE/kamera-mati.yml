@@ -1,0 +1,26 @@
+name: Lapor kamera mati
+description: Laporkan kamera yang tidak bisa diputar
+title: "[kamera-mati] Nama kamera"
+labels: ["kamera-mati"]
+body:
+  - type: input
+    id: nama
+    attributes:
+      label: Nama kamera
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL yang bermasalah (jika tahu)
+  - type: textarea
+    id: gejala
+    attributes:
+      label: Apa yang terjadi?
+      placeholder: hitam / error / buffering terus / 404 ...
+    validations:
+      required: true
+  - type: input
+    id: pengganti
+    attributes:
+      label: URL pengganti (jika punya)
