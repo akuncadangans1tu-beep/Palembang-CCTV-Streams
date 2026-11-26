@@ -1,0 +1,32 @@
+name: Update Thumbnails
+
+on:
+  schedule:
+    - cron: "0 21 * * 0"   # Minggu 04:00 WIB
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  thumbs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate thumbnail (ffmpeg)
+        run: python scripts/update_streams.py --thumbs
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add thumbs/
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan thumbnail."
+          else
+            git commit -m "chore: refresh thumbnails"
+            git push
+          fi
