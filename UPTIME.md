@@ -1,38 +1,38 @@
-# UPTIME & Kualitas — 27 Nov 2026 05:25 WIB
+# UPTIME & Kualitas — 27 Nov 2026 05:42 WIB
 
 ## 🏆 Paling stabil
 | Kamera | Uptime | Riwayat |
 |---|---|---|
-| CCTV Bank Sumsel Atmo | 100% | ▰▰▰▰▰ |
-| CCTV Benteng Kuto Besak | 100% | ▰▰▰▰▰ |
-| CCTV JL VETERAN 1 | 100% | ▰▰▰▰▰ |
-| CCTV Simpang Angkatan 45 | 100% | ▰▰▰▰▰ |
-| CCTV SP BOM BARU | 100% | ▰▰▰▰▰ |
-| CCTV SP IP | 100% | ▰▰▰▰▰ |
-| CCTV SP Samsat | 100% | ▰▰▰▰▰ |
-| CCTV Darma Agung | 100% | ▰▰▰▰▰ |
-| CCTV Lapangan Parkir Pasar 16 | 100% | ▰▰▰▰▰ |
-| CCTV TAMAN SISWA | 100% | ▰▰▰▰▰ |
+| CCTV Bank Sumsel Atmo | 100% | ▰▰▰▰▰▰ |
+| CCTV Benteng Kuto Besak | 100% | ▰▰▰▰▰▰ |
+| CCTV JL VETERAN 1 | 100% | ▰▰▰▰▰▰ |
+| CCTV Simpang Angkatan 45 | 100% | ▰▰▰▰▰▰ |
+| CCTV SP BOM BARU | 100% | ▰▰▰▰▰▰ |
+| CCTV SP IP | 100% | ▰▰▰▰▰▰ |
+| CCTV SP Samsat | 100% | ▰▰▰▰▰▰ |
+| CCTV Darma Agung | 100% | ▰▰▰▰▰▰ |
+| CCTV Lapangan Parkir Pasar 16 | 100% | ▰▰▰▰▰▰ |
+| CCTV TAMAN SISWA | 100% | ▰▰▰▰▰▰ |
 
 ## ⚠️ Paling sering mati
 | Kamera | Uptime | Riwayat |
 |---|---|---|
-| CCTV JL VETERAN | 20% | ▱▱▱▰▱ |
-| CCTV KM 12 | 40% | ▱▰▱▰▱ |
-| CCTV Lampu Merah Kol Atmo | 40% | ▱▰▰▱▱ |
-| CCTV SP BANDARA | 60% | ▱▰▰▰▱ |
-| CCTV Simpang Macan Lindungan | 60% | ▰▰▱▰▱ |
-| CCTV SP Parameswara | 80% | ▰▰▰▱▰ |
-| CCTV Pasar 16 | 80% | ▰▱▰▰▰ |
-| CCTV SP Charitas | 80% | ▰▰▰▱▰ |
-| CCTV Masjid Agung | 80% | ▰▰▰▰▱ |
-| CCTV SP Soekarno Hatta | 80% | ▰▰▰▰▱ |
+| CCTV KM 12 | 33% | ▱▰▱▰▱▱ |
+| CCTV JL VETERAN | 33% | ▱▱▱▰▱▰ |
+| CCTV Lampu Merah Kol Atmo | 50% | ▱▰▰▱▱▰ |
+| CCTV SP BANDARA | 67% | ▱▰▰▰▱▰ |
+| CCTV Pasar 16 | 67% | ▰▱▰▰▰▱ |
+| CCTV Simpang Macan Lindungan | 67% | ▰▰▱▰▱▰ |
+| Palindra 03+600 A | 83% | ▰▰▰▰▰▱ |
+| CCTV SP Parameswara | 83% | ▰▰▰▱▰▰ |
+| CCTV SP Charitas | 83% | ▰▰▰▱▰▰ |
+| CCTV Masjid Agung | 83% | ▰▰▰▰▱▰ |
 
 ## 🔁 Flapping (hidup-mati terus)
 - (tidak ada)
 
 ## 📺 Kualitas
-- Total bitrate ≈ **42678 kbps**
+- Total bitrate ≈ **36624 kbps**
 | Resolusi | Jumlah |
 |---|---|
 | ? | 18 |
@@ -43,4 +43,4 @@
 ## 🕐 Jam rawan offline (WIB)
 | Jam | Offline |
 |---|---|
-| 07:00 | 5% |
+| 07:00 | 4% |
