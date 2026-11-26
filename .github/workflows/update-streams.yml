@@ -1,6 +1,6 @@
 name: Update CCTV Streams
 on:
-  schedule: [{cron: "0 20,8,14 * * *"}]   # 03:00,15:00,21:00 WIB
+  schedule: [{cron: "0 20,8,14 * * *"}]
   workflow_dispatch:
 permissions: {contents: write, issues: write}
 concurrency: {group: update, cancel-in-progress: false}
@@ -16,7 +16,7 @@ jobs:
       - run: pip install pillow
       - run: python scripts/update_streams.py --playlist streams.m3u8
       - run: python scripts/make_visuals.py --postcard
-      - name: Meta repo (About + topics) — opsional
+      - name: Meta repo (opsional)
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.REPO_META_TOKEN || github.token }}
@@ -30,13 +30,13 @@ jobs:
                 names: ["cctv","palembang","iptv","m3u8","hls","open-data","indonesia","sumatera"] });
               core.info('Meta repo diperbarui.');
             } catch (e) {
-              core.warning('Meta repo dilewati: GITHUB_TOKEN default tidak punya izin administration. Tambahkan secret REPO_META_TOKEN (PAT) untuk mengaktifkan. ' + e.message);
+              core.warning('Meta repo dilewati: ' + e.message);
             }
       - name: Guard ukuran repo
         run: |
           MB=$(du -sm thumbs data 2>/dev/null | awk '{s+=$1} END {print s+0}')
           echo "thumbs+data = ${MB}MB"
-          if [ "$MB" -gt 60 ]; then echo "::warning::thumbs/data ${MB}MB > 60MB, pertimbangkan rotasi"; fi
+          if [ "$MB" -gt 60 ]; then echo "::warning::${MB}MB > 60MB"; fi
       - name: Issue kamera dihapus
         uses: actions/github-script@v7
         with:
@@ -46,8 +46,15 @@ jobs:
             const open=await github.rest.issues.listForRepo({owner:context.repo.owner,repo:context.repo.repo,state:'open',per_page:100});
             for(const r of rm){const t=`[kamera-mati] ${r.name}`; if(open.data.some(i=>i.title===t))continue;
               await github.rest.issues.create({owner:context.repo.owner,repo:context.repo.repo,title:t,body:`Kamera **${r.name}** dihapus otomatis.\nAlasan: ${r.reason}`});}
-      - name: Commit
+      - name: Commit & push (dengan pull --rebase)
         run: |
-          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git diff --cached --quiet || { git commit -m "chore: auto-update $(date -u '+%F %H:%M')"; git push; }
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan."
+          else
+            git pull --rebase origin main --no-edit || git rebase --abort
+            git commit -m "chore: auto-update $(date -u '+%F %H:%M')"
+            git push
+          fi
