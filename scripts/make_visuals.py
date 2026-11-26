@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Visual statis: --map --chart --mosaic --banner --postcard; tanpa flag = map+chart+mosaic+banner."""
+"""Visual statis: --map --chart --mosaic --banner --postcard; tanpa flag = map+chart+mosaic+banner.
+matplotlib di-import lazy (hanya map/chart), jadi --postcard/--mosaic/--banner cukup Pillow."""
 import argparse, json, csv, random
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
-import matplotlib; matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 from PIL import Image, ImageDraw, ImageFont
 
 A = Path("assets"); A.mkdir(exist_ok=True)
@@ -14,7 +13,14 @@ def font(sz):
     try: return ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", sz)
     except Exception: return ImageFont.load_default()
 
+def _plt():
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    return plt
+
 def pmap():
+    plt = _plt()
     pts = [(s["lng"], s["lat"], s["ok"]) for s in S["streams"] if s.get("lat") and s.get("lng")]
     if not pts: return
     fig, ax = plt.subplots(figsize=(8, 8), dpi=110); fig.patch.set_facecolor("#0b0f14"); ax.set_facecolor("#0b0f14")
@@ -24,6 +30,7 @@ def pmap():
     fig.savefig(A / "map.png", bbox_inches="tight"); plt.close(fig)
 
 def chart():
+    plt = _plt()
     p = Path("data/uptime.csv")
     if not p.exists(): return
     day = {}
