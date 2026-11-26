@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Visual statis: --map --chart --mosaic --banner --postcard; tanpa flag = map+chart+mosaic+banner.
-matplotlib di-import lazy (hanya map/chart), jadi --postcard/--mosaic/--banner cukup Pillow."""
+matplotlib lazy (hanya map/chart); postcard/mosaic/banner cukup Pillow. chart tahan schema campur."""
 import argparse, json, csv, random
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
@@ -35,8 +35,16 @@ def chart():
     if not p.exists(): return
     day = {}
     with p.open(encoding="utf-8") as f:
-        for r in csv.DictReader(f):
-            d = day.setdefault(r["date_utc"], [0, 0]); d[1] += 1; d[0] += int(r["online"])
+        rd = csv.reader(f); next(rd, None)
+        for r in rd:
+            # schema baru 8 kolom (online idx 5), lama 7 kolom (online idx 4)
+            if len(r) == 8: d, o = r[0], r[5]
+            elif len(r) == 7: d, o = r[0], r[4]
+            else: continue
+            try: o = int(o)
+            except ValueError: continue
+            if o not in (0, 1): continue
+            a = day.setdefault(d, [0, 0]); a[1] += 1; a[0] += o
     ks = sorted(day)[-30:]
     if not ks: return
     fig, ax = plt.subplots(figsize=(9, 3.5), dpi=110); fig.patch.set_facecolor("#0b0f14"); ax.set_facecolor("#0b0f14")
