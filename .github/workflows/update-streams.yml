@@ -1,56 +1,46 @@
 name: Update CCTV Streams
-
 on:
-  schedule:
-    - cron: "0 20 * * *"   # 03:00 WIB
+  schedule: [{cron: "0 20,8,14 * * *"}]   # 03:00,15:00,21:00 WIB
   workflow_dispatch:
-
-permissions:
-  contents: write
-  issues: write
-
-concurrency:
-  group: update-streams
-  cancel-in-progress: false
-
+permissions: {contents: write, issues: write}
+concurrency: {group: update, cancel-in-progress: false}
 jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    env:
-      PYTHONUNBUFFERED: "1"
+    env: {PYTHONUNBUFFERED: "1"}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Cek, update & hapus stream
-        run: python scripts/update_streams.py --playlist streams.m3u8
-      - name: Buka issue untuk kamera yang dihapus
+        with: {python-version: "3.12"}
+      - run: pip install pillow
+      - run: python scripts/update_streams.py --playlist streams.m3u8
+      - run: python scripts/make_visuals.py --postcard
+      - name: Meta repo (About + topics)
         uses: actions/github-script@v7
         with:
           script: |
-            const fs = require('fs');
-            if (!fs.existsSync('removed.json')) return;
-            const removed = JSON.parse(fs.readFileSync('removed.json', 'utf8'));
-            if (!removed.length) return;
-            const open = await github.rest.issues.listForRepo({ owner: context.repo.owner, repo: context.repo.repo, state: 'open', per_page: 100 });
-            for (const r of removed) {
-              const title = `[kamera-mati] ${r.name}`;
-              if (open.data.some(i => i.title === title)) continue;
-              await github.rest.issues.create({
-                owner: context.repo.owner, repo: context.repo.repo, title,
-                body: `Kamera **${r.name}** dihapus otomatis oleh checker.\n\nAlasan: ${r.reason}\n\nJika ini keliru atau kamu punya URL pengganti yang stabil, balas issue ini atau kirim PR.`
-              });
-            }
-      - name: Commit & push
+            const s = require('fs').existsSync('status.json') ? JSON.parse(require('fs').readFileSync('status.json','utf8')).summary : {};
+            await github.rest.repos.update({ owner: context.repo.owner, repo: context.repo.repo,
+              description: `📹 ${s.live||0}/${s.total||0} CCTV Palembang live - HLS auto-update harian (unofficial)` });
+            await github.rest.repos.replaceAllTopics({ owner: context.repo.owner, repo: context.repo.repo,
+              names: ["cctv","palembang","iptv","m3u8","hls","open-data","indonesia","sumatera"] });
+      - name: Guard ukuran repo
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add streams.m3u8 streams.m3u palembang-kota.m3u8 tol-sumatera.m3u8 scripts/state.json status.json history.json REPORT.md README.md CHANGELOG.md removed.json data/
-          if git diff --cached --quiet; then
-            echo "Tidak ada perubahan."
-          else
-            git commit -m "chore: auto-update streams $(date -u '+%Y-%m-%d %H:%M UTC')"
-            git push
-          fi
+          MB=$(du -sm thumbs data 2>/dev/null | awk '{s+=$1} END {print s+0}')
+          echo "thumbs+data = ${MB}MB"
+          if [ "$MB" -gt 60 ]; then echo "::warning::thumbs/data ${MB}MB > 60MB, pertimbangkan rotasi"; fi
+      - name: Issue kamera dihapus
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs=require('fs'); if(!fs.existsSync('removed.json'))return;
+            const rm=JSON.parse(fs.readFileSync('removed.json','utf8')); if(!rm.length)return;
+            const open=await github.rest.issues.listForRepo({owner:context.repo.owner,repo:context.repo.repo,state:'open',per_page:100});
+            for(const r of rm){const t=`[kamera-mati] ${r.name}`; if(open.data.some(i=>i.title===t))continue;
+              await github.rest.issues.create({owner:context.repo.owner,repo:context.repo.repo,title:t,body:`Kamera **${r.name}** dihapus otomatis.\nAlasan: ${r.reason}`});}
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || { git commit -m "chore: auto-update $(date -u '+%F %H:%M')"; git push; }
