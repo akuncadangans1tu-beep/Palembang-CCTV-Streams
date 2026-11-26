@@ -16,15 +16,22 @@ jobs:
       - run: pip install pillow
       - run: python scripts/update_streams.py --playlist streams.m3u8
       - run: python scripts/make_visuals.py --postcard
-      - name: Meta repo (About + topics)
+      - name: Meta repo (About + topics) — opsional
         uses: actions/github-script@v7
         with:
+          github-token: ${{ secrets.REPO_META_TOKEN || github.token }}
           script: |
-            const s = require('fs').existsSync('status.json') ? JSON.parse(require('fs').readFileSync('status.json','utf8')).summary : {};
-            await github.rest.repos.update({ owner: context.repo.owner, repo: context.repo.repo,
-              description: `📹 ${s.live||0}/${s.total||0} CCTV Palembang live - HLS auto-update harian (unofficial)` });
-            await github.rest.repos.replaceAllTopics({ owner: context.repo.owner, repo: context.repo.repo,
-              names: ["cctv","palembang","iptv","m3u8","hls","open-data","indonesia","sumatera"] });
+            const fs = require('fs');
+            const s = fs.existsSync('status.json') ? JSON.parse(fs.readFileSync('status.json','utf8')).summary : {};
+            try {
+              await github.rest.repos.update({ owner: context.repo.owner, repo: context.repo.repo,
+                description: `📹 ${s.live||0}/${s.total||0} CCTV Palembang live - HLS auto-update harian (unofficial)` });
+              await github.rest.repos.replaceAllTopics({ owner: context.repo.owner, repo: context.repo.repo,
+                names: ["cctv","palembang","iptv","m3u8","hls","open-data","indonesia","sumatera"] });
+              core.info('Meta repo diperbarui.');
+            } catch (e) {
+              core.warning('Meta repo dilewati: GITHUB_TOKEN default tidak punya izin administration. Tambahkan secret REPO_META_TOKEN (PAT) untuk mengaktifkan. ' + e.message);
+            }
       - name: Guard ukuran repo
         run: |
           MB=$(du -sm thumbs data 2>/dev/null | awk '{s+=$1} END {print s+0}')
