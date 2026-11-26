@@ -6,7 +6,17 @@
 ```
 
 <!-- LINKS:START -->
-_Badge, tautan, mirror CDN, QR dibuat otomatis._
+[![Update](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/actions/workflows/update-streams.yml/badge.svg)](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/actions/workflows/update-streams.yml)
+[![Kamera](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fakuncadangans1tu-beep%2FPalembang-CCTV-Streams%2Fmain%2Fstatus.json&query=%24.summary.total&label=kamera&color=blue)](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/blob/main/status.json)
+[![Live](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fakuncadangans1tu-beep%2FPalembang-CCTV-Streams%2Fmain%2Fstatus.json&query=%24.summary.live&label=live&color=brightgreen)](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/blob/main/status.json)
+
+```text
+https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/streams.m3u8
+```
+
+Mirror CDN (lebih cepat): `https://cdn.jsdelivr.net/gh/akuncadangans1tu-beep/Palembang-CCTV-Streams@main/streams.m3u8`
+
+![QR](https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fraw.githubusercontent.com%2Fakuncadangans1tu-beep%2FPalembang-CCTV-Streams%2Fmain%2Fstreams.m3u8)
 <!-- LINKS:END -->
 
 Playlist CCTV publik **Kota Palembang & koridor tol Sumatera** (HLS stabil), dirawat otomatis 3× sehari. Ala IPTV-Org.
@@ -15,7 +25,53 @@ Playlist CCTV publik **Kota Palembang & koridor tol Sumatera** (HLS stabil), dir
 
 ## 📊 Status Kamera
 <!-- STATUS:START -->
-_Otomatis._
+> 🕒 **27 Nov 2026 05:25 WIB** · **43** kamera · 🟢 33 · 🔴 10
+
+| Kamera | Grup | Status | Uptime | Riwayat | Kualitas |
+|---|---|:--:|:--:|---|:--:|
+| CCTV Bank Sumsel Atmo | Alang-Alang Lebar | 🟢 | 100% | ▰▰▰▰▰ | 1920x1080 |
+| CCTV Benteng Kuto Besak | Alang-Alang Lebar | 🟢 | 100% | ▰▰▰▰▰ | 704x576 |
+| CCTV Cinde | Alang-Alang Lebar | 🔴 | 80% | ▰▰▰▰▱ | 1920x1080 |
+| CCTV JL VETERAN 1 | Alang-Alang Lebar | 🟢 | 100% | ▰▰▰▰▰ | 1280x720 |
+| CCTV JL VETERAN 2 | Alang-Alang Lebar | 🔴 | 80% | ▰▰▰▰▱ | 1280x720 |
+| CCTV Lampu Merah Kol Atmo | Alang-Alang Lebar | 🔴 | 40% | ▱▰▰▱▱ | 704x576 |
+| CCTV Simpang Angkatan 45 | Alang-Alang Lebar | 🟢 | 100% | ▰▰▰▰▰ | 704x576 |
+| CCTV Simpang Macan Lindungan | Alang-Alang Lebar | 🔴 | 60% | ▰▰▱▰▱ | 704x576 |
+| CCTV Simpang Polda | Alang-Alang Lebar | 🔴 | 80% | ▰▰▰▰▱ | 704x576 |
+| CCTV SP BOM BARU | Alang-Alang Lebar | 🟢 | 100% | ▰▰▰▰▰ | 1280x720 |
+| CCTV SP Soekarno Hatta | Alang-Alang Lebar | 🔴 | 80% | ▰▰▰▰▱ | 1920x1080 |
+| CCTV JL VETERAN | Bukitkecil | 🔴 | 20% | ▱▱▱▰▱ | 1920x1080 |
+| CCTV Masjid Agung | Bukitkecil | 🔴 | 80% | ▰▰▰▰▱ | 1920x1080 |
+| CCTV SP IP | Bukitkecil | 🟢 | 100% | ▰▰▰▰▰ | 704x576 |
+| CCTV SP Samsat | Bukitkecil | 🟢 | 100% | ▰▰▰▰▰ | 1920x1080 |
+| CCTV KM 12 | Ilir Timur Dua | 🔴 | 40% | ▱▰▱▰▱ | 704x576 |
+| CCTV Darma Agung | Ilir Timur Tiga | 🟢 | 100% | ▰▰▰▰▰ | 704x576 |
+| CCTV Lapangan Parkir Pasar 16 | Ilir Timur Tiga | 🟢 | 100% | ▰▰▰▰▰ | 704x576 |
+| CCTV SP Charitas | Ilir Timur Tiga | 🟢 | 80% | ▰▰▰▱▰ | 1920x1080 |
+| CCTV TAMAN SISWA | Ilir Timur Tiga | 🟢 | 100% | ▰▰▰▰▰ | 1280x720 |
+| CCTV Pasar 16 | Jakabaring | 🟢 | 80% | ▰▱▰▰▰ | 704x576 |
+| CCTV Plaza 7 Ulu | Jakabaring | 🟢 | 100% | ▰▰▰▰▰ | 704x576 |
+| CCTV SP BANDARA | Jakabaring | 🔴 | 60% | ▱▰▰▰▱ | 1920x1080 |
+| CCTV SP DPRD PROV | Jakabaring | 🟢 | 100% | ▰▰▰▰▰ | 1920x1080 |
+| CCTV SP Parameswara | Jakabaring | 🟢 | 80% | ▰▰▰▱▰ | 1920x1080 |
+| Lampung 180+000 A | Tol Lampung | 🟢 | 100% | ▰▰▰▰▰ | — |
+| Lampung 180+000 B | Tol Lampung | 🟢 | 100% | ▰▰▰▰▰ | — |
+| Lampung 181+000 A | Tol Lampung | 🟢 | 100% | ▰▰▰▰▰ | — |
+| Lampung 181+000 B | Tol Lampung | 🟢 | 100% | ▰▰▰▰▰ | — |
+| Palindra 01+600 A | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| Palindra 01+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| Palindra 02+600 A | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| Palindra 02+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| Palindra 03+600 A | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| Palindra 03+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| Palindra 04+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| Palindra 05+600 A | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| Palindra 05+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| PALINDRA Gate Pemulutan | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| PALINDRA GT Indralaya | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| PALINDRA GT KTM RAMBUTAN | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| PALINDRA IC KTM | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
+| PALINDRA IC Pemulutan | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰ | — |
 <!-- STATUS:END -->
 
 ## 🖼️ Visual

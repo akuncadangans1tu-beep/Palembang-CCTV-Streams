@@ -1,18 +1,26 @@
-# Laporan — 2026-11-26T12:11:13Z
+# Laporan — 2026-11-26T22:25:45Z
 
-- Total **43** · 🟢 **40** · 🔴 **3** · dihapus **5**
+- **43** · 🟢33 · 🔴10 · hapus 5
 
-| Nama | Status | Keterangan |
+| Nama | Status | Ket |
 |---|---|---|
-| CCTV Kebun Sayur | 🆕 NEW | kamera baru dari sumber |
-| CCTV Kambang Iwak | 🆕 NEW | kamera baru dari sumber |
-| CCTV DEPAN DISDUKCAPIL | 🆕 NEW | kamera baru dari sumber |
-| CCTV Punti Kayu | 🆕 NEW | kamera baru dari sumber |
-| CCTV Lampu Merah Kol Atmo | ⚠️ FAIL | segmen HTTP 404 (gagal 1/3) |
-| CCTV SP Charitas | ⚠️ FAIL | segmen HTTP 404 (gagal 1/3) |
-| CCTV SP Parameswara | ⚠️ FAIL | HTTP 404 (gagal 1/3) |
-| CCTV Jl Tembesu | ❌ REMOVED | gagal 3x beruntun (HTTP 404) |
-| CCTV Kebun Sayur | ❌ REMOVED | baru tapi mati, dilewati |
-| CCTV Kambang Iwak | ❌ REMOVED | baru tapi mati, dilewati |
-| CCTV DEPAN DISDUKCAPIL | ❌ REMOVED | baru tapi mati, dilewati |
-| CCTV Punti Kayu | ❌ REMOVED | baru tapi mati, dilewati |
+| CCTV Jl Tembesu | 🆕 NEW | sumber |
+| CCTV Kebun Sayur | 🆕 NEW | sumber |
+| CCTV Kambang Iwak | 🆕 NEW | sumber |
+| CCTV DEPAN DISDUKCAPIL | 🆕 NEW | sumber |
+| CCTV Punti Kayu | 🆕 NEW | sumber |
+| CCTV Cinde | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV JL VETERAN 2 | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV Lampu Merah Kol Atmo | ⚠️ FAIL | segmen 404 (2/3) |
+| CCTV Simpang Macan Lindungan | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV Simpang Polda | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV SP Soekarno Hatta | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV JL VETERAN | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV Masjid Agung | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV KM 12 | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV SP BANDARA | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV Jl Tembesu | ❌ REMOVED | baru tapi mati |
+| CCTV Kebun Sayur | ❌ REMOVED | baru tapi mati |
+| CCTV Kambang Iwak | ❌ REMOVED | baru tapi mati |
+| CCTV DEPAN DISDUKCAPIL | ❌ REMOVED | baru tapi mati |
+| CCTV Punti Kayu | ❌ REMOVED | baru tapi mati |

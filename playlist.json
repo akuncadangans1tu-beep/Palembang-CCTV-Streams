@@ -1,0 +1,305 @@
+{
+  "channels": [
+    {
+      "name": "CCTV Bank Sumsel Atmo",
+      "group": "Alang-Alang Lebar",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a8866f32840d934ee905309/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-BSA-39",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-BSA-39.jpg"
+    },
+    {
+      "name": "CCTV Benteng Kuto Besak",
+      "group": "Alang-Alang Lebar",
+      "url": "https://cctv.palembang.go.id/api/cctv/68f09d50b4545109d5349b12/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-BKB-02",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-BKB-02.jpg"
+    },
+    {
+      "name": "CCTV Cinde",
+      "group": "Alang-Alang Lebar",
+      "url": "https://cctv.palembang.go.id/api/cctv/68f9f32d57309f82669542ca/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-CINDE-06",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-CINDE-06.jpg"
+    },
+    {
+      "name": "CCTV JL VETERAN 1",
+      "group": "Alang-Alang Lebar",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a95f17c392f3ee3ef741052/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-VTR-41",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-VTR-41.jpg"
+    },
+    {
+      "name": "CCTV JL VETERAN 2",
+      "group": "Alang-Alang Lebar",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a95febc392f3ee3ef741775/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-VTR-50",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-VTR-50.jpg"
+    },
+    {
+      "name": "CCTV Lampu Merah Kol Atmo",
+      "group": "Alang-Alang Lebar",
+      "url": "https://cctv.palembang.go.id/api/cctv/69fed770f59e8fd90f67227e/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-MANDIRI-38",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-MANDIRI-38.jpg"
+    },
+    {
+      "name": "CCTV Simpang Angkatan 45",
+      "group": "Alang-Alang Lebar",
+      "url": "https://cctv.palembang.go.id/api/cctv/68f59d6857309f826693741a/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-SIMPANG-ANGKATAN-45-05",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-ANGKATAN-45-05.jpg"
+    },
+    {
+      "name": "CCTV Simpang Macan Lindungan",
+      "group": "Alang-Alang Lebar",
+      "url": "https://cctv.palembang.go.id/api/cctv/68f59cab57309f8266937417/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04.jpg"
+    },
+    {
+      "name": "CCTV Simpang Polda",
+      "group": "Alang-Alang Lebar",
+      "url": "https://cctv.palembang.go.id/api/cctv/68f599c557309f826693740c/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-SIMPANG-POLDA-03",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-POLDA-03.jpg"
+    },
+    {
+      "name": "CCTV SP BOM BARU",
+      "group": "Alang-Alang Lebar",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a95112a2840d934ee9802de/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-SPBB-42",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPBB-42.jpg"
+    },
+    {
+      "name": "CCTV SP Soekarno Hatta",
+      "group": "Alang-Alang Lebar",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a95f507392f3ee3ef741282/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-SPSH-48",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPSH-48.jpg"
+    },
+    {
+      "name": "CCTV JL VETERAN",
+      "group": "Bukitkecil",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a8871102840d934ee905928/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-TAMSIS-40",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-TAMSIS-40.jpg"
+    },
+    {
+      "name": "CCTV Masjid Agung",
+      "group": "Bukitkecil",
+      "url": "https://cctv.palembang.go.id/api/cctv/69258794273b6e50c40e515c/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-MASJID-AGUNG-09",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-MASJID-AGUNG-09.jpg"
+    },
+    {
+      "name": "CCTV SP IP",
+      "group": "Bukitkecil",
+      "url": "https://cctv.palembang.go.id/api/cctv/692fd900a611d6b78f1aef5e/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-SPIP-30",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPIP-30.jpg"
+    },
+    {
+      "name": "CCTV SP Samsat",
+      "group": "Bukitkecil",
+      "url": "https://cctv.palembang.go.id/api/cctv/6928176c273b6e50c41642e7/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-SPSAMSAT-21",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPSAMSAT-21.jpg"
+    },
+    {
+      "name": "CCTV KM 12",
+      "group": "Ilir Timur Dua",
+      "url": "https://cctv.palembang.go.id/api/cctv/6926bf54273b6e50c40eeca6/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-KM12-13",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-KM12-13.jpg"
+    },
+    {
+      "name": "CCTV Darma Agung",
+      "group": "Ilir Timur Tiga",
+      "url": "https://cctv.palembang.go.id/api/cctv/69281931273b6e50c416536d/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-DA-24",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DA-24.jpg"
+    },
+    {
+      "name": "CCTV Lapangan Parkir Pasar 16",
+      "group": "Ilir Timur Tiga",
+      "url": "https://cctv.palembang.go.id/api/cctv/692819c6273b6e50c4165871/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-PASAR16-25",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PASAR16-25.jpg"
+    },
+    {
+      "name": "CCTV SP Charitas",
+      "group": "Ilir Timur Tiga",
+      "url": "https://cctv.palembang.go.id/api/cctv/6925871c273b6e50c40e50e1/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-CHARITAS-08",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-CHARITAS-08.jpg"
+    },
+    {
+      "name": "CCTV TAMAN SISWA",
+      "group": "Ilir Timur Tiga",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a95fc29392f3ee3ef741647/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-TAMSIS-47",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-TAMSIS-47.jpg"
+    },
+    {
+      "name": "CCTV Pasar 16",
+      "group": "Jakabaring",
+      "url": "https://cctv.palembang.go.id/api/cctv/69bd143ccc7bccc4b2dfa011/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-P16-36",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-P16-36.jpg"
+    },
+    {
+      "name": "CCTV Plaza 7 Ulu",
+      "group": "Jakabaring",
+      "url": "https://cctv.palembang.go.id/api/cctv/69281276273b6e50c4162201/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-PLAZA7-ULU-20",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PLAZA7-ULU-20.jpg"
+    },
+    {
+      "name": "CCTV SP BANDARA",
+      "group": "Jakabaring",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a95f3ad392f3ee3ef741169/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-SPB-45",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPB-45.jpg"
+    },
+    {
+      "name": "CCTV SP DPRD PROV",
+      "group": "Jakabaring",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a958ffe392f3ee3ef73e88c/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-DPR-44",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DPR-44.jpg"
+    },
+    {
+      "name": "CCTV SP Parameswara",
+      "group": "Jakabaring",
+      "url": "https://cctv.palembang.go.id/api/cctv/6a9602a9392f3ee3ef741a0d/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-PARAM-43",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PARAM-43.jpg"
+    },
+    {
+      "name": "Lampung 180+000 A",
+      "group": "Tol Lampung",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/Sz66S9K9q8wO1676355519747.m3u8",
+      "tvg-id": "oc-105303",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105303.jpg"
+    },
+    {
+      "name": "Lampung 180+000 B",
+      "group": "Tol Lampung",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/OYvGskpG5Xgx1675840402605.m3u8",
+      "tvg-id": "oc-105304",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105304.jpg"
+    },
+    {
+      "name": "Lampung 181+000 A",
+      "group": "Tol Lampung",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/t8nGJjBmGrrn1675840443964.m3u8",
+      "tvg-id": "oc-105305",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105305.jpg"
+    },
+    {
+      "name": "Lampung 181+000 B",
+      "group": "Tol Lampung",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/OAAGJkYZD1c41675840461119.m3u8",
+      "tvg-id": "oc-105306",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105306.jpg"
+    },
+    {
+      "name": "Palindra 01+600 A",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/267565493547947969759647.m3u8",
+      "tvg-id": "oc-105274",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105274.jpg"
+    },
+    {
+      "name": "Palindra 01+600 B",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/000873119738804749935559.m3u8",
+      "tvg-id": "oc-105275",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105275.jpg"
+    },
+    {
+      "name": "Palindra 02+600 A",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/512039039195007414780648.m3u8",
+      "tvg-id": "oc-105276",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105276.jpg"
+    },
+    {
+      "name": "Palindra 02+600 B",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/098395992445733487844660.m3u8",
+      "tvg-id": "oc-105277",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105277.jpg"
+    },
+    {
+      "name": "Palindra 03+600 A",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/694712410636759959803663.m3u8",
+      "tvg-id": "oc-105278",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105278.jpg"
+    },
+    {
+      "name": "Palindra 03+600 B",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/823069182482598599051789.m3u8",
+      "tvg-id": "oc-105279",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105279.jpg"
+    },
+    {
+      "name": "Palindra 04+600 B",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/530233880268202462634796.m3u8",
+      "tvg-id": "oc-105280",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105280.jpg"
+    },
+    {
+      "name": "Palindra 05+600 A",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/156545412556986213279533.m3u8",
+      "tvg-id": "oc-105281",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105281.jpg"
+    },
+    {
+      "name": "Palindra 05+600 B",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/620290052888606951595901.m3u8",
+      "tvg-id": "oc-105282",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105282.jpg"
+    },
+    {
+      "name": "PALINDRA Gate Pemulutan",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/648176351556242758398370.m3u8",
+      "tvg-id": "oc-105283",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105283.jpg"
+    },
+    {
+      "name": "PALINDRA GT Indralaya",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/425149463316515625544601.m3u8",
+      "tvg-id": "oc-105284",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105284.jpg"
+    },
+    {
+      "name": "PALINDRA GT KTM RAMBUTAN",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/953617100779184492903430.m3u8",
+      "tvg-id": "oc-105285",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105285.jpg"
+    },
+    {
+      "name": "PALINDRA IC KTM",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/481851734189142298210171.m3u8",
+      "tvg-id": "oc-105286",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105286.jpg"
+    },
+    {
+      "name": "PALINDRA IC Pemulutan",
+      "group": "Tol Palindra",
+      "url": "https://pub.hk-opt.com/LiveApp/streams/100831563641835272155645.m3u8",
+      "tvg-id": "oc-105287",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105287.jpg"
+    }
+  ]
+}
