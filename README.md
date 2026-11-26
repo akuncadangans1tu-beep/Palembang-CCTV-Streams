@@ -25,7 +25,7 @@ Pengembangan independen, **tidak berhubungan resmi** dengan instansi pemerintah 
 Hanya HLS langsung yang **stabil** (tanpa token/sementara).
 
 ## 🚀 Fitur
-* Playlist utama + **pecahan** (kota / tol) + varian `.m3u`.
+* Satu playlist utama: `streams.m3u8` (HLS).
 * **Thumbnail otomatis** (`tvg-logo`) per kamera, refresh mingguan.
 * Grouping **per kecamatan** biar gampang browse di app IPTV.
 * **Dataset uptime harian** (`data/uptime.csv`) + **CHANGELOG** + laporan kualitas (resolusi/bitrate).
@@ -35,3 +35,25 @@ Hanya HLS langsung yang **stabil** (tanpa token/sementara).
 Salin ke VLC / PotPlayer / app IPTV:
 ```text
 https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/raw/refs/heads/main/streams.m3u8
+```
+
+### 📱 QR (scan di HP)
+![QR](https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fgithub.com%2Fakuncadangans1tu-beep%2FPalembang-CCTV-Streams%2Fraw%2Frefs%2Fheads%2Fmain%2Fstreams.m3u8)
+
+## 📊 Status Kamera
+<!-- STATUS:START -->
+_Tabel dibuat otomatis pada run pertama._
+<!-- STATUS:END -->
+
+## 📦 Data & Laporan
+* [`data/uptime.csv`](data/uptime.csv) — dataset time-series online/offline + kualitas (open data).
+* [`CHANGELOG.md`](CHANGELOG.md) — riwayat kamera masuk/keluar.
+* [`REPORT.md`](REPORT.md) — laporan run terakhir.
+* [`status.json`](status.json) — API mini (JSON) untuk developer.
+
+## 🤖 Cara Kerja Otomatis
+Tiap 03:00 WIB GitHub Actions: scrape sumber → kenali/migrasi entri lama → cek HLS (master→media→segmen) → hapus duplikat & yang mati 3 hari beruntun → tulis playlist, dataset, changelog, tabel README. Mingguan: refresh thumbnail via ffmpeg.
+
+## 🤝 Kontribusi
+Baca [CONTRIBUTING.md](CONTRIBUTING.md). Pakai template Issue untuk usul kamera baru / lapor kamera mati.
+⚠️ **Harus kamera publik di Palembang / koridor tol sekitarnya! Kamera pribadi (kantor, rumah, dll.) dilarang kecuali memang untuk publik.**
