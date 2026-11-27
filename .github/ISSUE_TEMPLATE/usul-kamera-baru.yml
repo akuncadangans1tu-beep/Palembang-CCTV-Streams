@@ -1,0 +1,75 @@
+name: "📹 Usul Kamera Baru"
+description: "Usulkan CCTV publik baru untuk ditambahkan ke playlist"
+title: "[Usul Kamera]: "
+labels: ["kamera-baru", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Terima kasih sudah berkontribusi! Hanya kamera **publik** yang akan dipertimbangkan.
+  
+  - type: input
+    id: camera-name
+    attributes:
+      label: "Nama Kamera"
+      description: "Nama resmi/location CCTV"
+      placeholder: "CCTV Jembatan Ampera - Sisi Ilir"
+    validations:
+      required: true
+  
+  - type: input
+    id: stream-url
+    attributes:
+      label: "URL Stream (.m3u8)"
+      description: "Link langsung ke file .m3u8 (bukan halaman web)"
+      placeholder: "https://example.com/stream/camera1.m3u8"
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: region
+    attributes:
+      label: "Wilayah"
+      options:
+        - Palembang (Kota)
+        - Palembang (Kecamatan)
+        - Tol Palindra
+        - Tol Lampung
+        - Lainnya (sebutkan di deskripsi)
+    validations:
+      required: true
+  
+  - type: input
+    id: source
+    attributes:
+      label: "Sumber Resmi"
+      description: "Website/portal resmi pemilik CCTV"
+      placeholder: "https://dishub.palembang.go.id/cctv"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: "Deskripsi & Catatan"
+      description: "Info tambahan (kualitas, jam operasi, dll)"
+      placeholder: |
+        - Resolusi: 1080p
+        - Aktif 24 jam
+        - Sudah dicek, stream stabil
+    validations:
+      required: true
+  
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Checklist"
+      options:
+        - label: "Saya sudah cek stream dan bekerja dengan baik"
+          required: true
+        - label: "Ini kamera publik (bukan pribadi/perusahaan tertutup)"
+          required: true
+        - label: "URL tidak mengandung token/sesi sementara"
+          required: true
+        - label: "Saya izinkan URL ini digunakan di playlist publik"
+          required: true
