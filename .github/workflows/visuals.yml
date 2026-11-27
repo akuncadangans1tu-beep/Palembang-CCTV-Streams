@@ -1,6 +1,6 @@
 name: Visuals
 on:
-  schedule: [{cron: "0 21 * * 0"}]
+  schedule: [{cron: "0 21 * * 0"}]   # Minggu 04:00 WIB
   workflow_dispatch:
 permissions: {contents: write}
 jobs:
@@ -11,7 +11,10 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install matplotlib pillow
-      - run: python scripts/make_visuals.py
+      - name: Generate visual (map, chart, mosaic, banner)
+        run: python scripts/make_visuals.py
+      - name: Generate postcard
+        run: python scripts/make_visuals.py --postcard
       - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"
@@ -20,7 +23,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Tidak ada perubahan visual."
           else
-            git commit -m "chore: refresh visuals"
+            git commit -m "chore: refresh visuals + postcard"
             git pull --rebase origin main --no-edit || git rebase --abort
             git push
           fi
