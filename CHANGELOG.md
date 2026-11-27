@@ -1,5 +1,31 @@
 # Changelog
 ## 2026-11-27
+- 🆕 **NEW**: CCTV JL VETERAN 1 — sumber
+- 🆕 **NEW**: CCTV Jl Tembesu — sumber
+- 🆕 **NEW**: CCTV JL VETERAN 2 — sumber
+- 🆕 **NEW**: CCTV SP Parameswara — sumber
+- 🆕 **NEW**: CCTV Kebun Sayur — sumber
+- 🆕 **NEW**: CCTV Kambang Iwak — sumber
+- 🆕 **NEW**: CCTV DEPAN DISDUKCAPIL — sumber
+- 🆕 **NEW**: CCTV Punti Kayu — sumber
+- ❌ **REMOVED**: CCTV Bank Sumsel Atmo — gagal 3x (HTTP 404)
+- ❌ **REMOVED**: CCTV Cinde — gagal 3x (HTTP 404)
+- ❌ **REMOVED**: CCTV SP BOM BARU — gagal 3x (HTTP 404)
+- ❌ **REMOVED**: CCTV SP Soekarno Hatta — gagal 3x (HTTP 404)
+- ❌ **REMOVED**: CCTV JL VETERAN — gagal 3x (HTTP 404)
+- ❌ **REMOVED**: CCTV SP IP — gagal 3x (HTTP 404)
+- ❌ **REMOVED**: CCTV TAMAN SISWA — gagal 3x (HTTP 404)
+- ❌ **REMOVED**: CCTV SP BANDARA — gagal 3x (HTTP 404)
+- ❌ **REMOVED**: CCTV SP DPRD PROV — gagal 3x (HTTP 404)
+- ❌ **REMOVED**: CCTV JL VETERAN 1 — baru tapi mati
+- ❌ **REMOVED**: CCTV Jl Tembesu — baru tapi mati
+- ❌ **REMOVED**: CCTV JL VETERAN 2 — baru tapi mati
+- ❌ **REMOVED**: CCTV SP Parameswara — baru tapi mati
+- ❌ **REMOVED**: CCTV Kebun Sayur — baru tapi mati
+- ❌ **REMOVED**: CCTV Kambang Iwak — baru tapi mati
+- ❌ **REMOVED**: CCTV DEPAN DISDUKCAPIL — baru tapi mati
+- ❌ **REMOVED**: CCTV Punti Kayu — baru tapi mati
+## 2026-11-27
 - 🆕 **NEW**: CCTV Jl Tembesu — sumber
 - 🆕 **NEW**: CCTV SP Parameswara — sumber
 - 🆕 **NEW**: CCTV Kebun Sayur — sumber

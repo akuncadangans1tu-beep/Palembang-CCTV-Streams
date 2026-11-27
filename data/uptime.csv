@@ -424,3 +424,34 @@ date_utc,key,name,group,online,resolution,bandwidth_kbps
 2026-11-27,10,oc-105285,PALINDRA GT KTM RAMBUTAN,Tol Palindra,1,,
 2026-11-27,10,oc-105286,PALINDRA IC KTM,Tol Palindra,1,,
 2026-11-27,10,oc-105287,PALINDRA IC Pemulutan,Tol Palindra,1,,
+2026-11-27,12,plb-CCTV-BKB-02,CCTV Benteng Kuto Besak,Alang-Alang Lebar,1,704x576,314
+2026-11-27,12,plb-CCTV-MANDIRI-38,CCTV Lampu Merah Kol Atmo,Alang-Alang Lebar,1,704x576,282
+2026-11-27,12,plb-CCTV-SIMPANG-ANGKATAN-45-05,CCTV Simpang Angkatan 45,Alang-Alang Lebar,0,704x576,307
+2026-11-27,12,plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04,CCTV Simpang Macan Lindungan,Alang-Alang Lebar,1,704x576,308
+2026-11-27,12,plb-CCTV-SIMPANG-POLDA-03,CCTV Simpang Polda,Alang-Alang Lebar,1,704x576,308
+2026-11-27,12,plb-CCTV-MASJID-AGUNG-09,CCTV Masjid Agung,Bukitkecil,0,1920x1080,5862
+2026-11-27,12,plb-CCTV-SPSAMSAT-21,CCTV SP Samsat,Bukitkecil,0,1920x1080,6321
+2026-11-27,12,plb-CCTV-KM12-13,CCTV KM 12,Ilir Timur Dua,1,704x576,300
+2026-11-27,12,plb-CCTV-DA-24,CCTV Darma Agung,Ilir Timur Tiga,0,704x576,314
+2026-11-27,12,plb-CCTV-PASAR16-25,CCTV Lapangan Parkir Pasar 16,Ilir Timur Tiga,0,704x576,312
+2026-11-27,12,plb-CCTV-CHARITAS-08,CCTV SP Charitas,Ilir Timur Tiga,1,1920x1080,5909
+2026-11-27,12,plb-CCTV-P16-36,CCTV Pasar 16,Jakabaring,1,704x576,307
+2026-11-27,12,plb-CCTV-PLAZA7-ULU-20,CCTV Plaza 7 Ulu,Jakabaring,1,704x576,272
+2026-11-27,12,oc-105303,Lampung 180+000 A,Tol Lampung,1,,
+2026-11-27,12,oc-105304,Lampung 180+000 B,Tol Lampung,1,,
+2026-11-27,12,oc-105305,Lampung 181+000 A,Tol Lampung,1,,
+2026-11-27,12,oc-105306,Lampung 181+000 B,Tol Lampung,1,,
+2026-11-27,12,oc-105274,Palindra 01+600 A,Tol Palindra,1,,
+2026-11-27,12,oc-105275,Palindra 01+600 B,Tol Palindra,1,,
+2026-11-27,12,oc-105276,Palindra 02+600 A,Tol Palindra,1,,
+2026-11-27,12,oc-105277,Palindra 02+600 B,Tol Palindra,1,,
+2026-11-27,12,oc-105278,Palindra 03+600 A,Tol Palindra,1,,
+2026-11-27,12,oc-105279,Palindra 03+600 B,Tol Palindra,1,,
+2026-11-27,12,oc-105280,Palindra 04+600 B,Tol Palindra,1,,
+2026-11-27,12,oc-105281,Palindra 05+600 A,Tol Palindra,1,,
+2026-11-27,12,oc-105282,Palindra 05+600 B,Tol Palindra,1,,
+2026-11-27,12,oc-105283,PALINDRA Gate Pemulutan,Tol Palindra,1,,
+2026-11-27,12,oc-105284,PALINDRA GT Indralaya,Tol Palindra,1,,
+2026-11-27,12,oc-105285,PALINDRA GT KTM RAMBUTAN,Tol Palindra,1,,
+2026-11-27,12,oc-105286,PALINDRA IC KTM,Tol Palindra,1,,
+2026-11-27,12,oc-105287,PALINDRA IC Pemulutan,Tol Palindra,1,,

@@ -1,25 +1,11 @@
 {
   "channels": [
     {
-      "name": "CCTV Bank Sumsel Atmo",
-      "group": "Alang-Alang Lebar",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a8866f32840d934ee905309/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-BSA-39",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-BSA-39.jpg"
-    },
-    {
       "name": "CCTV Benteng Kuto Besak",
       "group": "Alang-Alang Lebar",
       "url": "https://cctv.palembang.go.id/api/cctv/68f09d50b4545109d5349b12/playback/index.m3u8",
       "tvg-id": "plb-CCTV-BKB-02",
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-BKB-02.jpg"
-    },
-    {
-      "name": "CCTV Cinde",
-      "group": "Alang-Alang Lebar",
-      "url": "https://cctv.palembang.go.id/api/cctv/68f9f32d57309f82669542ca/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-CINDE-06",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-CINDE-06.jpg"
     },
     {
       "name": "CCTV Lampu Merah Kol Atmo",
@@ -50,39 +36,11 @@
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-POLDA-03.jpg"
     },
     {
-      "name": "CCTV SP BOM BARU",
-      "group": "Alang-Alang Lebar",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95112a2840d934ee9802de/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-SPBB-42",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPBB-42.jpg"
-    },
-    {
-      "name": "CCTV SP Soekarno Hatta",
-      "group": "Alang-Alang Lebar",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95f507392f3ee3ef741282/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-SPSH-48",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPSH-48.jpg"
-    },
-    {
-      "name": "CCTV JL VETERAN",
-      "group": "Bukitkecil",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a8871102840d934ee905928/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-TAMSIS-40",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-TAMSIS-40.jpg"
-    },
-    {
       "name": "CCTV Masjid Agung",
       "group": "Bukitkecil",
       "url": "https://cctv.palembang.go.id/api/cctv/69258794273b6e50c40e515c/playback/index.m3u8",
       "tvg-id": "plb-CCTV-MASJID-AGUNG-09",
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-MASJID-AGUNG-09.jpg"
-    },
-    {
-      "name": "CCTV SP IP",
-      "group": "Bukitkecil",
-      "url": "https://cctv.palembang.go.id/api/cctv/692fd900a611d6b78f1aef5e/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-SPIP-30",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPIP-30.jpg"
     },
     {
       "name": "CCTV SP Samsat",
@@ -120,13 +78,6 @@
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-CHARITAS-08.jpg"
     },
     {
-      "name": "CCTV TAMAN SISWA",
-      "group": "Ilir Timur Tiga",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95fc29392f3ee3ef741647/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-TAMSIS-47",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-TAMSIS-47.jpg"
-    },
-    {
       "name": "CCTV Pasar 16",
       "group": "Jakabaring",
       "url": "https://cctv.palembang.go.id/api/cctv/69bd143ccc7bccc4b2dfa011/playback/index.m3u8",
@@ -139,20 +90,6 @@
       "url": "https://cctv.palembang.go.id/api/cctv/69281276273b6e50c4162201/playback/index.m3u8",
       "tvg-id": "plb-CCTV-PLAZA7-ULU-20",
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PLAZA7-ULU-20.jpg"
-    },
-    {
-      "name": "CCTV SP BANDARA",
-      "group": "Jakabaring",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95f3ad392f3ee3ef741169/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-SPB-45",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPB-45.jpg"
-    },
-    {
-      "name": "CCTV SP DPRD PROV",
-      "group": "Jakabaring",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a958ffe392f3ee3ef73e88c/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-DPR-44",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DPR-44.jpg"
     },
     {
       "name": "Lampung 180+000 A",

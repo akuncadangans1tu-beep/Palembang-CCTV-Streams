@@ -1,30 +1,17 @@
 {
   "summary": {
-    "generated_at": "2026-11-27T10:38:21Z",
-    "generated_wib": "27 Nov 2026 17:38 WIB",
-    "total": 40,
-    "live": 29,
-    "offline": 11,
-    "removed": 8,
+    "generated_at": "2026-11-27T12:11:57Z",
+    "generated_wib": "27 Nov 2026 19:11 WIB",
+    "total": 31,
+    "live": 26,
+    "offline": 5,
+    "removed": 17,
     "sources": {
       "palembang": true,
       "opencctv": true
     }
   },
   "streams": [
-    {
-      "key": "plb-CCTV-BSA-39",
-      "name": "CCTV Bank Sumsel Atmo",
-      "group": "Alang-Alang Lebar",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a8866f32840d934ee905309/playback/index.m3u8",
-      "ok": false,
-      "lat": -2.9807292478454235,
-      "lng": 104.75699830153796,
-      "uptime_pct": 83,
-      "resolution": null,
-      "bandwidth_kbps": null,
-      "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-BSA-39.jpg"
-    },
     {
       "key": "plb-CCTV-BKB-02",
       "name": "CCTV Benteng Kuto Besak",
@@ -35,21 +22,8 @@
       "lng": 104.761266,
       "uptime_pct": 100,
       "resolution": "704x576",
-      "bandwidth_kbps": 319,
+      "bandwidth_kbps": 314,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-BKB-02.jpg"
-    },
-    {
-      "key": "plb-CCTV-CINDE-06",
-      "name": "CCTV Cinde",
-      "group": "Alang-Alang Lebar",
-      "url": "https://cctv.palembang.go.id/api/cctv/68f9f32d57309f82669542ca/playback/index.m3u8",
-      "ok": false,
-      "lat": -2.979976,
-      "lng": 104.755865,
-      "uptime_pct": 75,
-      "resolution": null,
-      "bandwidth_kbps": null,
-      "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-CINDE-06.jpg"
     },
     {
       "key": "plb-CCTV-MANDIRI-38",
@@ -59,9 +33,9 @@
       "ok": true,
       "lat": -2.981811,
       "lng": 104.758485,
-      "uptime_pct": 67,
+      "uptime_pct": 69,
       "resolution": "704x576",
-      "bandwidth_kbps": 290,
+      "bandwidth_kbps": 282,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-MANDIRI-38.jpg"
     },
     {
@@ -69,12 +43,12 @@
       "name": "CCTV Simpang Angkatan 45",
       "group": "Alang-Alang Lebar",
       "url": "https://cctv.palembang.go.id/api/cctv/68f59d6857309f826693741a/playback/index.m3u8",
-      "ok": true,
+      "ok": false,
       "lat": -2.969155,
       "lng": 104.732837,
-      "uptime_pct": 100,
+      "uptime_pct": 92,
       "resolution": "704x576",
-      "bandwidth_kbps": 306,
+      "bandwidth_kbps": 307,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-ANGKATAN-45-05.jpg"
     },
     {
@@ -85,9 +59,9 @@
       "ok": true,
       "lat": -2.988056,
       "lng": 104.718564,
-      "uptime_pct": 75,
+      "uptime_pct": 77,
       "resolution": "704x576",
-      "bandwidth_kbps": 313,
+      "bandwidth_kbps": 308,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04.jpg"
     },
     {
@@ -98,49 +72,10 @@
       "ok": true,
       "lat": -2.961082,
       "lng": 104.737709,
-      "uptime_pct": 75,
+      "uptime_pct": 77,
       "resolution": "704x576",
-      "bandwidth_kbps": 306,
+      "bandwidth_kbps": 308,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-POLDA-03.jpg"
-    },
-    {
-      "key": "plb-CCTV-SPBB-42",
-      "name": "CCTV SP BOM BARU",
-      "group": "Alang-Alang Lebar",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95112a2840d934ee9802de/playback/index.m3u8",
-      "ok": false,
-      "lat": -2.977623404813833,
-      "lng": 104.7788168618242,
-      "uptime_pct": 83,
-      "resolution": null,
-      "bandwidth_kbps": null,
-      "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPBB-42.jpg"
-    },
-    {
-      "key": "plb-CCTV-SPSH-48",
-      "name": "CCTV SP Soekarno Hatta",
-      "group": "Alang-Alang Lebar",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95f507392f3ee3ef741282/playback/index.m3u8",
-      "ok": false,
-      "lat": -2.9362660543407957,
-      "lng": 104.70212465910649,
-      "uptime_pct": 67,
-      "resolution": null,
-      "bandwidth_kbps": null,
-      "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPSH-48.jpg"
-    },
-    {
-      "key": "plb-CCTV-TAMSIS-40",
-      "name": "CCTV JL VETERAN",
-      "group": "Bukitkecil",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a8871102840d934ee905928/playback/index.m3u8",
-      "ok": false,
-      "lat": -2.975561070774235,
-      "lng": 104.75792831753658,
-      "uptime_pct": 50,
-      "resolution": null,
-      "bandwidth_kbps": null,
-      "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-TAMSIS-40.jpg"
     },
     {
       "key": "plb-CCTV-MASJID-AGUNG-09",
@@ -150,35 +85,22 @@
       "ok": false,
       "lat": -2.98819,
       "lng": 104.760447,
-      "uptime_pct": 75,
+      "uptime_pct": 69,
       "resolution": "1920x1080",
-      "bandwidth_kbps": 4948,
+      "bandwidth_kbps": 5862,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-MASJID-AGUNG-09.jpg"
-    },
-    {
-      "key": "plb-CCTV-SPIP-30",
-      "name": "CCTV SP IP",
-      "group": "Bukitkecil",
-      "url": "https://cctv.palembang.go.id/api/cctv/692fd900a611d6b78f1aef5e/playback/index.m3u8",
-      "ok": false,
-      "lat": -2.9834553292649675,
-      "lng": 104.7581219930195,
-      "uptime_pct": 83,
-      "resolution": null,
-      "bandwidth_kbps": null,
-      "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPIP-30.jpg"
     },
     {
       "key": "plb-CCTV-SPSAMSAT-21",
       "name": "CCTV SP Samsat",
       "group": "Bukitkecil",
       "url": "https://cctv.palembang.go.id/api/cctv/6928176c273b6e50c41642e7/playback/index.m3u8",
-      "ok": true,
+      "ok": false,
       "lat": -2.986829357668499,
       "lng": 104.7439515423289,
-      "uptime_pct": 92,
+      "uptime_pct": 85,
       "resolution": "1920x1080",
-      "bandwidth_kbps": 4865,
+      "bandwidth_kbps": 6321,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPSAMSAT-21.jpg"
     },
     {
@@ -189,9 +111,9 @@
       "ok": true,
       "lat": -2.913313005325259,
       "lng": 104.68819312611218,
-      "uptime_pct": 58,
+      "uptime_pct": 62,
       "resolution": "704x576",
-      "bandwidth_kbps": 284,
+      "bandwidth_kbps": 300,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-KM12-13.jpg"
     },
     {
@@ -202,9 +124,9 @@
       "ok": false,
       "lat": -2.9388134892468485,
       "lng": 104.72125000000001,
-      "uptime_pct": 92,
+      "uptime_pct": 85,
       "resolution": "704x576",
-      "bandwidth_kbps": 307,
+      "bandwidth_kbps": 314,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DA-24.jpg"
     },
     {
@@ -212,12 +134,12 @@
       "name": "CCTV Lapangan Parkir Pasar 16",
       "group": "Ilir Timur Tiga",
       "url": "https://cctv.palembang.go.id/api/cctv/692819c6273b6e50c4165871/playback/index.m3u8",
-      "ok": true,
+      "ok": false,
       "lat": -2.9898965009699703,
       "lng": 104.76184254232889,
-      "uptime_pct": 100,
+      "uptime_pct": 92,
       "resolution": "704x576",
-      "bandwidth_kbps": 308,
+      "bandwidth_kbps": 312,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PASAR16-25.jpg"
     },
     {
@@ -230,21 +152,8 @@
       "lng": 104.75434,
       "uptime_pct": 92,
       "resolution": "1920x1080",
-      "bandwidth_kbps": 4920,
+      "bandwidth_kbps": 5909,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-CHARITAS-08.jpg"
-    },
-    {
-      "key": "plb-CCTV-TAMSIS-47",
-      "name": "CCTV TAMAN SISWA",
-      "group": "Ilir Timur Tiga",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95fc29392f3ee3ef741647/playback/index.m3u8",
-      "ok": false,
-      "lat": -2.9759372517847904,
-      "lng": 104.75797240712888,
-      "uptime_pct": 75,
-      "resolution": null,
-      "bandwidth_kbps": null,
-      "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-TAMSIS-47.jpg"
     },
     {
       "key": "plb-CCTV-P16-36",
@@ -254,9 +163,9 @@
       "ok": true,
       "lat": -2.989552,
       "lng": 104.763833,
-      "uptime_pct": 83,
+      "uptime_pct": 85,
       "resolution": "704x576",
-      "bandwidth_kbps": 312,
+      "bandwidth_kbps": 307,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-P16-36.jpg"
     },
     {
@@ -269,34 +178,8 @@
       "lng": 104.76330599999999,
       "uptime_pct": 92,
       "resolution": "704x576",
-      "bandwidth_kbps": 291,
+      "bandwidth_kbps": 272,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PLAZA7-ULU-20.jpg"
-    },
-    {
-      "key": "plb-CCTV-SPB-45",
-      "name": "CCTV SP BANDARA",
-      "group": "Jakabaring",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95f3ad392f3ee3ef741169/playback/index.m3u8",
-      "ok": false,
-      "lat": -2.9038701716938173,
-      "lng": 104.72746849900544,
-      "uptime_pct": 67,
-      "resolution": null,
-      "bandwidth_kbps": null,
-      "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPB-45.jpg"
-    },
-    {
-      "key": "plb-CCTV-DPR-44",
-      "name": "CCTV SP DPRD PROV",
-      "group": "Jakabaring",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a958ffe392f3ee3ef73e88c/playback/index.m3u8",
-      "ok": false,
-      "lat": -2.980102,
-      "lng": 104.745707,
-      "uptime_pct": 83,
-      "resolution": null,
-      "bandwidth_kbps": null,
-      "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DPR-44.jpg"
     },
     {
       "key": "oc-105303",
