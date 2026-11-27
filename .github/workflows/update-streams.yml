@@ -16,6 +16,7 @@ jobs:
       - run: pip install pillow
       - run: python scripts/update_streams.py --playlist streams.m3u8
       - run: python scripts/make_visuals.py --postcard
+      - run: python scripts/wa_broadcast.py
       - name: Meta repo (opsional)
         uses: actions/github-script@v7
         with:
