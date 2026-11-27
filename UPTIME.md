@@ -1,32 +1,32 @@
-# UPTIME & Kualitas — 27 Nov 2026 14:50 WIB
+# UPTIME & Kualitas — 27 Nov 2026 15:51 WIB
 
 ## 🏆 Paling stabil
 | Kamera | Uptime | Riwayat |
 |---|---|---|
-| CCTV Bank Sumsel Atmo | 100% | ▰▰▰▰▰▰▰▰▰▰ |
-| CCTV Benteng Kuto Besak | 100% | ▰▰▰▰▰▰▰▰▰▰ |
-| CCTV Simpang Angkatan 45 | 100% | ▰▰▰▰▰▰▰▰▰▰ |
-| CCTV SP BOM BARU | 100% | ▰▰▰▰▰▰▰▰▰▰ |
-| CCTV SP IP | 100% | ▰▰▰▰▰▰▰▰▰▰ |
-| CCTV Darma Agung | 100% | ▰▰▰▰▰▰▰▰▰▰ |
-| CCTV Lapangan Parkir Pasar 16 | 100% | ▰▰▰▰▰▰▰▰▰▰ |
-| CCTV SP DPRD PROV | 100% | ▰▰▰▰▰▰▰▰▰▰ |
-| Lampung 180+000 A | 100% | ▰▰▰▰▰▰▰▰▰▰ |
-| Lampung 180+000 B | 100% | ▰▰▰▰▰▰▰▰▰▰ |
+| CCTV Benteng Kuto Besak | 100% | ▰▰▰▰▰▰▰▰▰▰▰ |
+| CCTV Simpang Angkatan 45 | 100% | ▰▰▰▰▰▰▰▰▰▰▰ |
+| CCTV Darma Agung | 100% | ▰▰▰▰▰▰▰▰▰▰▰ |
+| CCTV Lapangan Parkir Pasar 16 | 100% | ▰▰▰▰▰▰▰▰▰▰▰ |
+| Lampung 180+000 A | 100% | ▰▰▰▰▰▰▰▰▰▰▰ |
+| Lampung 180+000 B | 100% | ▰▰▰▰▰▰▰▰▰▰▰ |
+| Lampung 181+000 A | 100% | ▰▰▰▰▰▰▰▰▰▰▰ |
+| Lampung 181+000 B | 100% | ▰▰▰▰▰▰▰▰▰▰▰ |
+| Palindra 01+600 A | 100% | ▰▰▰▰▰▰▰▰▰▰▰ |
+| Palindra 01+600 B | 100% | ▰▰▰▰▰▰▰▰▰▰▰ |
 
 ## ⚠️ Paling sering mati
 | Kamera | Uptime | Riwayat |
 |---|---|---|
-| CCTV KM 12 | 50% | ▱▰▱▰▱▱▰▰▱▰ |
-| CCTV JL VETERAN | 60% | ▱▱▱▰▱▰▰▰▰▰ |
-| CCTV Lampu Merah Kol Atmo | 60% | ▱▰▰▱▱▰▰▰▱▰ |
-| CCTV Simpang Polda | 70% | ▰▰▰▰▱▰▱▰▱▰ |
-| CCTV Simpang Macan Lindungan | 70% | ▰▰▱▰▱▰▰▱▰▰ |
-| CCTV SP BANDARA | 80% | ▱▰▰▰▱▰▰▰▰▰ |
-| CCTV Pasar 16 | 80% | ▰▱▰▰▰▱▰▰▰▰ |
-| CCTV Masjid Agung | 80% | ▰▰▰▰▱▰▱▰▰▰ |
-| CCTV SP Soekarno Hatta | 80% | ▰▰▰▰▱▰▰▰▱▰ |
-| CCTV JL VETERAN 2 | 80% | ▰▰▰▰▱▰▰▰▰▱ |
+| CCTV KM 12 | 55% | ▱▰▱▰▱▱▰▰▱▰▰ |
+| CCTV JL VETERAN | 55% | ▱▱▱▰▱▰▰▰▰▰▱ |
+| CCTV Lampu Merah Kol Atmo | 64% | ▱▰▰▱▱▰▰▰▱▰▰ |
+| CCTV SP BANDARA | 73% | ▱▰▰▰▱▰▰▰▰▰▱ |
+| CCTV SP Soekarno Hatta | 73% | ▰▰▰▰▱▰▰▰▱▰▱ |
+| CCTV Simpang Polda | 73% | ▰▰▰▰▱▰▱▰▱▰▰ |
+| CCTV Simpang Macan Lindungan | 73% | ▰▰▱▰▱▰▰▱▰▰▰ |
+| CCTV JL VETERAN 2 | 73% | ▰▰▰▰▱▰▰▰▰▱▱ |
+| CCTV Pasar 16 | 82% | ▰▱▰▰▰▱▰▰▰▰▰ |
+| CCTV TAMAN SISWA | 82% | ▰▰▰▰▰▰▰▰▱▰▱ |
 
 ## 🔁 Flapping (hidup-mati terus)
 - CCTV Simpang Macan Lindungan (6 transisi)
@@ -34,13 +34,12 @@
 - CCTV KM 12 (7 transisi)
 
 ## 📺 Kualitas
-- Total bitrate ≈ **41919 kbps**
+- Total bitrate ≈ **17432 kbps**
 | Resolusi | Jumlah |
 |---|---|
-| ? | 18 |
-| 704x576 | 11 |
-| 1920x1080 | 9 |
-| 1280x720 | 4 |
+| ? | 29 |
+| 704x576 | 10 |
+| 1920x1080 | 3 |
 
 ## 🕐 Jam rawan offline (WIB)
 | Jam | Offline |
