@@ -29,9 +29,7 @@ jobs:
               await github.rest.repos.replaceAllTopics({ owner: context.repo.owner, repo: context.repo.repo,
                 names: ["cctv","palembang","iptv","m3u8","hls","open-data","indonesia","sumatera"] });
               core.info('Meta repo diperbarui.');
-            } catch (e) {
-              core.warning('Meta repo dilewati: ' + e.message);
-            }
+            } catch (e) { core.warning('Meta repo dilewati: ' + e.message); }
       - name: Guard ukuran repo
         run: |
           MB=$(du -sm thumbs data 2>/dev/null | awk '{s+=$1} END {print s+0}')
@@ -46,7 +44,7 @@ jobs:
             const open=await github.rest.issues.listForRepo({owner:context.repo.owner,repo:context.repo.repo,state:'open',per_page:100});
             for(const r of rm){const t=`[kamera-mati] ${r.name}`; if(open.data.some(i=>i.title===t))continue;
               await github.rest.issues.create({owner:context.repo.owner,repo:context.repo.repo,title:t,body:`Kamera **${r.name}** dihapus otomatis.\nAlasan: ${r.reason}`});}
-      - name: Commit & push (dengan pull --rebase)
+      - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -54,7 +52,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Tidak ada perubahan."
           else
-            git pull --rebase origin main --no-edit || git rebase --abort
             git commit -m "chore: auto-update $(date -u '+%F %H:%M')"
+            git pull --rebase origin main --no-edit || git rebase --abort
             git push
           fi
