@@ -18,7 +18,7 @@ jobs:
       - name: Dry-run checker
         run: python scripts/update_streams.py --dry-run --limit 5 > dry.txt 2>&1 || true
       - name: Komentar hasil
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const fs=require('fs');

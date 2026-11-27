@@ -18,7 +18,7 @@ jobs:
       - run: python scripts/make_visuals.py --postcard
       - run: python scripts/wa_broadcast.py
       - name: Meta repo (opsional)
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           github-token: ${{ secrets.REPO_META_TOKEN || github.token }}
           script: |
@@ -37,7 +37,7 @@ jobs:
           echo "thumbs+data = ${MB}MB"
           if [ "$MB" -gt 60 ]; then echo "::warning::${MB}MB > 60MB"; fi
       - name: Issue kamera dihapus
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const fs=require('fs'); if(!fs.existsSync('removed.json'))return;
