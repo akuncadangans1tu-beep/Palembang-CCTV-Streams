@@ -57,13 +57,6 @@
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-KM12-13.jpg"
     },
     {
-      "name": "CCTV Darma Agung",
-      "group": "Ilir Timur Tiga",
-      "url": "https://cctv.palembang.go.id/api/cctv/69281931273b6e50c416536d/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-DA-24",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DA-24.jpg"
-    },
-    {
       "name": "CCTV Lapangan Parkir Pasar 16",
       "group": "Ilir Timur Tiga",
       "url": "https://cctv.palembang.go.id/api/cctv/692819c6273b6e50c4165871/playback/index.m3u8",
