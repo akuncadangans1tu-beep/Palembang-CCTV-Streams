@@ -12,7 +12,7 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install matplotlib pillow
       - run: python scripts/make_visuals.py
-      - name: Commit & push (dengan pull --rebase)
+      - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -20,7 +20,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Tidak ada perubahan visual."
           else
-            git pull --rebase origin main --no-edit || git rebase --abort
             git commit -m "chore: refresh visuals"
+            git pull --rebase origin main --no-edit || git rebase --abort
             git push
           fi
