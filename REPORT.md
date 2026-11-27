@@ -1,6 +1,6 @@
-# Laporan — 2026-11-27T13:49:43Z
+# Laporan — 2026-11-27T14:25:05Z
 
-- **30** · 🟢29 · 🔴1 · hapus 18
+- **31** · 🟢31 · 🔴0 · hapus 17
 
 | Nama | Status | Ket |
 |---|---|---|
@@ -19,10 +19,9 @@
 | CCTV SP IP | 🆕 NEW | sumber |
 | CCTV Cinde | 🆕 NEW | sumber |
 | CCTV Kambang Iwak | 🆕 NEW | sumber |
+| CCTV Darma Agung | 🆕 NEW | sumber |
 | CCTV DEPAN DISDUKCAPIL | 🆕 NEW | sumber |
 | CCTV Punti Kayu | 🆕 NEW | sumber |
-| CCTV Pasar 16 | ⚠️ FAIL | segmen 404 (1/3) |
-| CCTV Darma Agung | ❌ REMOVED | gagal 3x (segmen 404) |
 | CCTV Bank Sumsel Atmo | ❌ REMOVED | baru tapi mati |
 | CCTV JL VETERAN | ❌ REMOVED | baru tapi mati |
 | CCTV SP BOM BARU | ❌ REMOVED | baru tapi mati |

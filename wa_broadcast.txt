@@ -1,9 +1,6 @@
 📹 *PALEMBANG CCTV — LAPORAN HARIAN*
-🕒 27 Nov 2026 20:49 WIB
-✅ Live: *29* | 🔴 Gangguan: *1* | Total: *30*
-
-🔴 *Sedang gangguan:*
-• CCTV Pasar 16 (Jakabaring)
+🕒 27 Nov 2026 21:25 WIB
+✅ Live: *31* | 🔴 Gangguan: *0* | Total: *31*
 
 🟢 *Live sekarang:*
 • CCTV Benteng Kuto Besak
@@ -16,9 +13,9 @@
 • CCTV KM 12
 • CCTV Lapangan Parkir Pasar 16
 • CCTV SP Charitas
+• CCTV Pasar 16
 • CCTV Plaza 7 Ulu
-• Lampung 180+000 A
-• …dan 17 lainnya
+• …dan 19 lainnya
 
 🔗 _Playlist HLS:_
 https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/streams.m3u8

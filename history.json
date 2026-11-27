@@ -1,8 +1,9 @@
 {
   "plb-CCTV-BKB-02": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -21,50 +22,52 @@
     "uptime_pct": 100
   },
   "plb-CCTV-KM12-13": {
-    "total": 14,
-    "ok": 9,
-    "recent": [
-      false,
-      true,
-      false,
-      true,
-      false,
-      false,
-      true,
-      true,
-      false,
-      true,
-      true,
-      true,
-      true,
-      true
-    ],
-    "uptime_pct": 64
-  },
-  "plb-CCTV-MANDIRI-38": {
-    "total": 14,
+    "total": 15,
     "ok": 10,
     "recent": [
       false,
       true,
+      false,
       true,
       false,
       false,
       true,
       true,
-      true,
       false,
+      true,
       true,
       true,
       true,
       true,
       true
     ],
-    "uptime_pct": 71
+    "uptime_pct": 67
+  },
+  "plb-CCTV-MANDIRI-38": {
+    "total": 15,
+    "ok": 11,
+    "recent": [
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "uptime_pct": 73
   },
   "plb-CCTV-PASAR16-25": {
-    "total": 14,
-    "ok": 13,
+    "total": 15,
+    "ok": 14,
     "recent": [
       true,
       true,
@@ -79,55 +82,58 @@
       true,
       true,
       false,
+      true,
       true
     ],
     "uptime_pct": 93
   },
   "plb-CCTV-MASJID-AGUNG-09": {
-    "total": 14,
-    "ok": 10,
-    "recent": [
-      true,
-      true,
-      true,
-      true,
-      false,
-      true,
-      false,
-      true,
-      true,
-      true,
-      true,
-      false,
-      false,
-      true
-    ],
-    "uptime_pct": 71
-  },
-  "plb-CCTV-P16-36": {
-    "total": 14,
+    "total": 15,
     "ok": 11,
     "recent": [
       true,
-      false,
       true,
       true,
       true,
       false,
       true,
+      false,
       true,
       true,
       true,
       true,
+      false,
+      false,
       true,
-      true,
-      false
+      true
     ],
-    "uptime_pct": 79
+    "uptime_pct": 73
+  },
+  "plb-CCTV-P16-36": {
+    "total": 15,
+    "ok": 12,
+    "recent": [
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    "uptime_pct": 80
   },
   "plb-CCTV-PLAZA7-ULU-20": {
-    "total": 14,
-    "ok": 13,
+    "total": 15,
+    "ok": 14,
     "recent": [
       true,
       true,
@@ -138,6 +144,7 @@
       true,
       true,
       false,
+      true,
       true,
       true,
       true,
@@ -147,8 +154,8 @@
     "uptime_pct": 93
   },
   "plb-CCTV-SIMPANG-ANGKATAN-45-05": {
-    "total": 14,
-    "ok": 13,
+    "total": 15,
+    "ok": 14,
     "recent": [
       true,
       true,
@@ -163,13 +170,14 @@
       true,
       true,
       false,
+      true,
       true
     ],
     "uptime_pct": 93
   },
   "plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04": {
-    "total": 14,
-    "ok": 11,
+    "total": 15,
+    "ok": 12,
     "recent": [
       true,
       true,
@@ -184,13 +192,14 @@
       true,
       true,
       true,
+      true,
       true
     ],
-    "uptime_pct": 79
+    "uptime_pct": 80
   },
   "plb-CCTV-SIMPANG-POLDA-03": {
-    "total": 14,
-    "ok": 11,
+    "total": 15,
+    "ok": 12,
     "recent": [
       true,
       true,
@@ -201,22 +210,24 @@
       false,
       true,
       false,
+      true,
       true,
       true,
       true,
       true,
       true
     ],
-    "uptime_pct": 79
+    "uptime_pct": 80
   },
   "plb-CCTV-CHARITAS-08": {
-    "total": 14,
-    "ok": 13,
+    "total": 15,
+    "ok": 14,
     "recent": [
       true,
       true,
       true,
       false,
+      true,
       true,
       true,
       true,
@@ -231,8 +242,8 @@
     "uptime_pct": 93
   },
   "plb-CCTV-SPSAMSAT-21": {
-    "total": 14,
-    "ok": 12,
+    "total": 15,
+    "ok": 13,
     "recent": [
       true,
       true,
@@ -247,14 +258,16 @@
       true,
       true,
       false,
+      true,
       true
     ],
-    "uptime_pct": 86
+    "uptime_pct": 87
   },
   "oc-105303": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -273,9 +286,10 @@
     "uptime_pct": 100
   },
   "oc-105304": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -294,9 +308,10 @@
     "uptime_pct": 100
   },
   "oc-105305": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -315,9 +330,10 @@
     "uptime_pct": 100
   },
   "oc-105306": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -336,9 +352,10 @@
     "uptime_pct": 100
   },
   "oc-105274": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -357,9 +374,10 @@
     "uptime_pct": 100
   },
   "oc-105275": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -378,9 +396,10 @@
     "uptime_pct": 100
   },
   "oc-105276": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -399,9 +418,10 @@
     "uptime_pct": 100
   },
   "oc-105277": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -420,8 +440,8 @@
     "uptime_pct": 100
   },
   "oc-105278": {
-    "total": 14,
-    "ok": 13,
+    "total": 15,
+    "ok": 14,
     "recent": [
       true,
       true,
@@ -436,14 +456,16 @@
       true,
       true,
       true,
+      true,
       true
     ],
     "uptime_pct": 93
   },
   "oc-105279": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -462,8 +484,8 @@
     "uptime_pct": 100
   },
   "oc-105280": {
-    "total": 14,
-    "ok": 13,
+    "total": 15,
+    "ok": 14,
     "recent": [
       true,
       true,
@@ -478,14 +500,16 @@
       true,
       true,
       true,
+      true,
       true
     ],
     "uptime_pct": 93
   },
   "oc-105281": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -504,9 +528,10 @@
     "uptime_pct": 100
   },
   "oc-105282": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -525,9 +550,10 @@
     "uptime_pct": 100
   },
   "oc-105283": {
-    "total": 14,
-    "ok": 14,
+    "total": 15,
+    "ok": 15,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -546,8 +572,8 @@
     "uptime_pct": 100
   },
   "oc-105284": {
-    "total": 14,
-    "ok": 13,
+    "total": 15,
+    "ok": 14,
     "recent": [
       true,
       true,
@@ -557,6 +583,7 @@
       true,
       true,
       false,
+      true,
       true,
       true,
       true,
@@ -567,8 +594,8 @@
     "uptime_pct": 93
   },
   "oc-105285": {
-    "total": 14,
-    "ok": 13,
+    "total": 15,
+    "ok": 14,
     "recent": [
       true,
       true,
@@ -578,6 +605,7 @@
       true,
       true,
       false,
+      true,
       true,
       true,
       true,
@@ -588,8 +616,8 @@
     "uptime_pct": 93
   },
   "oc-105286": {
-    "total": 14,
-    "ok": 13,
+    "total": 15,
+    "ok": 14,
     "recent": [
       true,
       true,
@@ -599,6 +627,7 @@
       true,
       true,
       false,
+      true,
       true,
       true,
       true,
@@ -609,8 +638,8 @@
     "uptime_pct": 93
   },
   "oc-105287": {
-    "total": 14,
-    "ok": 13,
+    "total": 15,
+    "ok": 14,
     "recent": [
       true,
       true,
@@ -625,8 +654,17 @@
       true,
       true,
       true,
+      true,
       true
     ],
     "uptime_pct": 93
+  },
+  "plb-CCTV-DA-24": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
   }
 }

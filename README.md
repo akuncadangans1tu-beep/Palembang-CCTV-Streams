@@ -25,22 +25,23 @@ Playlist CCTV publik **Kota Palembang & koridor tol Sumatera** (HLS stabil), dir
 
 ## 📊 Status Kamera
 <!-- STATUS:START -->
-> 🕒 **27 Nov 2026 20:49 WIB** · **30** kamera · 🟢 29 · 🔴 1
+> 🕒 **27 Nov 2026 21:25 WIB** · **31** kamera · 🟢 31 · 🔴 0
 
 | Kamera | Grup | Status | Uptime | Riwayat | Kualitas |
 |---|---|:--:|:--:|---|:--:|
 | CCTV Benteng Kuto Besak | Alang-Alang Lebar | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | 704x576 |
-| CCTV Lampu Merah Kol Atmo | Alang-Alang Lebar | 🟢 | 71% | ▱▰▰▱▱▰▰▰▱▰▰▰▰▰ | 704x576 |
-| CCTV Simpang Angkatan 45 | Alang-Alang Lebar | 🟢 | 93% | ▰▰▰▰▰▰▰▰▰▰▰▰▱▰ | 704x576 |
-| CCTV Simpang Macan Lindungan | Alang-Alang Lebar | 🟢 | 79% | ▰▰▱▰▱▰▰▱▰▰▰▰▰▰ | 704x576 |
-| CCTV Simpang Polda | Alang-Alang Lebar | 🟢 | 79% | ▰▰▰▰▱▰▱▰▱▰▰▰▰▰ | 704x576 |
-| CCTV Masjid Agung | Bukitkecil | 🟢 | 71% | ▰▰▰▰▱▰▱▰▰▰▰▱▱▰ | 1920x1080 |
-| CCTV SP Samsat | Bukitkecil | 🟢 | 86% | ▰▰▰▰▰▰▱▰▰▰▰▰▱▰ | 1920x1080 |
-| CCTV KM 12 | Ilir Timur Dua | 🟢 | 64% | ▱▰▱▰▱▱▰▰▱▰▰▰▰▰ | 704x576 |
-| CCTV Lapangan Parkir Pasar 16 | Ilir Timur Tiga | 🟢 | 93% | ▰▰▰▰▰▰▰▰▰▰▰▰▱▰ | 704x576 |
-| CCTV SP Charitas | Ilir Timur Tiga | 🟢 | 93% | ▰▰▰▱▰▰▰▰▰▰▰▰▰▰ | 1920x1080 |
-| CCTV Pasar 16 | Jakabaring | 🔴 | 79% | ▰▱▰▰▰▱▰▰▰▰▰▰▰▱ | 704x576 |
-| CCTV Plaza 7 Ulu | Jakabaring | 🟢 | 93% | ▰▰▰▰▰▰▰▰▱▰▰▰▰▰ | 704x576 |
+| CCTV Lampu Merah Kol Atmo | Alang-Alang Lebar | 🟢 | 73% | ▰▰▱▱▰▰▰▱▰▰▰▰▰▰ | 704x576 |
+| CCTV Simpang Angkatan 45 | Alang-Alang Lebar | 🟢 | 93% | ▰▰▰▰▰▰▰▰▰▰▰▱▰▰ | 704x576 |
+| CCTV Simpang Macan Lindungan | Alang-Alang Lebar | 🟢 | 80% | ▰▱▰▱▰▰▱▰▰▰▰▰▰▰ | 704x576 |
+| CCTV Simpang Polda | Alang-Alang Lebar | 🟢 | 80% | ▰▰▰▱▰▱▰▱▰▰▰▰▰▰ | 704x576 |
+| CCTV Masjid Agung | Bukitkecil | 🟢 | 73% | ▰▰▰▱▰▱▰▰▰▰▱▱▰▰ | 1920x1080 |
+| CCTV SP Samsat | Bukitkecil | 🟢 | 87% | ▰▰▰▰▰▱▰▰▰▰▰▱▰▰ | 1920x1080 |
+| CCTV KM 12 | Ilir Timur Dua | 🟢 | 67% | ▰▱▰▱▱▰▰▱▰▰▰▰▰▰ | 704x576 |
+| CCTV Darma Agung | Ilir Timur Tiga | 🟢 | 100% | ▰ | 704x576 |
+| CCTV Lapangan Parkir Pasar 16 | Ilir Timur Tiga | 🟢 | 93% | ▰▰▰▰▰▰▰▰▰▰▰▱▰▰ | 704x576 |
+| CCTV SP Charitas | Ilir Timur Tiga | 🟢 | 93% | ▰▰▱▰▰▰▰▰▰▰▰▰▰▰ | 1920x1080 |
+| CCTV Pasar 16 | Jakabaring | 🟢 | 80% | ▱▰▰▰▱▰▰▰▰▰▰▰▱▰ | 704x576 |
+| CCTV Plaza 7 Ulu | Jakabaring | 🟢 | 93% | ▰▰▰▰▰▰▰▱▰▰▰▰▰▰ | 704x576 |
 | Lampung 180+000 A | Tol Lampung | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | Lampung 180+000 B | Tol Lampung | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | Lampung 181+000 A | Tol Lampung | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
@@ -49,16 +50,16 @@ Playlist CCTV publik **Kota Palembang & koridor tol Sumatera** (HLS stabil), dir
 | Palindra 01+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | Palindra 02+600 A | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | Palindra 02+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
-| Palindra 03+600 A | Tol Palindra | 🟢 | 93% | ▰▰▰▰▰▱▰▰▰▰▰▰▰▰ | — |
+| Palindra 03+600 A | Tol Palindra | 🟢 | 93% | ▰▰▰▰▱▰▰▰▰▰▰▰▰▰ | — |
 | Palindra 03+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
-| Palindra 04+600 B | Tol Palindra | 🟢 | 93% | ▰▰▰▰▰▰▰▰▱▰▰▰▰▰ | — |
+| Palindra 04+600 B | Tol Palindra | 🟢 | 93% | ▰▰▰▰▰▰▰▱▰▰▰▰▰▰ | — |
 | Palindra 05+600 A | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | Palindra 05+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | PALINDRA Gate Pemulutan | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
-| PALINDRA GT Indralaya | Tol Palindra | 🟢 | 93% | ▰▰▰▰▰▰▰▱▰▰▰▰▰▰ | — |
-| PALINDRA GT KTM RAMBUTAN | Tol Palindra | 🟢 | 93% | ▰▰▰▰▰▰▰▱▰▰▰▰▰▰ | — |
-| PALINDRA IC KTM | Tol Palindra | 🟢 | 93% | ▰▰▰▰▰▰▰▱▰▰▰▰▰▰ | — |
-| PALINDRA IC Pemulutan | Tol Palindra | 🟢 | 93% | ▰▰▰▰▰▰▰▱▰▰▰▰▰▰ | — |
+| PALINDRA GT Indralaya | Tol Palindra | 🟢 | 93% | ▰▰▰▰▰▰▱▰▰▰▰▰▰▰ | — |
+| PALINDRA GT KTM RAMBUTAN | Tol Palindra | 🟢 | 93% | ▰▰▰▰▰▰▱▰▰▰▰▰▰▰ | — |
+| PALINDRA IC KTM | Tol Palindra | 🟢 | 93% | ▰▰▰▰▰▰▱▰▰▰▰▰▰▰ | — |
+| PALINDRA IC Pemulutan | Tol Palindra | 🟢 | 93% | ▰▰▰▰▰▰▱▰▰▰▰▰▰▰ | — |
 <!-- STATUS:END -->
 
 ## 🖼️ Visual

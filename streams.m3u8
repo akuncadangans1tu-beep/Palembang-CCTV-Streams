@@ -31,6 +31,10 @@ https://cctv.palembang.go.id/api/cctv/6928176c273b6e50c41642e7/playback/index.m3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/6926bf54273b6e50c40eeca6/playback/index.m3u8
+#EXTINF:-1 tvg-id="plb-CCTV-DA-24" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DA-24.jpg" group-title="Ilir Timur Tiga",CCTV Darma Agung
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
+https://cctv.palembang.go.id/api/cctv/69281931273b6e50c416536d/playback/index.m3u8
 #EXTINF:-1 tvg-id="plb-CCTV-PASAR16-25" group-title="Ilir Timur Tiga" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PASAR16-25.jpg",CCTV Lapangan Parkir Pasar 16
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/

@@ -209,6 +209,13 @@
       "url": "https://pub.hk-opt.com/LiveApp/streams/100831563641835272155645.m3u8",
       "tvg-id": "oc-105287",
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105287.jpg"
+    },
+    {
+      "name": "CCTV Darma Agung",
+      "group": "Ilir Timur Tiga",
+      "url": "https://cctv.palembang.go.id/api/cctv/69281931273b6e50c416536d/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-DA-24",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DA-24.jpg"
     }
   ]
 }
