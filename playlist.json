@@ -169,13 +169,6 @@
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DPR-44.jpg"
     },
     {
-      "name": "CCTV SP Parameswara",
-      "group": "Jakabaring",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a9602a9392f3ee3ef741a0d/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-PARAM-43",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PARAM-43.jpg"
-    },
-    {
       "name": "Lampung 180+000 A",
       "group": "Tol Lampung",
       "url": "https://pub.hk-opt.com/LiveApp/streams/Sz66S9K9q8wO1676355519747.m3u8",
