@@ -1,6 +1,19 @@
 # Changelog
 ## 2026-11-27
 - 🆕 **NEW**: CCTV Jl Tembesu — sumber
+- 🆕 **NEW**: CCTV SP Parameswara — sumber
+- 🆕 **NEW**: CCTV Kebun Sayur — sumber
+- 🆕 **NEW**: CCTV Kambang Iwak — sumber
+- 🆕 **NEW**: CCTV DEPAN DISDUKCAPIL — sumber
+- 🆕 **NEW**: CCTV Punti Kayu — sumber
+- ❌ **REMOVED**: CCTV Jl Tembesu — baru tapi mati
+- ❌ **REMOVED**: CCTV SP Parameswara — baru tapi mati
+- ❌ **REMOVED**: CCTV Kebun Sayur — baru tapi mati
+- ❌ **REMOVED**: CCTV Kambang Iwak — baru tapi mati
+- ❌ **REMOVED**: CCTV DEPAN DISDUKCAPIL — baru tapi mati
+- ❌ **REMOVED**: CCTV Punti Kayu — baru tapi mati
+## 2026-11-27
+- 🆕 **NEW**: CCTV Jl Tembesu — sumber
 - 🆕 **NEW**: CCTV Kebun Sayur — sumber
 - 🆕 **NEW**: CCTV Kambang Iwak — sumber
 - 🆕 **NEW**: CCTV DEPAN DISDUKCAPIL — sumber

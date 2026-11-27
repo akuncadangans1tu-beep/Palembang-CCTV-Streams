@@ -1,0 +1,28 @@
+📹 *PALEMBANG CCTV — LAPORAN HARIAN*
+🕒 27 Nov 2026 14:50 WIB
+✅ Live: *40* | 🔴 Gangguan: *2* | Total: *42*
+
+🔴 *Sedang gangguan:*
+• CCTV JL VETERAN 1 (Alang-Alang Lebar)
+• CCTV JL VETERAN 2 (Alang-Alang Lebar)
+
+🟢 *Live sekarang:*
+• CCTV Bank Sumsel Atmo
+• CCTV Benteng Kuto Besak
+• CCTV Cinde
+• CCTV Lampu Merah Kol Atmo
+• CCTV Simpang Angkatan 45
+• CCTV Simpang Macan Lindungan
+• CCTV Simpang Polda
+• CCTV SP BOM BARU
+• CCTV SP Soekarno Hatta
+• CCTV JL VETERAN
+• CCTV Masjid Agung
+• CCTV SP IP
+• …dan 28 lainnya
+
+🔗 _Playlist HLS:_
+https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/streams.m3u8
+⚡ _Mirror CDN:_ https://cdn.jsdelivr.net/gh/akuncadangans1tu-beep/Palembang-CCTV-Streams@main/streams.m3u8
+
+_Pantau otomatis • unofficial • open data_
