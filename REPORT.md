@@ -1,6 +1,6 @@
-# Laporan — 2026-11-26T23:12:05Z
+# Laporan — 2026-11-27T06:24:11Z
 
-- **43** · 🟢39 · 🔴4 · hapus 5
+- **43** · 🟢37 · 🔴6 · hapus 5
 
 | Nama | Status | Ket |
 |---|---|---|
@@ -9,10 +9,12 @@
 | CCTV Kambang Iwak | 🆕 NEW | sumber |
 | CCTV DEPAN DISDUKCAPIL | 🆕 NEW | sumber |
 | CCTV Punti Kayu | 🆕 NEW | sumber |
-| CCTV Simpang Polda | ⚠️ FAIL | segmen 404 (1/3) |
-| CCTV Masjid Agung | ⚠️ FAIL | segmen 404 (1/3) |
-| CCTV SP Samsat | ⚠️ FAIL | segmen 404 (1/3) |
-| CCTV SP Parameswara | ⚠️ FAIL | HTTP 404 (1/3) |
+| CCTV Simpang Macan Lindungan | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV SP Parameswara | ⚠️ FAIL | HTTP 404 (2/3) |
+| PALINDRA GT Indralaya | ⚠️ FAIL | HTTP 404 (1/3) |
+| PALINDRA GT KTM RAMBUTAN | ⚠️ FAIL | HTTP 404 (1/3) |
+| PALINDRA IC KTM | ⚠️ FAIL | HTTP 404 (1/3) |
+| PALINDRA IC Pemulutan | ⚠️ FAIL | HTTP 404 (1/3) |
 | CCTV Jl Tembesu | ❌ REMOVED | baru tapi mati |
 | CCTV Kebun Sayur | ❌ REMOVED | baru tapi mati |
 | CCTV Kambang Iwak | ❌ REMOVED | baru tapi mati |

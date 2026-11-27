@@ -1,10 +1,10 @@
 {
   "summary": {
-    "generated_at": "2026-11-26T23:12:05Z",
-    "generated_wib": "27 Nov 2026 06:12 WIB",
+    "generated_at": "2026-11-27T06:24:11Z",
+    "generated_wib": "27 Nov 2026 13:24 WIB",
     "total": 43,
-    "live": 39,
-    "offline": 4,
+    "live": 37,
+    "offline": 6,
     "removed": 5,
     "sources": {
       "palembang": true,
@@ -22,7 +22,7 @@
       "lng": 104.75699830153796,
       "uptime_pct": 100,
       "resolution": "1920x1080",
-      "bandwidth_kbps": 3751,
+      "bandwidth_kbps": 3741,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-BSA-39.jpg"
     },
     {
@@ -35,7 +35,7 @@
       "lng": 104.761266,
       "uptime_pct": 100,
       "resolution": "704x576",
-      "bandwidth_kbps": 300,
+      "bandwidth_kbps": 307,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-BKB-02.jpg"
     },
     {
@@ -46,9 +46,9 @@
       "ok": true,
       "lat": -2.979976,
       "lng": 104.755865,
-      "uptime_pct": 86,
+      "uptime_pct": 88,
       "resolution": "1920x1080",
-      "bandwidth_kbps": 384,
+      "bandwidth_kbps": 658,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-CINDE-06.jpg"
     },
     {
@@ -61,7 +61,7 @@
       "lng": 104.7574997133,
       "uptime_pct": 100,
       "resolution": "1280x720",
-      "bandwidth_kbps": 391,
+      "bandwidth_kbps": 412,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-VTR-41.jpg"
     },
     {
@@ -72,9 +72,9 @@
       "ok": true,
       "lat": -2.9756908710488026,
       "lng": 104.75803218497177,
-      "uptime_pct": 86,
+      "uptime_pct": 88,
       "resolution": "1280x720",
-      "bandwidth_kbps": 1284,
+      "bandwidth_kbps": 2175,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-VTR-50.jpg"
     },
     {
@@ -85,9 +85,9 @@
       "ok": true,
       "lat": -2.981811,
       "lng": 104.758485,
-      "uptime_pct": 57,
+      "uptime_pct": 62,
       "resolution": "704x576",
-      "bandwidth_kbps": 305,
+      "bandwidth_kbps": 296,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-MANDIRI-38.jpg"
     },
     {
@@ -100,7 +100,7 @@
       "lng": 104.732837,
       "uptime_pct": 100,
       "resolution": "704x576",
-      "bandwidth_kbps": 309,
+      "bandwidth_kbps": 308,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-ANGKATAN-45-05.jpg"
     },
     {
@@ -108,12 +108,12 @@
       "name": "CCTV Simpang Macan Lindungan",
       "group": "Alang-Alang Lebar",
       "url": "https://cctv.palembang.go.id/api/cctv/68f59cab57309f8266937417/playback/index.m3u8",
-      "ok": true,
+      "ok": false,
       "lat": -2.988056,
       "lng": 104.718564,
-      "uptime_pct": 71,
+      "uptime_pct": 62,
       "resolution": "704x576",
-      "bandwidth_kbps": 306,
+      "bandwidth_kbps": 311,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04.jpg"
     },
     {
@@ -121,12 +121,12 @@
       "name": "CCTV Simpang Polda",
       "group": "Alang-Alang Lebar",
       "url": "https://cctv.palembang.go.id/api/cctv/68f599c557309f826693740c/playback/index.m3u8",
-      "ok": false,
+      "ok": true,
       "lat": -2.961082,
       "lng": 104.737709,
-      "uptime_pct": 71,
+      "uptime_pct": 75,
       "resolution": "704x576",
-      "bandwidth_kbps": 309,
+      "bandwidth_kbps": 310,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-POLDA-03.jpg"
     },
     {
@@ -139,7 +139,7 @@
       "lng": 104.7788168618242,
       "uptime_pct": 100,
       "resolution": "1280x720",
-      "bandwidth_kbps": 1788,
+      "bandwidth_kbps": 3382,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPBB-42.jpg"
     },
     {
@@ -150,9 +150,9 @@
       "ok": true,
       "lat": -2.9362660543407957,
       "lng": 104.70212465910649,
-      "uptime_pct": 86,
+      "uptime_pct": 88,
       "resolution": "1920x1080",
-      "bandwidth_kbps": 5564,
+      "bandwidth_kbps": 5680,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPSH-48.jpg"
     },
     {
@@ -163,9 +163,9 @@
       "ok": true,
       "lat": -2.975561070774235,
       "lng": 104.75792831753658,
-      "uptime_pct": 43,
+      "uptime_pct": 50,
       "resolution": "1920x1080",
-      "bandwidth_kbps": 510,
+      "bandwidth_kbps": 753,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-TAMSIS-40.jpg"
     },
     {
@@ -173,12 +173,12 @@
       "name": "CCTV Masjid Agung",
       "group": "Bukitkecil",
       "url": "https://cctv.palembang.go.id/api/cctv/69258794273b6e50c40e515c/playback/index.m3u8",
-      "ok": false,
+      "ok": true,
       "lat": -2.98819,
       "lng": 104.760447,
-      "uptime_pct": 71,
+      "uptime_pct": 75,
       "resolution": "1920x1080",
-      "bandwidth_kbps": 5506,
+      "bandwidth_kbps": 5029,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-MASJID-AGUNG-09.jpg"
     },
     {
@@ -191,7 +191,7 @@
       "lng": 104.7581219930195,
       "uptime_pct": 100,
       "resolution": "704x576",
-      "bandwidth_kbps": 482,
+      "bandwidth_kbps": 484,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPIP-30.jpg"
     },
     {
@@ -199,12 +199,12 @@
       "name": "CCTV SP Samsat",
       "group": "Bukitkecil",
       "url": "https://cctv.palembang.go.id/api/cctv/6928176c273b6e50c41642e7/playback/index.m3u8",
-      "ok": false,
+      "ok": true,
       "lat": -2.986829357668499,
       "lng": 104.7439515423289,
-      "uptime_pct": 86,
+      "uptime_pct": 88,
       "resolution": "1920x1080",
-      "bandwidth_kbps": 3157,
+      "bandwidth_kbps": 4719,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPSAMSAT-21.jpg"
     },
     {
@@ -215,9 +215,9 @@
       "ok": true,
       "lat": -2.913313005325259,
       "lng": 104.68819312611218,
-      "uptime_pct": 43,
+      "uptime_pct": 50,
       "resolution": "704x576",
-      "bandwidth_kbps": 284,
+      "bandwidth_kbps": 291,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-KM12-13.jpg"
     },
     {
@@ -230,7 +230,7 @@
       "lng": 104.72125000000001,
       "uptime_pct": 100,
       "resolution": "704x576",
-      "bandwidth_kbps": 306,
+      "bandwidth_kbps": 309,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DA-24.jpg"
     },
     {
@@ -243,7 +243,7 @@
       "lng": 104.76184254232889,
       "uptime_pct": 100,
       "resolution": "704x576",
-      "bandwidth_kbps": 308,
+      "bandwidth_kbps": 313,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PASAR16-25.jpg"
     },
     {
@@ -254,9 +254,9 @@
       "ok": true,
       "lat": -2.976768,
       "lng": 104.75434,
-      "uptime_pct": 86,
+      "uptime_pct": 88,
       "resolution": "1920x1080",
-      "bandwidth_kbps": 5391,
+      "bandwidth_kbps": 6503,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-CHARITAS-08.jpg"
     },
     {
@@ -269,7 +269,7 @@
       "lng": 104.75797240712888,
       "uptime_pct": 100,
       "resolution": "1280x720",
-      "bandwidth_kbps": 445,
+      "bandwidth_kbps": 1285,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-TAMSIS-47.jpg"
     },
     {
@@ -280,9 +280,9 @@
       "ok": true,
       "lat": -2.989552,
       "lng": 104.763833,
-      "uptime_pct": 71,
+      "uptime_pct": 75,
       "resolution": "704x576",
-      "bandwidth_kbps": 370,
+      "bandwidth_kbps": 318,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-P16-36.jpg"
     },
     {
@@ -295,7 +295,7 @@
       "lng": 104.76330599999999,
       "uptime_pct": 100,
       "resolution": "704x576",
-      "bandwidth_kbps": 286,
+      "bandwidth_kbps": 269,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PLAZA7-ULU-20.jpg"
     },
     {
@@ -306,9 +306,9 @@
       "ok": true,
       "lat": -2.9038701716938173,
       "lng": 104.72746849900544,
-      "uptime_pct": 71,
+      "uptime_pct": 75,
       "resolution": "1920x1080",
-      "bandwidth_kbps": 5530,
+      "bandwidth_kbps": 5644,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPB-45.jpg"
     },
     {
@@ -321,7 +321,7 @@
       "lng": 104.745707,
       "uptime_pct": 100,
       "resolution": "1920x1080",
-      "bandwidth_kbps": 376,
+      "bandwidth_kbps": 529,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DPR-44.jpg"
     },
     {
@@ -332,7 +332,7 @@
       "ok": false,
       "lat": -2.988164860621555,
       "lng": 104.71905091893788,
-      "uptime_pct": 71,
+      "uptime_pct": 62,
       "resolution": null,
       "bandwidth_kbps": null,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PARAM-43.jpg"
@@ -449,7 +449,7 @@
       "ok": true,
       "lat": -3.081023,
       "lng": 104.747069,
-      "uptime_pct": 86,
+      "uptime_pct": 88,
       "resolution": null,
       "bandwidth_kbps": null,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105278.jpg"
@@ -524,10 +524,10 @@
       "name": "PALINDRA GT Indralaya",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/425149463316515625544601.m3u8",
-      "ok": true,
+      "ok": false,
       "lat": -3.212218,
       "lng": 104.679816,
-      "uptime_pct": 100,
+      "uptime_pct": 88,
       "resolution": null,
       "bandwidth_kbps": null,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105284.jpg"
@@ -537,10 +537,10 @@
       "name": "PALINDRA GT KTM RAMBUTAN",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/953617100779184492903430.m3u8",
-      "ok": true,
+      "ok": false,
       "lat": -3.147033,
       "lng": 104.703918,
-      "uptime_pct": 100,
+      "uptime_pct": 88,
       "resolution": null,
       "bandwidth_kbps": null,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105285.jpg"
@@ -550,10 +550,10 @@
       "name": "PALINDRA IC KTM",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/481851734189142298210171.m3u8",
-      "ok": true,
+      "ok": false,
       "lat": -3.148842,
       "lng": 104.710146,
-      "uptime_pct": 100,
+      "uptime_pct": 88,
       "resolution": null,
       "bandwidth_kbps": null,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105286.jpg"
@@ -563,10 +563,10 @@
       "name": "PALINDRA IC Pemulutan",
       "group": "Tol Palindra",
       "url": "https://pub.hk-opt.com/LiveApp/streams/100831563641835272155645.m3u8",
-      "ok": true,
+      "ok": false,
       "lat": -3.107979,
       "lng": 104.72642,
-      "uptime_pct": 100,
+      "uptime_pct": 88,
       "resolution": null,
       "bandwidth_kbps": null,
       "logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105287.jpg"
