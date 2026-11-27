@@ -11,14 +11,6 @@ https://cctv.palembang.go.id/api/cctv/68f09d50b4545109d5349b12/playback/index.m3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/68f9f32d57309f82669542ca/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-VTR-41" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-VTR-41.jpg",CCTV JL VETERAN 1
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
-https://cctv.palembang.go.id/api/cctv/6a95f17c392f3ee3ef741052/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-VTR-50" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-VTR-50.jpg",CCTV JL VETERAN 2
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
-#EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
-https://cctv.palembang.go.id/api/cctv/6a95febc392f3ee3ef741775/playback/index.m3u8
 #EXTINF:-1 tvg-id="plb-CCTV-MANDIRI-38" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-MANDIRI-38.jpg",CCTV Lampu Merah Kol Atmo
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/

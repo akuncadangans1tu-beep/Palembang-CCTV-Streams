@@ -22,20 +22,6 @@
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-CINDE-06.jpg"
     },
     {
-      "name": "CCTV JL VETERAN 1",
-      "group": "Alang-Alang Lebar",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95f17c392f3ee3ef741052/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-VTR-41",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-VTR-41.jpg"
-    },
-    {
-      "name": "CCTV JL VETERAN 2",
-      "group": "Alang-Alang Lebar",
-      "url": "https://cctv.palembang.go.id/api/cctv/6a95febc392f3ee3ef741775/playback/index.m3u8",
-      "tvg-id": "plb-CCTV-VTR-50",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-VTR-50.jpg"
-    },
-    {
       "name": "CCTV Lampu Merah Kol Atmo",
       "group": "Alang-Alang Lebar",
       "url": "https://cctv.palembang.go.id/api/cctv/69fed770f59e8fd90f67227e/playback/index.m3u8",
