@@ -96,6 +96,11 @@ Salin tautan playlist di blok atas ke VLC / app IPTV, atau pakai mirror CDN jsDe
 ## ⚠️ Disclaimer
 Independen, tidak berafiliasi dengan Pemkot Palembang / DisHub / Pemprov Sumsel. Semua tautan dari sumber publik.
 
+## 🗺️ Area belum tercakup
+<!-- GAPS:START -->
+_Otomatis._
+<!-- GAPS:END -->
+
 ## 🤝 Kontribusi
 [CONTRIBUTING.md](CONTRIBUTING.md) · [FAQ](FAQ.md) · [Arsitektur](ARCHITECTURE.md) · [Keamanan](SECURITY.md) · [Kode Etik](CODE_OF_CONDUCT.md)
 ⚠️ Hanya kamera publik Palembang / koridor tol; kamera pribadi dilarang.
