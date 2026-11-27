@@ -1,26 +1,42 @@
-name: Lapor kamera mati
-description: Laporkan kamera yang tidak bisa diputar
-title: "[kamera-mati] Nama kamera"
-labels: ["kamera-mati"]
+name: "🔴 Lapor Kamera Mati"
+description: "Laporkan CCTV yang offline/tidak bisa diakses"
+title: "[Kamera Mati]: "
+labels: ["kamera-mati", "bug"]
 body:
   - type: input
-    id: nama
+    id: camera-name
     attributes:
-      label: Nama kamera
+      label: "Nama Kamera"
+      description: "Nama kamera yang bermasalah (dari playlist)"
+      placeholder: "CCTV Jembatan Ampera"
     validations:
       required: true
-  - type: input
-    id: url
-    attributes:
-      label: URL yang bermasalah (jika tahu)
+  
   - type: textarea
-    id: gejala
+    id: error-details
     attributes:
-      label: Apa yang terjadi?
-      placeholder: hitam / error / buffering terus / 404 ...
+      label: "Detail Masalah"
+      description: "Jelaskan apa yang terjadi saat coba akses"
+      placeholder: |
+        - HTTP 404 Not Found
+        - Stream timeout setelah 30 detik
+        - Video hitam tanpa audio
     validations:
       required: true
+  
   - type: input
-    id: pengganti
+    id: last-working
     attributes:
-      label: URL pengganti (jika punya)
+      label: "Terakhir Bekerja"
+      description: "Kapan terakhir kamu lihat kamera ini aktif?"
+      placeholder: "2 hari yang lalu / tanggal tertentu"
+  
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: "Verifikasi"
+      options:
+        - label: "Saya sudah coba akses ulang beberapa kali"
+          required: true
+        - label: "Masalah konsisten (bukan network lokal saya)"
+          required: true
