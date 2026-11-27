@@ -15,6 +15,7 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install pillow
       - run: python scripts/update_streams.py --playlist streams.m3u8
+      - run: python scripts/make_gaps.py
       - run: python scripts/make_visuals.py --postcard
       - run: python scripts/wa_broadcast.py
       - name: Meta repo (opsional)
