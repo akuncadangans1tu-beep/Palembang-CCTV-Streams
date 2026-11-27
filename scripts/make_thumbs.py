@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Thumbnail semua CCTV (kota + tol).
-Strategi: resolve master->media->segmen lewat Python (SSL longgar + header),
-lalu ffmpeg langsung ke segmen .ts (bypass HLS demuxer yang gagal di playlist bertoken pemkot).
-Fallback: ffmpeg HLS biasa dengan -tls_verify 0."""
+Resolve master->media->segmen lewat Python (SSL longgar + header), lalu:
+  - segmen: paksa demuxer mpegts (segmen pemkot berupa .ts tanpa ekstensi di URL)
+  - fallback HLS: -allowed_extensions ALL -extension_picky 0 (terima segmen tanpa .ts)
+"""
 import re, ssl, subprocess, urllib.request
 import concurrent.futures as cf
 from pathlib import Path
@@ -44,27 +45,28 @@ def parse(p):
             cur = None
     return es
 
-def ffmpeg_frame(target, out, hdr):
-    cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
-           "-tls_verify", "0", "-headers", hdr,
-           "-i", target, "-frames:v", "1", "-q:v", "4", "-vf", "scale=320:-2", str(out)]
+def run(cmd):
     r = subprocess.run(cmd, timeout=30, capture_output=True)
-    return r.returncode == 0 and out.exists() and out.stat().st_size > 0, r.stderr.decode("utf-8", "ignore")[:300]
+    out = Path(cmd[-1])
+    return (r.returncode == 0 and out.exists() and out.stat().st_size > 0), r.stderr.decode("utf-8", "ignore")[:300]
 
 def one(item):
     key, url = item
-    out = Path("thumbs") / f"{key}.jpg"
+    out = str(Path("thumbs") / f"{key}.jpg")
     hdr = f"User-Agent: {UA}\r\nReferer: {referer(url)}\r\n"
+    base = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-tls_verify", "0", "-headers", hdr]
+    tail = ["-frames:v", "1", "-q:v", "4", "-vf", "scale=320:-2", out]
     err = ""
     seg = None
     try: seg = resolve_segment(url)
     except Exception as e: err = f"resolve: {e}"
-    targets = ([seg] if seg else []) + [url]
-    for tgt in targets:
-        ok, e = ffmpeg_frame(tgt, out, hdr)
+    if seg:
+        ok, e = run(base + ["-f", "mpegts", "-i", seg] + tail)
         if ok: return (key, True, "")
         err = e or err
-    return (key, False, err)
+    ok, e = run(base + ["-f", "hls", "-allowed_extensions", "ALL", "-extension_picky", "0", "-i", url] + tail)
+    if ok: return (key, True, "")
+    return (key, False, e or err)
 
 def main():
     Path("thumbs").mkdir(parents=True, exist_ok=True)
