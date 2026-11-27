@@ -15,25 +15,15 @@ jobs:
         run: |
           which ffmpeg || { sudo apt-get update && sudo apt-get install -y ffmpeg; }
           ffmpeg -version | head -1
-      - name: Debug satu stream (cetak error asli bila gagal)
-        run: |
-          URL=$(python -c "import json;print(json.load(open('status.json'))['streams'][0]['url'])")
-          echo "URL tes: $URL"
-          ffmpeg -y -loglevel error \
-            -headers "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36\r\nReferer: https://cctv.palembang.go.id/\r\n" \
-            -i "$URL" -frames:v 1 -vf scale=320:-2 /tmp/dbg.jpg \
-            && echo "DEBUG OK - ffmpeg bisa ambil frame" \
-            || echo "DEBUG GAGAL - lihat pesan error ffmpeg di atas"
-          ls -la /tmp/dbg.jpg || true
-      - name: Generate semua thumbnail
-        run: python scripts/update_streams.py --thumbs
+      - name: Generate semua thumbnail (kota + tol)
+        run: python scripts/make_thumbs.py
       - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add thumbs/
           if git diff --cached --quiet; then
-            echo "Tidak ada thumbnail baru (cek log langkah Debug/Generate)."
+            echo "Tidak ada thumbnail baru (cek log [thumb-err] di atas)."
           else
             git commit -m "chore: refresh thumbnails"
             git pull --rebase origin main --no-edit || git rebase --abort
