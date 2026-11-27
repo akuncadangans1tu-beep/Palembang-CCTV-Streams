@@ -90,6 +90,12 @@ Independen, tidak berafiliasi dengan Pemkot Palembang / DisHub / Pemprov Sumsel.
 📍 **16 kecamatan** Palembang & **2 ruas tol** belum tercakup. [Lihat detail & cara bantu →](GAPS.md)
 <!-- GAPS:END -->
 
+## 👤 Maintainer
+
+Proyek ini dikelola oleh **[@akuncadangans1tu-beep](https://github.com/akuncadangans1tu-beep)**.
+
+Untuk usul kamera baru atau laporan masalah, buka [Issues](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/issues).
+
 ## 🤝 Kontribusi
 [CONTRIBUTING.md](CONTRIBUTING.md) · [FAQ](FAQ.md) · [Arsitektur](ARCHITECTURE.md) · [Keamanan](SECURITY.md) · [Kode Etik](CODE_OF_CONDUCT.md)
 ⚠️ Hanya kamera publik Palembang / koridor tol; kamera pribadi dilarang.
