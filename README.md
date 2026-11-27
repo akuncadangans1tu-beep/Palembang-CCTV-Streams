@@ -76,6 +76,7 @@ Playlist CCTV publik **Kota Palembang & koridor tol Sumatera** (HLS stabil), dir
 ## 🖼️ Visual
 ![Coverage](assets/map.png)
 ![Uptime](assets/uptime.png)
+![Heatmap](assets/heatmap.png)
 ![Mosaic](assets/mosaic.jpg)
 ![Postcard](assets/postcard.jpg)
 
