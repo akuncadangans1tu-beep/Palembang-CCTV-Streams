@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """CCTV Palembang + tol Sumatera. Output: streams.m3u8, playlist.json, status.json, history.json,
-data/uptime.csv, UPTIME.md, CHANGELOG.md, feed.xml, REPORT.md, removed.json, README(STATUS+LINKS).
-Mode: --thumbs (ffmpeg), --lint (validasi PR), --rotate (arsip data lama). Python 3.9+."""
+data/uptime.csv, UPTIME.md, CHANGELOG.md, feed.xml, REPORT.md, removed.json, GAPS.md, README(STATUS+LINKS+GAPS).
+Mode: --thumbs, --lint, --rotate. Python 3.9+."""
 import argparse, concurrent.futures as cf, csv, json, os, re, ssl, subprocess, sys, time
 import urllib.error, urllib.request
 from datetime import datetime, timezone, timedelta
@@ -21,6 +21,15 @@ SSL_CTX = ssl.create_default_context(); SSL_CTX.check_hostname = False; SSL_CTX.
 TOKEN_RE = re.compile(r"[?&](token|expires?|expiration|signature|sig|auth|hdnts|hdnea|policy|key-pair-id|exp)=", re.I)
 RS, RE_ = "<!-- STATUS:START -->", "<!-- STATUS:END -->"
 LS, LE = "<!-- LINKS:START -->", "<!-- LINKS:END -->"
+GS, GE = "<!-- GAPS:START -->", "<!-- GAPS:END -->"
+HEAD = ["date_utc", "hour_utc", "key", "name", "group", "online", "resolution", "bandwidth_kbps"]
+KECAMATAN = ["Bukit Kecil", "Ilir Barat I", "Ilir Barat II", "Ilir Timur I", "Ilir Timur II", "Ilir Timur Tiga",
+             "Kemuning", "Kertapati", "Plaju", "Sako", "Seberang Ulu I", "Seberang Ulu II",
+             "Sematang Borang", "Sukarami", "Gandus", "Jakabaring", "Kalidoni", "Seberang Ulu Tiga"]
+RUAS_TOL = [("Tol Palindra", "Palembang - Indralaya (Sumsel)"),
+            ("Tol Lampung", "Bakauheni - Terbanggi Besar & sekitarnya"),
+            ("Tol Kayu Agung - Palembang", "Kayu Agung - Palembang"),
+            ("Tol Pematang Panggang - Kayu Agung", "Pematang Panggang - Kayu Agung")]
 
 def now_iso(): return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 def wib_now(): return datetime.now(timezone(timedelta(hours=7))).strftime("%d %b %Y %H:%M WIB")
@@ -112,14 +121,14 @@ def _links(ru):
             elif href.startswith(ru.replace("https://opencctv.org", "")) and "?page=" in href: pages.append(f)
     return sorted(links)
 
+def html_unescape(s):
+    import html as H; return H.unescape(s)
+
 def _m3u8(h):
     c = [html_unescape(s) for t, s in re.findall(r'data-type="([^"]+)"[^>]*?data-src="([^"]+)"', h) if t == "m3u8"]
     c += [html_unescape(s) for s, t in re.findall(r'data-src="([^"]+)"[^>]*?data-type="([^"]+)"', h) if t == "m3u8"]
     c += [html_unescape(m.group(0)) for m in re.finditer(r'https?://[^"\'\s]+\.m3u8[^"\'\s]*', h)]
     return next((u for u in c if stable(u)), None)
-
-def html_unescape(s):
-    import html as H; return H.unescape(s)
 
 def _one(link, g, pre):
     try:
@@ -174,7 +183,10 @@ def from_cat(i):
 
 def write_m3u(p, es):
     L = ["#EXTM3U"]
-    for e in sorted(es, key=lambda x: (x["attrs"].get("group-title", ""), x["name"].lower())):
+    for i, e in enumerate(sorted(es, key=lambda x: (x["attrs"].get("group-title", ""), x["name"].lower())), 1):
+        e["attrs"]["tvg-chno"] = str(i)          # #1 nomor channel
+        e["attrs"]["tvg-country"] = "ID"         # #1 negara
+        e["attrs"]["tvg-language"] = "Indonesian"  # #1 bahasa
         L.append("#EXTINF:-1" + "".join(f' {k}="{v}"' for k, v in e["attrs"].items()) + "," + e["name"])
         L += e.get("extra", []); L.append(e["url"])
     Path(p).write_text("\n".join(L) + "\n", encoding="utf-8")
@@ -223,11 +235,26 @@ def upd_hist(h, kept, res):
         d["uptime_pct"] = round(100 * d["ok"] / d["total"]) if d["total"] else 0
     return h
 
+def normalize_csv(p):
+    if not p.exists(): return
+    with p.open(encoding="utf-8") as f: rows = list(csv.reader(f))
+    if not rows: return
+    head, body = rows[0], rows[1:]
+    if head == HEAD and all(len(r) == 8 for r in body): return
+    out = []
+    for r in body:
+        if len(r) == 8: out.append(r)
+        elif len(r) == 7: out.append([r[0], "00", r[1], r[2], r[3], r[4], r[5], r[6]])
+    with p.open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f); w.writerow(HEAD); w.writerows(out)
+    print(f"[✓] normalisasi CSV: {len(out)} baris")
+
 def dataset(kept, res, qual):
-    Path("data").mkdir(parents=True, exist_ok=True); p = Path("data/uptime.csv"); new = not p.exists()
+    Path("data").mkdir(parents=True, exist_ok=True); p = Path("data/uptime.csv")
+    normalize_csv(p); new = not p.exists()
     with p.open("a", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        if new: w.writerow(["date_utc", "hour_utc", "key", "name", "group", "online", "resolution", "bandwidth_kbps"])
+        if new: w.writerow(HEAD)
         n = datetime.now(timezone.utc)
         for e in kept:
             q = qual.get(e["key"], {})
@@ -240,7 +267,9 @@ def hourly():
     agg = {}
     with p.open(encoding="utf-8") as f:
         for r in csv.DictReader(f):
-            h = (int(r.get("hour_utc", 0)) + 7) % 24; a = agg.setdefault(h, [0, 0]); a[1] += 1; a[0] += (r.get("online") == "0")
+            try: h = (int(r.get("hour_utc", 0)) + 7) % 24; o = int(r.get("online", 0))
+            except ValueError: continue
+            a = agg.setdefault(h, [0, 0]); a[1] += 1; a[0] += (o == 0)
     return sorted(((h, o, t, round(100 * o / t) if t else 0) for h, (o, t) in agg.items()), key=lambda x: -x[3])[:5]
 
 def uptime_md(kept, res, hist, qual):
@@ -253,8 +282,7 @@ def uptime_md(kept, res, hist, qual):
         h = hist.get(e["key"], {}); L.append(f"| {e['name']} | {h.get('uptime_pct',0)}% | {spark(h.get('recent',[]))} |")
     fl = [e for e in kept if flap(hist.get(e["key"], {}).get("recent", [])) >= 6]
     L += ["", "## 🔁 Flapping (hidup-mati terus)"] + ([f"- {e['name']} ({flap(hist[e['key']]['recent'])} transisi)" for e in fl] or ["- (tidak ada)"])
-    rc = {}
-    tb = 0
+    rc = {}; tb = 0
     for e in kept:
         q = qual.get(e["key"], {}); rc[q.get("resolution") or "?"] = rc.get(q.get("resolution") or "?", 0) + 1; tb += q.get("bandwidth_kbps") or 0
     L += ["", "## 📺 Kualitas", f"- Total bitrate ≈ **{tb} kbps**", "| Resolusi | Jumlah |", "|---|---|"]
@@ -262,6 +290,36 @@ def uptime_md(kept, res, hist, qual):
     hr = hourly()
     L += ["", "## 🕐 Jam rawan offline (WIB)", "| Jam | Offline |", "|---|---|"] + [f"| {h:02d}:00 | {p}% |" for h, o, t, p in hr]
     Path("UPTIME.md").write_text("\n".join(L) + "\n", encoding="utf-8")
+
+def gaps(groups):
+    ck = [k for k in KECAMATAN if any(k.lower() in g.lower() for g in groups)]
+    ek = [k for k in KECAMATAN if k not in ck]
+    ct = [n for n, _ in RUAS_TOL if any(n in g for g in groups)]
+    et = [(n, d) for n, d in RUAS_TOL if n not in ct]
+    L = [f"# 🗺️ Area Belum Tercakup — {wib_now()}", "",
+         f"_Playlist mencakup **{len(ck)}**/{len(KECAMATAN)} kecamatan Palembang & **{len(ct)}**/{len(RUAS_TOL)} ruas tol._", ""]
+    if ek:
+        L.append(f"## 🏘️ Kecamatan tanpa kamera ({len(ek)})")
+        L += [f"- [ ] **{k}**" for k in ek]
+        L += ["", "_Tahu CCTV publik resmi di sini? Buka issue `Usul kamera baru`._"]
+    else:
+        L.append("## 🎉 Semua kecamatan Palembang tercakup!")
+    L.append("")
+    if et:
+        L.append(f"## 🛣️ Ruas tol tanpa kamera ({len(et)})")
+        L += [f"- [ ] **{n}** — {d}" for n, d in et]
+        L += ["", "_Tahu portal CCTV publik ruas ini? Buka issue `Usul kamera baru`._"]
+    else:
+        L.append("## 🎉 Semua ruas tol target tercakup!")
+    L += ["", "## Cara bantu mengisi", "", "1. Issues → New issue → Usul kamera baru.", "2. Sertakan URL `.m3u8` + sumber resmi.", "3. Maintainer verifikasi & tambah.", "", "_Hanya kamera publik & legal._"]
+    Path("GAPS.md").write_text("\n".join(L) + "\n", encoding="utf-8")
+    p = Path("README.md")
+    if p.exists():
+        t = p.read_text(encoding="utf-8")
+        if GS in t and GE in t:
+            summ = f"📍 **{len(ek)} kecamatan** & **{len(et)} ruas tol** belum tercakup. [Detail & cara bantu →](GAPS.md)"
+            p.write_text(t.split(GS, 1)[0] + GS + "\n" + summ + "\n" + GE + t.split(GE, 1)[1], encoding="utf-8")
+    print(f"[✓] GAPS: {len(ek)} kecamatan + {len(et)} ruas kosong")
 
 def changelog(rep):
     p = Path("CHANGELOG.md"); old = p.read_text(encoding="utf-8") if p.exists() else "# Changelog\n"
@@ -339,6 +397,7 @@ def lint(p):
 def rotate(days=60):
     p = Path("data/uptime.csv")
     if not p.exists(): return
+    normalize_csv(p)
     cut = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
     keep, arch = [], {}
     with p.open(encoding="utf-8") as f:
@@ -354,7 +413,7 @@ def rotate(days=60):
             w.writerows(rows)
     with p.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f); w.writerow(head); w.writerows(keep)
-    print(f"[✓] rotate: {len(keep)} baris aktif, {sum(len(v) for v in arch.values())} diarsip")
+    print(f"[✓] rotate: {len(keep)} aktif, {sum(len(v) for v in arch.values())} diarsip")
 
 def main():
     ap = argparse.ArgumentParser()
@@ -419,7 +478,8 @@ def main():
     Path(a.state).parent.mkdir(parents=True, exist_ok=True)
     Path(a.state).write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
     Path(a.history).write_text(json.dumps(hist, indent=2, ensure_ascii=False), encoding="utf-8")
-    dataset(kept, res, qual); cl = changelog(rep); feed(rep, summ); uptime_md(kept, res, hist, qual)
+    dataset(kept, res, qual); changelog(rep); feed(rep, summ); uptime_md(kept, res, hist, qual)
+    gaps({e["attrs"].get("group-title", "") for e in kept})
     Path("removed.json").write_text(json.dumps([{"key": e["key"], "name": e["name"], "reason": w} for e, w in rem], ensure_ascii=False), encoding="utf-8")
     streams = [{"key": e["key"], "name": e["name"], "group": e["attrs"].get("group-title", ""), "url": e["url"], "ok": res.get(e["key"], (False, ""))[0],
                 "lat": e.get("lat"), "lng": e.get("lng"), "uptime_pct": hist.get(e["key"], {}).get("uptime_pct", 100),
