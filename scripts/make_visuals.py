@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""Visual statis: --map --chart --mosaic --banner --postcard --heatmap; tanpa flag = semua kecuali postcard.
-Selalu menulis file (placeholder bila sumber belum ada). matplotlib lazy; yang lain cukup Pillow."""
-import argparse, json, csv, random
+"""Visual: --map --chart --heatmap --mosaic --banner --postcard --donut; tanpa flag = semua kecuali postcard.
+Postcard kini附带 cuaca + kualitas udara (Open-Meteo, gratis tanpa key)."""
+import argparse, json, csv, random, urllib.request
 from pathlib import Path
 from datetime import datetime, timezone, timedelta, date as ddate
 from PIL import Image, ImageDraw, ImageFont
 
 A = Path("assets"); A.mkdir(exist_ok=True)
 S = json.loads(Path("status.json").read_text(encoding="utf-8")) if Path("status.json").exists() else {"summary": {}, "streams": []}
+WMO = {0: "Cerah", 1: "Cerah berawan", 2: "Berawan", 3: "Mendung", 45: "Kabut", 48: "Kabut beku",
+       51: "Gerimis", 53: "Gerimis", 55: "Gerimis lebat", 61: "Hujan", 63: "Hujan", 65: "Hujan lebat",
+       80: "Hujan lokal", 81: "Hujan lokal", 82: "Hujan lebat", 95: "Badai petir", 96: "Badai petir", 99: "Badai petir"}
 
 def font(sz):
     try: return ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", sz)
@@ -20,8 +23,7 @@ def placeholder(fn, text):
     im.save(A / fn)
 
 def _plt():
-    import matplotlib
-    matplotlib.use("Agg")
+    import matplotlib; matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     return plt
 
@@ -39,6 +41,28 @@ def _daily():
             if o not in (0, 1): continue
             a = day.setdefault(d, [0, 0]); a[1] += 1; a[0] += o
     return day
+
+def weather():
+    try:
+        u = "https://api.open-meteo.com/v1/forecast?latitude=-2.99&longitude=104.75&current=temperature_2m,relative_humidity_2m,weather_code&timezone=Asia%2FJakarta"
+        c = json.load(urllib.request.urlopen(u, timeout=15))["current"]
+        aq = None
+        try:
+            ua = "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=-2.99&longitude=104.75&current=us_aqi&timezone=Asia%2FJakarta"
+            aq = json.load(urllib.request.urlopen(ua, timeout=15))["current"]["us_aqi"]
+        except Exception: pass
+        return {"t": c.get("temperature_2m"), "rh": c.get("relative_humidity_2m"), "code": c.get("weather_code"), "aqi": aq}
+    except Exception:
+        return None
+
+def aqi_cat(v):
+    if v is None: return ""
+    if v <= 50: return "Baik"
+    if v <= 100: return "Sedang"
+    if v <= 150: return "Tidak sehat (sensitif)"
+    if v <= 200: return "Tidak sehat"
+    if v <= 300: return "Sangat tidak sehat"
+    return "Berbahaya"
 
 def pmap():
     plt = _plt()
@@ -72,14 +96,32 @@ def heatmap():
     start = min(cells) - timedelta(days=min(cells).weekday())
     nw = (max(cells) - start).days // 7 + 1
     MAT = np.full((7, nw), np.nan)
-    for d, r in cells.items():
-        MAT[d.weekday(), (d - start).days // 7] = r
+    for d, r in cells.items(): MAT[d.weekday(), (d - start).days // 7] = r
     fig, ax = plt.subplots(figsize=(nw * 0.32 + 2, 3.2), dpi=110); fig.patch.set_facecolor("#0b0f14")
     im = ax.imshow(MAT, cmap="RdYlGn", aspect="auto", vmin=0, vmax=1)
     ax.set_yticks(range(7)); ax.set_yticklabels(["Sen", "Sel", "Rab", "Kam", "Jum", "Sab", "Min"], color="white", fontsize=7)
     ax.set_xticks([]); ax.set_title("Kalender uptime harian (hijau = sehat)", color="white", fontsize=10)
     fig.colorbar(im, ax=ax, fraction=0.02)
     fig.savefig(A / "heatmap.png", bbox_inches="tight"); plt.close(fig)
+
+def donut():
+    plt = _plt()
+    st = S.get("streams", [])
+    if not st: placeholder("donut.png", "Donut menunggu data"); return
+    def mean(pred):
+        v = [s.get("uptime_pct", 100) for s in st if pred(s)]
+        return round(sum(v) / len(v)) if v else None
+    sets = [("Overall", lambda s: True), ("Kota Palembang", lambda s: s["key"].startswith("plb-")),
+            ("Tol Palindra", lambda s: s.get("group") == "Tol Palindra"), ("Tol Lampung", lambda s: s.get("group") == "Tol Lampung")]
+    fig, axes = plt.subplots(1, 4, figsize=(12, 3.2), dpi=110); fig.patch.set_facecolor("#0b0f14")
+    for ax, (lab, pred) in zip(axes, sets):
+        v = mean(pred); ax.set_facecolor("#0b0f14")
+        if v is None:
+            ax.text(0.5, 0.5, "—", ha="center", va="center", color="white"); ax.axis("off"); ax.set_title(lab, color="white", fontsize=9); continue
+        ax.pie([v, 100 - v], colors=["#22c55e", "#2a3440"], startangle=90, counterclock=False, wedgeprops=dict(width=0.35))
+        ax.text(0, 0, f"{v}%", ha="center", va="center", color="white", fontsize=14)
+        ax.set_title(lab, color="white", fontsize=9)
+    fig.savefig(A / "donut.png", bbox_inches="tight"); plt.close(fig)
 
 def mosaic():
     th = sorted(Path("thumbs").glob("*.jpg"))[:64]
@@ -105,11 +147,17 @@ def postcard():
     t = random.choice(th); im = Image.open(t).convert("RGB").resize((640, 360)); d = ImageDraw.Draw(im)
     wib = datetime.now(timezone(timedelta(hours=7))).strftime("%d %b %Y %H:%M WIB")
     d.rectangle([0, 320, 640, 360], fill="#000000cc"); d.text((12, 330), f"Postcard {wib}", fill="white", font=font(20))
+    w = weather()
+    if w:
+        desc = WMO.get(w.get("code"), "—")
+        aq = w.get("aqi"); aqs = f" · AQI {aq} ({aqi_cat(aq)})" if aq is not None else ""
+        txt = f"{w.get('t')}°C · {desc} · RH {w.get('rh')}%{aqs}"
+        d.rectangle([0, 0, 640, 40], fill="#000000cc"); d.text((12, 10), txt, fill="white", font=font(16))
     im.save(A / "postcard.jpg", quality=88)
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    for f in ("map", "chart", "mosaic", "banner", "postcard", "heatmap"): ap.add_argument(f"--{f}", action="store_true")
+    for f in ("map", "chart", "mosaic", "banner", "postcard", "heatmap", "donut"): ap.add_argument(f"--{f}", action="store_true")
     a = ap.parse_args()
     if a.postcard: postcard()
     elif a.map: pmap()
@@ -117,5 +165,6 @@ if __name__ == "__main__":
     elif a.mosaic: mosaic()
     elif a.banner: banner()
     elif a.heatmap: heatmap()
-    else: pmap(); chart(); heatmap(); mosaic(); banner()
+    elif a.donut: donut()
+    else: pmap(); chart(); heatmap(); donut(); mosaic(); banner()
     print("[✓] visuals selesai")
