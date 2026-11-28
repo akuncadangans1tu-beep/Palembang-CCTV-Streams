@@ -11,7 +11,7 @@ jobs:
     env: {PYTHONUNBUFFERED: "1"}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with: {python-version: "3.12"}
       - run: pip install pillow
       - run: python scripts/update_streams.py --playlist streams.m3u8
