@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""CCTV Palembang + tol Sumatera. Output: streams.m3u8, playlist.json, status.json, history.json,
-data/uptime.csv, UPTIME.md, CHANGELOG.md, feed.xml, REPORT.md, removed.json, GAPS.md, README(STATUS+LINKS+GAPS).
-Mode: --thumbs, --lint, --rotate. Python 3.9+."""
+"""CCTV Palembang + tol Sumatera + atcsindonesia. Output: streams.m3u8, playlist.json, status.json,
+history.json, data/uptime.csv, UPTIME.md, CHANGELOG.md, feed.xml, REPORT.md, removed.json, GAPS.md,
+README(STATUS+LINKS+GAPS). Mode: --thumbs, --lint, --rotate. Python 3.9+."""
 import argparse, concurrent.futures as cf, csv, json, os, re, ssl, subprocess, sys, time
 import urllib.error, urllib.request
 from datetime import datetime, timezone, timedelta
@@ -14,6 +14,8 @@ RAW_BASE = f"https://raw.githubusercontent.com/{REPO}/main"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 PALEMBANG_API = "https://cctv.palembang.go.id/api/cctv"
 PALEMBANG_STREAM = "https://cctv.palembang.go.id/api/cctv/{id}/playback/index.m3u8"
+ATCS_API = "https://atcsindonesia.com/api/cctv"
+ATCS_SKIP = {"palembang-cctv", "binamarga-tol-cctv"}  # sudah dicakup sumber dedicated
 OPENCCTV_REGIONS = [("https://opencctv.org/cameras/indonesia/sumatera-selatan", "Tol Palindra", "Palindra "),
                     ("https://opencctv.org/cameras/indonesia/lampung", "Tol Lampung", "Lampung ")]
 MAX_FAILS, TIMEOUT, WORKERS, HIST = 3, 12, 10, 30
@@ -105,6 +107,25 @@ def scrape_palembang(limit=None):
         if limit and len(out) >= limit: break
     return out
 
+def scrape_atcs(limit=None):
+    st, b = http_get(ATCS_API, timeout=40, max_bytes=12000000)
+    if st != 200: raise RuntimeError(f"atcs {st}")
+    data = json.loads(b.decode("utf-8", "ignore")).get("data", [])
+    if not data: raise RuntimeError("atcs kosong")
+    out = []
+    for c in data:
+        if "palembang" not in str(c.get("city", "")).lower(): continue
+        if c.get("source") in ATCS_SKIP: continue
+        url = c.get("streamingUrl") or c.get("streamingUrlPrimary") or c.get("streamingUrlSecondary") or ""
+        url = url.split("?")[0] if TOKEN_RE.search(url) else url
+        if not stable(url): continue
+        lat = c.get("latitude", c.get("lat")); lng = c.get("longitude", c.get("lng"))
+        out.append({"key": f"atcs-{c.get('id')}", "name": (c.get("title") or c.get("id")).strip(), "group": "Palembang",
+                    "url": url, "lat": lat, "lng": lng,
+                    "extra": [f"#EXTVLCOPT:http-user-agent={UA}", "#EXTVLCOPT:http-referrer=https://atcsindonesia.com/"]})
+        if limit and len(out) >= limit: break
+    return out
+
 def _links(ru):
     pages, seen, links = [ru], set(), set()
     while pages and len(seen) < 6:
@@ -184,9 +205,7 @@ def from_cat(i):
 def write_m3u(p, es):
     L = ["#EXTM3U"]
     for i, e in enumerate(sorted(es, key=lambda x: (x["attrs"].get("group-title", ""), x["name"].lower())), 1):
-        e["attrs"]["tvg-chno"] = str(i)          # #1 nomor channel
-        e["attrs"]["tvg-country"] = "ID"         # #1 negara
-        e["attrs"]["tvg-language"] = "Indonesian"  # #1 bahasa
+        e["attrs"]["tvg-chno"] = str(i); e["attrs"]["tvg-country"] = "ID"; e["attrs"]["tvg-language"] = "Indonesian"
         L.append("#EXTINF:-1" + "".join(f' {k}="{v}"' for k, v in e["attrs"].items()) + "," + e["name"])
         L += e.get("extra", []); L.append(e["url"])
     Path(p).write_text("\n".join(L) + "\n", encoding="utf-8")
@@ -432,12 +451,17 @@ def main():
         except Exception: state = {}
     hist = load_hist(a.history); es = parse_m3u(a.playlist)
     print(f"[i] lama {len(es)}")
-    cat, sok = {}, {"palembang": False, "opencctv": False}
+    cat, sok = {}, {"palembang": False, "opencctv": False, "atcs": False}
     try:
         it = scrape_palembang(a.limit)
         for x in it: cat[x["key"]] = x
         sok["palembang"] = True; print(f"[+] palembang {len(it)}")
     except Exception as e: print("[!] palembang", e)
+    try:
+        it = scrape_atcs(a.limit)
+        for x in it: cat[x["key"]] = x
+        sok["atcs"] = True; print(f"[+] atcsindonesia {len(it)}")
+    except Exception as e: print("[!] atcs", e)
     try:
         it = scrape_opencctv(a.limit, a.workers)
         for x in it: cat[x["key"]] = x
@@ -446,7 +470,7 @@ def main():
     rep = merge(es, cat); es, dup = dedup(es)
     for e, w in dup: rep.append((e["name"], "REMOVED", w)); state.pop(e["key"], None); hist.pop(e["key"], None)
     for e in es:
-        src = "palembang" if e["key"].startswith("plb-") else ("opencctv" if e["key"].startswith("oc-") else None)
+        src = ("palembang" if e["key"].startswith("plb-") else "atcs" if e["key"].startswith("atcs-") else "opencctv" if e["key"].startswith("oc-") else None)
         if src and sok[src] and e["key"] not in cat:
             s = state.setdefault(e["key"], {"fail": 0, "missing": 0}); s["missing"] = s.get("missing", 0) + 1
         elif src: state.setdefault(e["key"], {"fail": 0, "missing": 0})["missing"] = 0
