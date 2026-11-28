@@ -51,6 +51,10 @@ https://cctv.palembang.go.id/api/cctv/69bd143ccc7bccc4b2dfa011/playback/index.m3
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/69281276273b6e50c4162201/playback/index.m3u8
+#EXTINF:-1 tvg-id="manual-pa-palembang" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/manual-pa-palembang.jpg" group-title="Palembang" tvg-country="ID" tvg-language="Indonesian",CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PA Palembang
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.0.0 Safari/537.36
+#EXTVLCOPT:http-referrer=https://papalembang.cctvbadilag2.my.id/402242PAPALEMBANG/streams/454303528492964193572747.m3u8
+https://papalembang.cctvbadilag2.my.id/402242PAPALEMBANG/streams/454303528492964193572747.m3u8
 #EXTINF:-1 tvg-id="oc-105303" group-title="Tol Lampung" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105303.jpg" tvg-chno="14" tvg-country="ID" tvg-language="Indonesian",Lampung 180+000 A
 https://pub.hk-opt.com/LiveApp/streams/Sz66S9K9q8wO1676355519747.m3u8
 #EXTINF:-1 tvg-id="oc-105304" group-title="Tol Lampung" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105304.jpg" tvg-chno="15" tvg-country="ID" tvg-language="Indonesian",Lampung 180+000 B
