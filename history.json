@@ -1,8 +1,9 @@
 {
   "plb-CCTV-BKB-02": {
-    "total": 21,
-    "ok": 21,
+    "total": 22,
+    "ok": 22,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -28,39 +29,40 @@
     "uptime_pct": 100
   },
   "plb-CCTV-KM12-13": {
-    "total": 21,
-    "ok": 15,
-    "recent": [
-      false,
-      true,
-      false,
-      true,
-      false,
-      false,
-      true,
-      true,
-      false,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      false,
-      true,
-      true
-    ],
-    "uptime_pct": 71
-  },
-  "plb-CCTV-MANDIRI-38": {
-    "total": 21,
+    "total": 22,
     "ok": 16,
     "recent": [
       false,
       true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true
+    ],
+    "uptime_pct": 73
+  },
+  "plb-CCTV-MANDIRI-38": {
+    "total": 22,
+    "ok": 17,
+    "recent": [
+      false,
+      true,
       true,
       false,
       false,
@@ -71,6 +73,36 @@
       true,
       true,
       true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    "uptime_pct": 77
+  },
+  "plb-CCTV-PASAR16-25": {
+    "total": 22,
+    "ok": 20,
+    "recent": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
       true,
       true,
       true,
@@ -81,10 +113,68 @@
       false,
       true
     ],
-    "uptime_pct": 76
+    "uptime_pct": 91
   },
-  "plb-CCTV-PASAR16-25": {
-    "total": 21,
+  "plb-CCTV-MASJID-AGUNG-09": {
+    "total": 22,
+    "ok": 18,
+    "recent": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "uptime_pct": 82
+  },
+  "plb-CCTV-P16-36": {
+    "total": 22,
+    "ok": 18,
+    "recent": [
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true
+    ],
+    "uptime_pct": 82
+  },
+  "plb-CCTV-PLAZA7-ULU-20": {
+    "total": 22,
     "ok": 19,
     "recent": [
       true,
@@ -95,90 +185,6 @@
       true,
       true,
       true,
-      true,
-      true,
-      true,
-      true,
-      false,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      false
-    ],
-    "uptime_pct": 90
-  },
-  "plb-CCTV-MASJID-AGUNG-09": {
-    "total": 21,
-    "ok": 17,
-    "recent": [
-      true,
-      true,
-      true,
-      true,
-      false,
-      true,
-      false,
-      true,
-      true,
-      true,
-      true,
-      false,
-      false,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true
-    ],
-    "uptime_pct": 81
-  },
-  "plb-CCTV-P16-36": {
-    "total": 21,
-    "ok": 17,
-    "recent": [
-      true,
-      false,
-      true,
-      true,
-      true,
-      false,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      false,
-      true,
-      true,
-      true,
-      true,
-      false,
-      true,
-      true
-    ],
-    "uptime_pct": 81
-  },
-  "plb-CCTV-PLAZA7-ULU-20": {
-    "total": 21,
-    "ok": 18,
-    "recent": [
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
       false,
       true,
       true,
@@ -191,50 +197,53 @@
       true,
       false,
       false,
+      true,
       true
     ],
     "uptime_pct": 86
   },
   "plb-CCTV-SIMPANG-ANGKATAN-45-05": {
-    "total": 21,
+    "total": 22,
+    "ok": 20,
+    "recent": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    "uptime_pct": 91
+  },
+  "plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04": {
+    "total": 22,
     "ok": 19,
     "recent": [
       true,
       true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      false,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      false
-    ],
-    "uptime_pct": 90
-  },
-  "plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04": {
-    "total": 21,
-    "ok": 18,
-    "recent": [
-      true,
-      true,
       false,
       true,
       false,
       true,
       true,
       false,
+      true,
       true,
       true,
       true,
@@ -252,8 +261,8 @@
     "uptime_pct": 86
   },
   "plb-CCTV-SIMPANG-POLDA-03": {
-    "total": 21,
-    "ok": 18,
+    "total": 22,
+    "ok": 19,
     "recent": [
       true,
       true,
@@ -264,6 +273,7 @@
       false,
       true,
       false,
+      true,
       true,
       true,
       true,
@@ -280,40 +290,41 @@
     "uptime_pct": 86
   },
   "plb-CCTV-CHARITAS-08": {
-    "total": 21,
+    "total": 22,
+    "ok": 20,
+    "recent": [
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true
+    ],
+    "uptime_pct": 91
+  },
+  "plb-CCTV-SPSAMSAT-21": {
+    "total": 22,
     "ok": 19,
     "recent": [
       true,
       true,
       true,
-      false,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      false,
-      true,
-      true
-    ],
-    "uptime_pct": 90
-  },
-  "plb-CCTV-SPSAMSAT-21": {
-    "total": 21,
-    "ok": 18,
-    "recent": [
-      true,
-      true,
-      true,
       true,
       true,
       true,
@@ -330,15 +341,17 @@
       true,
       true,
       false,
+      true,
       true,
       true
     ],
     "uptime_pct": 86
   },
   "oc-105303": {
-    "total": 21,
-    "ok": 21,
+    "total": 22,
+    "ok": 22,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -364,8 +377,8 @@
     "uptime_pct": 100
   },
   "oc-105304": {
-    "total": 21,
-    "ok": 20,
+    "total": 22,
+    "ok": 21,
     "recent": [
       true,
       true,
@@ -387,14 +400,16 @@
       false,
       true,
       true,
+      true,
       true
     ],
     "uptime_pct": 95
   },
   "oc-105305": {
-    "total": 21,
-    "ok": 21,
+    "total": 22,
+    "ok": 22,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -420,8 +435,8 @@
     "uptime_pct": 100
   },
   "oc-105306": {
-    "total": 21,
-    "ok": 20,
+    "total": 22,
+    "ok": 21,
     "recent": [
       true,
       true,
@@ -441,6 +456,7 @@
       true,
       true,
       false,
+      true,
       true,
       true,
       true
@@ -448,8 +464,8 @@
     "uptime_pct": 95
   },
   "oc-105274": {
-    "total": 21,
-    "ok": 20,
+    "total": 22,
+    "ok": 21,
     "recent": [
       true,
       true,
@@ -467,6 +483,7 @@
       true,
       true,
       false,
+      true,
       true,
       true,
       true,
@@ -476,9 +493,10 @@
     "uptime_pct": 95
   },
   "oc-105275": {
-    "total": 21,
-    "ok": 21,
+    "total": 22,
+    "ok": 22,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -504,9 +522,10 @@
     "uptime_pct": 100
   },
   "oc-105276": {
-    "total": 21,
-    "ok": 21,
+    "total": 22,
+    "ok": 22,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -532,9 +551,10 @@
     "uptime_pct": 100
   },
   "oc-105277": {
-    "total": 21,
-    "ok": 21,
+    "total": 22,
+    "ok": 22,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -560,8 +580,8 @@
     "uptime_pct": 100
   },
   "oc-105278": {
-    "total": 21,
-    "ok": 20,
+    "total": 22,
+    "ok": 21,
     "recent": [
       true,
       true,
@@ -583,14 +603,16 @@
       true,
       true,
       true,
+      true,
       true
     ],
     "uptime_pct": 95
   },
   "oc-105279": {
-    "total": 21,
-    "ok": 21,
+    "total": 22,
+    "ok": 22,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -616,8 +638,8 @@
     "uptime_pct": 100
   },
   "oc-105280": {
-    "total": 21,
-    "ok": 20,
+    "total": 22,
+    "ok": 21,
     "recent": [
       true,
       true,
@@ -639,14 +661,16 @@
       true,
       true,
       true,
+      true,
       true
     ],
     "uptime_pct": 95
   },
   "oc-105281": {
-    "total": 21,
-    "ok": 21,
+    "total": 22,
+    "ok": 22,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -672,9 +696,10 @@
     "uptime_pct": 100
   },
   "oc-105282": {
-    "total": 21,
-    "ok": 21,
+    "total": 22,
+    "ok": 22,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -700,9 +725,10 @@
     "uptime_pct": 100
   },
   "oc-105283": {
-    "total": 21,
-    "ok": 21,
+    "total": 22,
+    "ok": 22,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -728,35 +754,7 @@
     "uptime_pct": 100
   },
   "oc-105284": {
-    "total": 21,
-    "ok": 19,
-    "recent": [
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      false,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      false,
-      true,
-      true,
-      true
-    ],
-    "uptime_pct": 90
-  },
-  "oc-105285": {
-    "total": 21,
+    "total": 22,
     "ok": 20,
     "recent": [
       true,
@@ -767,6 +765,36 @@
       true,
       true,
       false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true
+    ],
+    "uptime_pct": 91
+  },
+  "oc-105285": {
+    "total": 22,
+    "ok": 21,
+    "recent": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
       true,
       true,
       true,
@@ -784,8 +812,8 @@
     "uptime_pct": 95
   },
   "oc-105286": {
-    "total": 21,
-    "ok": 20,
+    "total": 22,
+    "ok": 21,
     "recent": [
       true,
       true,
@@ -795,6 +823,7 @@
       true,
       true,
       false,
+      true,
       true,
       true,
       true,
@@ -812,8 +841,8 @@
     "uptime_pct": 95
   },
   "oc-105287": {
-    "total": 21,
-    "ok": 20,
+    "total": 22,
+    "ok": 21,
     "recent": [
       true,
       true,
@@ -835,14 +864,16 @@
       true,
       true,
       true,
+      true,
       true
     ],
     "uptime_pct": 95
   },
   "plb-CCTV-DA-24": {
-    "total": 7,
-    "ok": 7,
+    "total": 8,
+    "ok": 8,
     "recent": [
+      true,
       true,
       true,
       true,
@@ -854,118 +885,150 @@
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-1": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-11": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-12": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-13": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-14": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-15": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-16": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-2": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-3": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-4": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-5": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-6": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-7": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-8": {
-    "total": 1,
-    "ok": 1,
+    "total": 2,
+    "ok": 2,
     "recent": [
+      true,
       true
     ],
     "uptime_pct": 100
   },
   "atcs-binamarga-tol-palembang-indralaya-9": {
+    "total": 2,
+    "ok": 2,
+    "recent": [
+      true,
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "atcs-kemenhub-terminal-aal-pintu-masuk": {
+    "total": 2,
+    "ok": 2,
+    "recent": [
+      true,
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "plb-CCTV-CAPIL-26": {
     "total": 1,
     "ok": 1,
     "recent": [
@@ -973,7 +1036,15 @@
     ],
     "uptime_pct": 100
   },
-  "atcs-kemenhub-terminal-aal-pintu-masuk": {
+  "plb-CCTV-PUNTI-KAYU-14": {
+    "total": 1,
+    "ok": 1,
+    "recent": [
+      true
+    ],
+    "uptime_pct": 100
+  },
+  "atcs-binamarga-tol-palembang-indralaya-10": {
     "total": 1,
     "ok": 1,
     "recent": [

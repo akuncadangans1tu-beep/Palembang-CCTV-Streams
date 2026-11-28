@@ -92,6 +92,13 @@
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PLAZA7-ULU-20.jpg"
     },
     {
+      "name": "Gerbang Pintu Masuk Terminal Alang-Alang Lebar",
+      "group": "Palembang",
+      "url": "https://mitradarat-vidstream.kemenhub.go.id/stream/AALGERBANGPINTUMASUKTERMINAL/index.m3u8",
+      "tvg-id": "atcs-kemenhub-terminal-aal-pintu-masuk",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-kemenhub-terminal-aal-pintu-masuk.jpg"
+    },
+    {
       "name": "Lampung 180+000 A",
       "group": "Tol Lampung",
       "url": "https://pub.hk-opt.com/LiveApp/streams/Sz66S9K9q8wO1676355519747.m3u8",
@@ -225,48 +232,6 @@
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-1.jpg"
     },
     {
-      "name": "Tol Palembang Indralaya - PALINDRA KM 10+000 A",
-      "group": "Tol Palindra",
-      "url": "https://pub2.hk-opt.com/LiveApp/streams/421187275697827865888243.m3u8",
-      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-11",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-11.jpg"
-    },
-    {
-      "name": "Tol Palembang Indralaya - PALINDRA KM 10+000 B",
-      "group": "Tol Palindra",
-      "url": "https://pub2.hk-opt.com/LiveApp/streams/456870316790688303611820.m3u8",
-      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-12",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-12.jpg"
-    },
-    {
-      "name": "Tol Palembang Indralaya - PALINDRA KM 14+700 A",
-      "group": "Tol Palindra",
-      "url": "https://pub2.hk-opt.com/LiveApp/streams/830420490000028390395192.m3u8",
-      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-13",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-13.jpg"
-    },
-    {
-      "name": "Tol Palembang Indralaya - PALINDRA KM 14+700 B",
-      "group": "Tol Palindra",
-      "url": "https://pub2.hk-opt.com/LiveApp/streams/470984176555780160791642.m3u8",
-      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-14",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-14.jpg"
-    },
-    {
-      "name": "Tol Palembang Indralaya - PALINDRA KM 18+300 A",
-      "group": "Tol Palindra",
-      "url": "https://pub2.hk-opt.com/LiveApp/streams/426719818405515807543344.m3u8",
-      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-15",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-15.jpg"
-    },
-    {
-      "name": "Tol Palembang Indralaya - PALINDRA KM 18+300 B",
-      "group": "Tol Palindra",
-      "url": "https://pub2.hk-opt.com/LiveApp/streams/429890133451227723270508.m3u8",
-      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-16",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-16.jpg"
-    },
-    {
       "name": "Tol Palembang Indralaya - PALINDRA Gate Pemulutan",
       "group": "Tol Palindra",
       "url": "https://pub2.hk-opt.com/LiveApp/streams/648176351556242758398370.m3u8",
@@ -323,11 +288,67 @@
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-9.jpg"
     },
     {
-      "name": "Gerbang Pintu Masuk Terminal Alang-Alang Lebar",
-      "group": "Palembang",
-      "url": "https://mitradarat-vidstream.kemenhub.go.id/stream/AALGERBANGPINTUMASUKTERMINAL/index.m3u8",
-      "tvg-id": "atcs-kemenhub-terminal-aal-pintu-masuk",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-kemenhub-terminal-aal-pintu-masuk.jpg"
+      "name": "Tol Palembang Indralaya - PALINDRA KM 10+000 A",
+      "group": "Tol Palindra",
+      "url": "https://pub2.hk-opt.com/LiveApp/streams/421187275697827865888243.m3u8",
+      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-11",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-11.jpg"
+    },
+    {
+      "name": "Tol Palembang Indralaya - PALINDRA KM 10+000 B",
+      "group": "Tol Palindra",
+      "url": "https://pub2.hk-opt.com/LiveApp/streams/456870316790688303611820.m3u8",
+      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-12",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-12.jpg"
+    },
+    {
+      "name": "Tol Palembang Indralaya - PALINDRA KM 14+700 A",
+      "group": "Tol Palindra",
+      "url": "https://pub2.hk-opt.com/LiveApp/streams/830420490000028390395192.m3u8",
+      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-13",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-13.jpg"
+    },
+    {
+      "name": "Tol Palembang Indralaya - PALINDRA KM 14+700 B",
+      "group": "Tol Palindra",
+      "url": "https://pub2.hk-opt.com/LiveApp/streams/470984176555780160791642.m3u8",
+      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-14",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-14.jpg"
+    },
+    {
+      "name": "Tol Palembang Indralaya - PALINDRA KM 18+300 A",
+      "group": "Tol Palindra",
+      "url": "https://pub2.hk-opt.com/LiveApp/streams/426719818405515807543344.m3u8",
+      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-15",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-15.jpg"
+    },
+    {
+      "name": "Tol Palembang Indralaya - PALINDRA KM 18+300 B",
+      "group": "Tol Palindra",
+      "url": "https://pub2.hk-opt.com/LiveApp/streams/429890133451227723270508.m3u8",
+      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-16",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-16.jpg"
+    },
+    {
+      "name": "CCTV DEPAN DISDUKCAPIL",
+      "group": "Ilir Barat Satu",
+      "url": "https://cctv.palembang.go.id/api/cctv/69294c69273b6e50c422a4fa/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-CAPIL-26",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-CAPIL-26.jpg"
+    },
+    {
+      "name": "CCTV Punti Kayu",
+      "group": "Gandus",
+      "url": "https://cctv.palembang.go.id/api/cctv/6926c5d9273b6e50c40ef292/playback/index.m3u8",
+      "tvg-id": "plb-CCTV-PUNTI-KAYU-14",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PUNTI-KAYU-14.jpg"
+    },
+    {
+      "name": "Tol Palembang Indralaya - PALINDRA KM 05+600 B",
+      "group": "Tol Palindra",
+      "url": "https://pub2.hk-opt.com/LiveApp/streams/620290052888606951595901.m3u8",
+      "tvg-id": "atcs-binamarga-tol-palembang-indralaya-10",
+      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/atcs-binamarga-tol-palembang-indralaya-10.jpg"
     }
   ]
 }

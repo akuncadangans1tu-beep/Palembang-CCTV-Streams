@@ -1,6 +1,6 @@
-# Laporan — 2026-11-28T02:21:48Z
+# Laporan — 2026-11-28T10:41:41Z
 
-- **47** · 🟢45 · 🔴2 · hapus 20
+- **50** · 🟢50 · 🔴0 · hapus 17
 
 | Nama | Status | Ket |
 |---|---|---|
@@ -21,27 +21,9 @@
 | CCTV Kambang Iwak | 🆕 NEW | sumber |
 | CCTV DEPAN DISDUKCAPIL | 🆕 NEW | sumber |
 | CCTV Punti Kayu | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA Gate Palembang | 🆕 NEW | sumber |
 | Tol Palembang Indralaya - PALINDRA KM 05+600 B | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA KM 10+000 A | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA KM 10+000 B | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA KM 14+700 A | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA KM 14+700 B | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA KM 18+300 A | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA KM 18+300 B | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA Gate Pemulutan | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA GT Indralaya | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA GT KTM RAMBUTAN | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA IC KTM | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA IC Pemulutan | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA KM 01+600 A | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA KM 01+600 B | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA KM 05+600 A | 🆕 NEW | sumber |
-| Gerbang Pintu Masuk Terminal Alang-Alang Lebar | 🆕 NEW | sumber |
 | CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PTA Palembang | 🆕 NEW | sumber |
 | CCTV PTSP PTA Palembang | 🆕 NEW | sumber |
-| CCTV Simpang Angkatan 45 | ⚠️ FAIL | segmen 404 (1/3) |
-| CCTV Lapangan Parkir Pasar 16 | ⚠️ FAIL | segmen 404 (1/3) |
 | CCTV Bank Sumsel Atmo | ❌ REMOVED | baru tapi mati |
 | CCTV JL VETERAN | ❌ REMOVED | baru tapi mati |
 | CCTV SP BOM BARU | ❌ REMOVED | baru tapi mati |
@@ -57,8 +39,5 @@
 | CCTV SP IP | ❌ REMOVED | baru tapi mati |
 | CCTV Cinde | ❌ REMOVED | baru tapi mati |
 | CCTV Kambang Iwak | ❌ REMOVED | baru tapi mati |
-| CCTV DEPAN DISDUKCAPIL | ❌ REMOVED | baru tapi mati |
-| CCTV Punti Kayu | ❌ REMOVED | baru tapi mati |
-| Tol Palembang Indralaya - PALINDRA KM 05+600 B | ❌ REMOVED | baru tapi mati |
 | CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PTA Palembang | ❌ REMOVED | baru tapi mati |
 | CCTV PTSP PTA Palembang | ❌ REMOVED | baru tapi mati |

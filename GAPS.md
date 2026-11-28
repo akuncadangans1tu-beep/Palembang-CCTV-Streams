@@ -1,8 +1,8 @@
-# 🗺️ Area Belum Tercakup — 28 Nov 2026 09:21 WIB
+# 🗺️ Area Belum Tercakup — 28 Nov 2026 17:41 WIB
 
-_Playlist saat ini mencakup **2** dari 18 kecamatan di Palembang, dan **2** ruas tol._
+_Playlist saat ini mencakup **3** dari 18 kecamatan di Palembang, dan **2** ruas tol._
 
-## 🏘️ Kecamatan Palembang tanpa kamera (16)
+## 🏘️ Kecamatan Palembang tanpa kamera (15)
 - [ ] **Bukit Kecil**
 - [ ] **Ilir Barat I**
 - [ ] **Ilir Barat II**
@@ -16,7 +16,6 @@ _Playlist saat ini mencakup **2** dari 18 kecamatan di Palembang, dan **2** ruas
 - [ ] **Seberang Ulu II**
 - [ ] **Sematang Borang**
 - [ ] **Sukarami**
-- [ ] **Gandus**
 - [ ] **Kalidoni**
 - [ ] **Seberang Ulu Tiga**
 
