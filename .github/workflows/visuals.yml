@@ -11,22 +11,22 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: pip install matplotlib pillow
-      - name: Visual (map, chart, heatmap, mosaic, banner)
+      - name: Visual (map, chart, heatmap, donut, mosaic, banner)
         run: python scripts/make_visuals.py
       - name: Postcard
         run: python scripts/make_visuals.py --postcard
-      - name: Snapshot Wayback Machine
+      - name: Snapshot Wayback Machine + ARCHIVE.md
         continue-on-error: true
         run: python scripts/archive_wayback.py
       - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/
+          git add assets/ ARCHIVE.md
           if git diff --cached --quiet; then
-            echo "Tidak ada perubahan visual."
+            echo "Tidak ada perubahan visual/arsip."
           else
-            git commit -m "chore: refresh visuals + postcard"
+            git commit -m "chore: refresh visuals + postcard + archive"
             git pull --rebase origin main --no-edit || git rebase --abort
             git push
           fi
