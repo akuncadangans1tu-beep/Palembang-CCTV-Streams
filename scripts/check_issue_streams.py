@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+"""Baca issue usulan kamera ([Usul Kamera] / label kamera-baru), ekstrak URL .m3u8,
+cek HLS, lalu komentar otomatis ✅ LIVE / ❌ GAGAL. Jalankan di Actions (GITHUB_TOKEN)."""
+import os, re, json, sys, urllib.request
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from update_streams import check
+
+TOKEN = os.environ.get("GITHUB_TOKEN")
+REPO = os.environ.get("GITHUB_REPOSITORY", "owner/repo")
+API = f"https://api.github.com/repos/{REPO}"
+MARKER = "<!-- cctv-issue-check -->"
+
+def gh(method, path, body=None):
+    req = urllib.request.Request(API + path,
+        data=json.dumps(body).encode() if body is not None else None,
+        headers={"Authorization": f"Bearer {TOKEN}", "Accept": "application/vnd.github+json",
+                 "User-Agent": "cctv-issue-check", "Content-Type": "application/json"}, method=method)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r)
+
+def main():
+    if not TOKEN:
+        print("[!] GITHUB_TOKEN tidak ada"); return 1
+    issues = gh("GET", "/issues?state=open&per_page=100")
+    n = 0
+    for it in issues:
+        if "pull_request" in it: continue
+        labels = [l["name"] for l in it.get("labels", [])]
+        if not (it["title"].startswith("[Usul Kamera]") or "kamera-baru" in labels): continue
+        body = it.get("body") or ""
+        urls = re.findall(r'https?://[^\s"<>]+?\.m3u8[^\s"<>]*', body)
+        num = it["number"]
+        if not urls:
+            print(f"#{num}: tidak ada URL .m3u8"); continue
+        url = urls[0]
+        ok, reason, _ = check(url)
+        status = "LIVE" if ok else "GAGAL"
+        comments = gh("GET", f"/issues/{num}/comments?per_page=100")
+        prev = [c for c in comments if MARKER in (c.get("body") or "")]
+        if prev and status in prev[-1]["body"]:
+            print(f"#{num}: sudah dikomentar ({status}), skip"); continue
+        msg = (f"{MARKER}\n🔍 **Cek otomatis:** {'✅ LIVE' if ok else '❌ GAGAL'} — `{url}`\n"
+               f"Alasan: {reason}\n\n"
+               + ("Stream layak ditambahkan. Maintainer: tambah sebagai entri manual / sumber, lalu close issue."
+                  if ok else "Perbaiki URL / pastikan stream aktif & publik, lalu edit issue ini agar dicek ulang."))
+        gh("POST", f"/issues/{num}/comments", {"body": msg})
+        print(f"#{num}: {status} -> komentar dikirim"); n += 1
+    print(f"[✓] cek issue selesai ({n} komentar baru)")
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())
