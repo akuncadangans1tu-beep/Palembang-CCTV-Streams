@@ -1,10 +1,10 @@
-# UPTIME & Kualitas — 28 Nov 2026 00:43 WIB
+# UPTIME & Kualitas — 28 Nov 2026 07:20 WIB
 
 ## 🏆 Paling stabil
 | Kamera | Uptime | Riwayat |
 |---|---|---|
 | CCTV Benteng Kuto Besak | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ |
-| CCTV Darma Agung | 100% | ▰▰ |
+| CCTV Darma Agung | 100% | ▰▰▰ |
 | Lampung 180+000 A | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ |
 | Lampung 180+000 B | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ |
 | Lampung 181+000 A | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ |
@@ -17,16 +17,16 @@
 ## ⚠️ Paling sering mati
 | Kamera | Uptime | Riwayat |
 |---|---|---|
-| CCTV KM 12 | 69% | ▱▰▱▱▰▰▱▰▰▰▰▰▰▰ |
-| CCTV Masjid Agung | 75% | ▰▰▱▰▱▰▰▰▰▱▱▰▰▰ |
-| CCTV Lampu Merah Kol Atmo | 75% | ▰▱▱▰▰▰▱▰▰▰▰▰▰▰ |
-| CCTV Pasar 16 | 81% | ▰▰▰▱▰▰▰▰▰▰▰▱▰▰ |
-| CCTV Simpang Polda | 81% | ▰▰▱▰▱▰▱▰▰▰▰▰▰▰ |
-| CCTV Simpang Macan Lindungan | 81% | ▱▰▱▰▰▱▰▰▰▰▰▰▰▰ |
-| CCTV SP Samsat | 88% | ▰▰▰▰▱▰▰▰▰▰▱▰▰▰ |
-| PALINDRA IC Pemulutan | 94% | ▰▰▰▰▰▱▰▰▰▰▰▰▰▰ |
-| PALINDRA IC KTM | 94% | ▰▰▰▰▰▱▰▰▰▰▰▰▰▰ |
-| PALINDRA GT KTM RAMBUTAN | 94% | ▰▰▰▰▰▱▰▰▰▰▰▰▰▰ |
+| CCTV KM 12 | 71% | ▰▱▱▰▰▱▰▰▰▰▰▰▰▰ |
+| CCTV Masjid Agung | 76% | ▰▱▰▱▰▰▰▰▱▱▰▰▰▰ |
+| CCTV Lampu Merah Kol Atmo | 76% | ▱▱▰▰▰▱▰▰▰▰▰▰▰▰ |
+| CCTV Pasar 16 | 82% | ▰▰▱▰▰▰▰▰▰▰▱▰▰▰ |
+| CCTV Simpang Polda | 82% | ▰▱▰▱▰▱▰▰▰▰▰▰▰▰ |
+| CCTV Simpang Macan Lindungan | 82% | ▰▱▰▰▱▰▰▰▰▰▰▰▰▰ |
+| CCTV SP Samsat | 88% | ▰▰▰▱▰▰▰▰▰▱▰▰▰▰ |
+| PALINDRA IC Pemulutan | 94% | ▰▰▰▰▱▰▰▰▰▰▰▰▰▰ |
+| PALINDRA IC KTM | 94% | ▰▰▰▰▱▰▰▰▰▰▰▰▰▰ |
+| PALINDRA GT KTM RAMBUTAN | 94% | ▰▰▰▰▱▰▰▰▰▰▰▰▰▰ |
 
 ## 🔁 Flapping (hidup-mati terus)
 - CCTV Simpang Macan Lindungan (6 transisi)
@@ -36,7 +36,7 @@
 - CCTV Pasar 16 (6 transisi)
 
 ## 📺 Kualitas
-- Total bitrate ≈ **18257 kbps**
+- Total bitrate ≈ **18759 kbps**
 | Resolusi | Jumlah |
 |---|---|
 | ? | 18 |
@@ -46,4 +46,8 @@
 ## 🕐 Jam rawan offline (WIB)
 | Jam | Offline |
 |---|---|
-| 07:00 | 1% |
+| 17:00 | 28% |
+| 15:00 | 26% |
+| 19:00 | 16% |
+| 05:00 | 15% |
+| 13:00 | 14% |

@@ -2,218 +2,218 @@
   "plb-CCTV-MANDIRI-38": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/69fed770f59e8fd90f67227e/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "plb-CCTV-SIMPANG-ANGKATAN-45-05": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/68f59d6857309f826693741a/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "plb-CCTV-SPSAMSAT-21": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6928176c273b6e50c41642e7/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "plb-CCTV-PASAR16-25": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/692819c6273b6e50c4165871/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "plb-CCTV-KM12-13": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6926bf54273b6e50c40eeca6/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "plb-CCTV-MASJID-AGUNG-09": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/69258794273b6e50c40e515c/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/68f59cab57309f8266937417/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "plb-CCTV-BKB-02": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/68f09d50b4545109d5349b12/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105274": {
-    "fail": 1,
+    "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/267565493547947969759647.m3u8",
-    "last_ok": "2026-11-27T14:25:05Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105275": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/000873119738804749935559.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105276": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/512039039195007414780648.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105277": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/098395992445733487844660.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105278": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/694712410636759959803663.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105279": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/823069182482598599051789.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105280": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/530233880268202462634796.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105281": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/156545412556986213279533.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105282": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/620290052888606951595901.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105283": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/648176351556242758398370.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105284": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/425149463316515625544601.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105285": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/953617100779184492903430.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105286": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/481851734189142298210171.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105287": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/100831563641835272155645.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "plb-CCTV-P16-36": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/69bd143ccc7bccc4b2dfa011/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "plb-CCTV-CHARITAS-08": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/6925871c273b6e50c40e50e1/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "plb-CCTV-PLAZA7-ULU-20": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/69281276273b6e50c4162201/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "plb-CCTV-SIMPANG-POLDA-03": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/68f599c557309f826693740c/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105303": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/Sz66S9K9q8wO1676355519747.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105304": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/OYvGskpG5Xgx1675840402605.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105305": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/t8nGJjBmGrrn1675840443964.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "oc-105306": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://pub.hk-opt.com/LiveApp/streams/OAAGJkYZD1c41675840461119.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   },
   "plb-CCTV-DA-24": {
     "fail": 0,
     "missing": 0,
-    "last_check": "2026-11-27T17:43:25Z",
+    "last_check": "2026-11-28T00:20:31Z",
     "url": "https://cctv.palembang.go.id/api/cctv/69281931273b6e50c416536d/playback/index.m3u8",
-    "last_ok": "2026-11-27T17:43:25Z"
+    "last_ok": "2026-11-28T00:20:31Z"
   }
 }

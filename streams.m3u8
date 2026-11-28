@@ -1,89 +1,89 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="plb-CCTV-BKB-02" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-BKB-02.jpg",CCTV Benteng Kuto Besak
+#EXTINF:-1 tvg-id="plb-CCTV-BKB-02" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-BKB-02.jpg" tvg-chno="1" tvg-country="ID" tvg-language="Indonesian",CCTV Benteng Kuto Besak
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/68f09d50b4545109d5349b12/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-MANDIRI-38" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-MANDIRI-38.jpg",CCTV Lampu Merah Kol Atmo
+#EXTINF:-1 tvg-id="plb-CCTV-MANDIRI-38" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-MANDIRI-38.jpg" tvg-chno="2" tvg-country="ID" tvg-language="Indonesian",CCTV Lampu Merah Kol Atmo
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/69fed770f59e8fd90f67227e/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-SIMPANG-ANGKATAN-45-05" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-ANGKATAN-45-05.jpg",CCTV Simpang Angkatan 45
+#EXTINF:-1 tvg-id="plb-CCTV-SIMPANG-ANGKATAN-45-05" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-ANGKATAN-45-05.jpg" tvg-chno="3" tvg-country="ID" tvg-language="Indonesian",CCTV Simpang Angkatan 45
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/68f59d6857309f826693741a/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04.jpg",CCTV Simpang Macan Lindungan
+#EXTINF:-1 tvg-id="plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04.jpg" tvg-chno="4" tvg-country="ID" tvg-language="Indonesian",CCTV Simpang Macan Lindungan
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/68f59cab57309f8266937417/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-SIMPANG-POLDA-03" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-POLDA-03.jpg",CCTV Simpang Polda
+#EXTINF:-1 tvg-id="plb-CCTV-SIMPANG-POLDA-03" group-title="Alang-Alang Lebar" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SIMPANG-POLDA-03.jpg" tvg-chno="5" tvg-country="ID" tvg-language="Indonesian",CCTV Simpang Polda
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/68f599c557309f826693740c/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-MASJID-AGUNG-09" group-title="Bukitkecil" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-MASJID-AGUNG-09.jpg",CCTV Masjid Agung
+#EXTINF:-1 tvg-id="plb-CCTV-MASJID-AGUNG-09" group-title="Bukitkecil" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-MASJID-AGUNG-09.jpg" tvg-chno="6" tvg-country="ID" tvg-language="Indonesian",CCTV Masjid Agung
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/69258794273b6e50c40e515c/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-SPSAMSAT-21" group-title="Bukitkecil" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPSAMSAT-21.jpg",CCTV SP Samsat
+#EXTINF:-1 tvg-id="plb-CCTV-SPSAMSAT-21" group-title="Bukitkecil" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-SPSAMSAT-21.jpg" tvg-chno="7" tvg-country="ID" tvg-language="Indonesian",CCTV SP Samsat
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/6928176c273b6e50c41642e7/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-KM12-13" group-title="Ilir Timur Dua" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-KM12-13.jpg",CCTV KM 12
+#EXTINF:-1 tvg-id="plb-CCTV-KM12-13" group-title="Ilir Timur Dua" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-KM12-13.jpg" tvg-chno="8" tvg-country="ID" tvg-language="Indonesian",CCTV KM 12
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/6926bf54273b6e50c40eeca6/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-DA-24" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DA-24.jpg" group-title="Ilir Timur Tiga",CCTV Darma Agung
+#EXTINF:-1 tvg-id="plb-CCTV-DA-24" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-DA-24.jpg" group-title="Ilir Timur Tiga" tvg-chno="9" tvg-country="ID" tvg-language="Indonesian",CCTV Darma Agung
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/69281931273b6e50c416536d/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-PASAR16-25" group-title="Ilir Timur Tiga" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PASAR16-25.jpg",CCTV Lapangan Parkir Pasar 16
+#EXTINF:-1 tvg-id="plb-CCTV-PASAR16-25" group-title="Ilir Timur Tiga" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PASAR16-25.jpg" tvg-chno="10" tvg-country="ID" tvg-language="Indonesian",CCTV Lapangan Parkir Pasar 16
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/692819c6273b6e50c4165871/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-CHARITAS-08" group-title="Ilir Timur Tiga" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-CHARITAS-08.jpg",CCTV SP Charitas
+#EXTINF:-1 tvg-id="plb-CCTV-CHARITAS-08" group-title="Ilir Timur Tiga" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-CHARITAS-08.jpg" tvg-chno="11" tvg-country="ID" tvg-language="Indonesian",CCTV SP Charitas
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/6925871c273b6e50c40e50e1/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-P16-36" group-title="Jakabaring" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-P16-36.jpg",CCTV Pasar 16
+#EXTINF:-1 tvg-id="plb-CCTV-P16-36" group-title="Jakabaring" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-P16-36.jpg" tvg-chno="12" tvg-country="ID" tvg-language="Indonesian",CCTV Pasar 16
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/69bd143ccc7bccc4b2dfa011/playback/index.m3u8
-#EXTINF:-1 tvg-id="plb-CCTV-PLAZA7-ULU-20" group-title="Jakabaring" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PLAZA7-ULU-20.jpg",CCTV Plaza 7 Ulu
+#EXTINF:-1 tvg-id="plb-CCTV-PLAZA7-ULU-20" group-title="Jakabaring" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PLAZA7-ULU-20.jpg" tvg-chno="13" tvg-country="ID" tvg-language="Indonesian",CCTV Plaza 7 Ulu
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36
 #EXTVLCOPT:http-referrer=https://cctv.palembang.go.id/
 https://cctv.palembang.go.id/api/cctv/69281276273b6e50c4162201/playback/index.m3u8
-#EXTINF:-1 tvg-id="oc-105303" group-title="Tol Lampung" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105303.jpg",Lampung 180+000 A
+#EXTINF:-1 tvg-id="oc-105303" group-title="Tol Lampung" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105303.jpg" tvg-chno="14" tvg-country="ID" tvg-language="Indonesian",Lampung 180+000 A
 https://pub.hk-opt.com/LiveApp/streams/Sz66S9K9q8wO1676355519747.m3u8
-#EXTINF:-1 tvg-id="oc-105304" group-title="Tol Lampung" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105304.jpg",Lampung 180+000 B
+#EXTINF:-1 tvg-id="oc-105304" group-title="Tol Lampung" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105304.jpg" tvg-chno="15" tvg-country="ID" tvg-language="Indonesian",Lampung 180+000 B
 https://pub.hk-opt.com/LiveApp/streams/OYvGskpG5Xgx1675840402605.m3u8
-#EXTINF:-1 tvg-id="oc-105305" group-title="Tol Lampung" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105305.jpg",Lampung 181+000 A
+#EXTINF:-1 tvg-id="oc-105305" group-title="Tol Lampung" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105305.jpg" tvg-chno="16" tvg-country="ID" tvg-language="Indonesian",Lampung 181+000 A
 https://pub.hk-opt.com/LiveApp/streams/t8nGJjBmGrrn1675840443964.m3u8
-#EXTINF:-1 tvg-id="oc-105306" group-title="Tol Lampung" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105306.jpg",Lampung 181+000 B
+#EXTINF:-1 tvg-id="oc-105306" group-title="Tol Lampung" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105306.jpg" tvg-chno="17" tvg-country="ID" tvg-language="Indonesian",Lampung 181+000 B
 https://pub.hk-opt.com/LiveApp/streams/OAAGJkYZD1c41675840461119.m3u8
-#EXTINF:-1 tvg-id="oc-105274" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105274.jpg",Palindra 01+600 A
+#EXTINF:-1 tvg-id="oc-105274" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105274.jpg" tvg-chno="18" tvg-country="ID" tvg-language="Indonesian",Palindra 01+600 A
 https://pub.hk-opt.com/LiveApp/streams/267565493547947969759647.m3u8
-#EXTINF:-1 tvg-id="oc-105275" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105275.jpg",Palindra 01+600 B
+#EXTINF:-1 tvg-id="oc-105275" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105275.jpg" tvg-chno="19" tvg-country="ID" tvg-language="Indonesian",Palindra 01+600 B
 https://pub.hk-opt.com/LiveApp/streams/000873119738804749935559.m3u8
-#EXTINF:-1 tvg-id="oc-105276" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105276.jpg",Palindra 02+600 A
+#EXTINF:-1 tvg-id="oc-105276" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105276.jpg" tvg-chno="20" tvg-country="ID" tvg-language="Indonesian",Palindra 02+600 A
 https://pub.hk-opt.com/LiveApp/streams/512039039195007414780648.m3u8
-#EXTINF:-1 tvg-id="oc-105277" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105277.jpg",Palindra 02+600 B
+#EXTINF:-1 tvg-id="oc-105277" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105277.jpg" tvg-chno="21" tvg-country="ID" tvg-language="Indonesian",Palindra 02+600 B
 https://pub.hk-opt.com/LiveApp/streams/098395992445733487844660.m3u8
-#EXTINF:-1 tvg-id="oc-105278" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105278.jpg",Palindra 03+600 A
+#EXTINF:-1 tvg-id="oc-105278" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105278.jpg" tvg-chno="22" tvg-country="ID" tvg-language="Indonesian",Palindra 03+600 A
 https://pub.hk-opt.com/LiveApp/streams/694712410636759959803663.m3u8
-#EXTINF:-1 tvg-id="oc-105279" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105279.jpg",Palindra 03+600 B
+#EXTINF:-1 tvg-id="oc-105279" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105279.jpg" tvg-chno="23" tvg-country="ID" tvg-language="Indonesian",Palindra 03+600 B
 https://pub.hk-opt.com/LiveApp/streams/823069182482598599051789.m3u8
-#EXTINF:-1 tvg-id="oc-105280" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105280.jpg",Palindra 04+600 B
+#EXTINF:-1 tvg-id="oc-105280" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105280.jpg" tvg-chno="24" tvg-country="ID" tvg-language="Indonesian",Palindra 04+600 B
 https://pub.hk-opt.com/LiveApp/streams/530233880268202462634796.m3u8
-#EXTINF:-1 tvg-id="oc-105281" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105281.jpg",Palindra 05+600 A
+#EXTINF:-1 tvg-id="oc-105281" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105281.jpg" tvg-chno="25" tvg-country="ID" tvg-language="Indonesian",Palindra 05+600 A
 https://pub.hk-opt.com/LiveApp/streams/156545412556986213279533.m3u8
-#EXTINF:-1 tvg-id="oc-105282" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105282.jpg",Palindra 05+600 B
+#EXTINF:-1 tvg-id="oc-105282" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105282.jpg" tvg-chno="26" tvg-country="ID" tvg-language="Indonesian",Palindra 05+600 B
 https://pub.hk-opt.com/LiveApp/streams/620290052888606951595901.m3u8
-#EXTINF:-1 tvg-id="oc-105283" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105283.jpg",PALINDRA Gate Pemulutan
+#EXTINF:-1 tvg-id="oc-105283" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105283.jpg" tvg-chno="27" tvg-country="ID" tvg-language="Indonesian",PALINDRA Gate Pemulutan
 https://pub.hk-opt.com/LiveApp/streams/648176351556242758398370.m3u8
-#EXTINF:-1 tvg-id="oc-105284" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105284.jpg",PALINDRA GT Indralaya
+#EXTINF:-1 tvg-id="oc-105284" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105284.jpg" tvg-chno="28" tvg-country="ID" tvg-language="Indonesian",PALINDRA GT Indralaya
 https://pub.hk-opt.com/LiveApp/streams/425149463316515625544601.m3u8
-#EXTINF:-1 tvg-id="oc-105285" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105285.jpg",PALINDRA GT KTM RAMBUTAN
+#EXTINF:-1 tvg-id="oc-105285" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105285.jpg" tvg-chno="29" tvg-country="ID" tvg-language="Indonesian",PALINDRA GT KTM RAMBUTAN
 https://pub.hk-opt.com/LiveApp/streams/953617100779184492903430.m3u8
-#EXTINF:-1 tvg-id="oc-105286" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105286.jpg",PALINDRA IC KTM
+#EXTINF:-1 tvg-id="oc-105286" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105286.jpg" tvg-chno="30" tvg-country="ID" tvg-language="Indonesian",PALINDRA IC KTM
 https://pub.hk-opt.com/LiveApp/streams/481851734189142298210171.m3u8
-#EXTINF:-1 tvg-id="oc-105287" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105287.jpg",PALINDRA IC Pemulutan
+#EXTINF:-1 tvg-id="oc-105287" group-title="Tol Palindra" tvg-logo="https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/oc-105287.jpg" tvg-chno="31" tvg-country="ID" tvg-language="Indonesian",PALINDRA IC Pemulutan
 https://pub.hk-opt.com/LiveApp/streams/100831563641835272155645.m3u8

@@ -1,6 +1,6 @@
-# Laporan — 2026-11-27T17:43:25Z
+# Laporan — 2026-11-28T00:20:31Z
 
-- **31** · 🟢30 · 🔴1 · hapus 17
+- **31** · 🟢31 · 🔴0 · hapus 17
 
 | Nama | Status | Ket |
 |---|---|---|
@@ -21,7 +21,6 @@
 | CCTV Kambang Iwak | 🆕 NEW | sumber |
 | CCTV DEPAN DISDUKCAPIL | 🆕 NEW | sumber |
 | CCTV Punti Kayu | 🆕 NEW | sumber |
-| Palindra 01+600 A | ⚠️ FAIL | HTTP 404 (1/3) |
 | CCTV Bank Sumsel Atmo | ❌ REMOVED | baru tapi mati |
 | CCTV JL VETERAN | ❌ REMOVED | baru tapi mati |
 | CCTV SP BOM BARU | ❌ REMOVED | baru tapi mati |

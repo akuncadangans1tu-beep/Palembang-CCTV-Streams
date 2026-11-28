@@ -1,9 +1,6 @@
 📹 *PALEMBANG CCTV — LAPORAN HARIAN*
-🕒 28 Nov 2026 00:43 WIB
-✅ Live: *30* | 🔴 Gangguan: *1* | Total: *31*
-
-🔴 *Sedang gangguan:*
-• Palindra 01+600 A (Tol Palindra)
+🕒 28 Nov 2026 07:20 WIB
+✅ Live: *31* | 🔴 Gangguan: *0* | Total: *31*
 
 🟢 *Live sekarang:*
 • CCTV Benteng Kuto Besak
@@ -18,7 +15,7 @@
 • CCTV Lapangan Parkir Pasar 16
 • CCTV SP Charitas
 • CCTV Pasar 16
-• …dan 18 lainnya
+• …dan 19 lainnya
 
 🔗 _Playlist HLS:_
 https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/streams.m3u8
