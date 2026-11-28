@@ -1,6 +1,6 @@
-# Laporan — 2026-11-28T01:44:35Z
+# Laporan — 2026-11-28T02:02:45Z
 
-- **32** · 🟢26 · 🔴6 · hapus 17
+- **31** · 🟢29 · 🔴2 · hapus 21
 
 | Nama | Status | Ket |
 |---|---|---|
@@ -21,12 +21,12 @@
 | CCTV Kambang Iwak | 🆕 NEW | sumber |
 | CCTV DEPAN DISDUKCAPIL | 🆕 NEW | sumber |
 | CCTV Punti Kayu | 🆕 NEW | sumber |
-| CCTV SP Samsat | ⚠️ FAIL | segmen 404 (1/3) |
-| CCTV KM 12 | ⚠️ FAIL | segmen 404 (1/3) |
-| CCTV SP Charitas | ⚠️ FAIL | segmen 404 (1/3) |
-| CCTV Pasar 16 | ⚠️ FAIL | segmen 404 (1/3) |
-| CCTV Plaza 7 Ulu | ⚠️ FAIL | segmen 404 (1/3) |
-| CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PA Palembang | ⚠️ FAIL | HTTP 403 (2/3) |
+| Gerbang Pintu Masuk Terminal Alang-Alang Lebar | 🆕 NEW | sumber |
+| CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PTA Palembang | 🆕 NEW | sumber |
+| CCTV PTSP PTA Palembang | 🆕 NEW | sumber |
+| CCTV Lampu Merah Kol Atmo | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV Plaza 7 Ulu | ⚠️ FAIL | segmen 404 (2/3) |
+| CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PA Palembang | ❌ REMOVED | gagal 3x (HTTP 403) |
 | CCTV Bank Sumsel Atmo | ❌ REMOVED | baru tapi mati |
 | CCTV JL VETERAN | ❌ REMOVED | baru tapi mati |
 | CCTV SP BOM BARU | ❌ REMOVED | baru tapi mati |
@@ -44,3 +44,6 @@
 | CCTV Kambang Iwak | ❌ REMOVED | baru tapi mati |
 | CCTV DEPAN DISDUKCAPIL | ❌ REMOVED | baru tapi mati |
 | CCTV Punti Kayu | ❌ REMOVED | baru tapi mati |
+| Gerbang Pintu Masuk Terminal Alang-Alang Lebar | ❌ REMOVED | baru tapi mati |
+| CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PTA Palembang | ❌ REMOVED | baru tapi mati |
+| CCTV PTSP PTA Palembang | ❌ REMOVED | baru tapi mati |

@@ -92,13 +92,6 @@
       "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/plb-CCTV-PLAZA7-ULU-20.jpg"
     },
     {
-      "name": "CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PA Palembang",
-      "group": "Palembang",
-      "url": "https://papalembang.cctvbadilag2.my.id/402242PAPALEMBANG/streams/454303528492964193572747.m3u8",
-      "tvg-id": "manual-pa-palembang",
-      "tvg-logo": "https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/thumbs/manual-pa-palembang.jpg"
-    },
-    {
       "name": "Lampung 180+000 A",
       "group": "Tol Lampung",
       "url": "https://pub.hk-opt.com/LiveApp/streams/Sz66S9K9q8wO1676355519747.m3u8",
