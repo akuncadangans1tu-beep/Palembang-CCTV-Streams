@@ -3,7 +3,7 @@
 """CCTV Palembang + tol Sumatera + atcsindonesia. Output: streams.m3u8, playlist.json, status.json,
 history.json, data/uptime.csv, UPTIME.md, CHANGELOG.md, feed.xml, REPORT.md, removed.json, GAPS.md,
 README(STATUS+LINKS+GAPS). Mode: --thumbs, --lint, --rotate. Python 3.9+."""
-import argparse, concurrent.futures as cf, csv, json, os, re, ssl, subprocess, sys, time
+import argparse, concurrent.futures as cf, csv, gzip, json, os, re, ssl, subprocess, sys, time
 import urllib.error, urllib.request
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -15,7 +15,7 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 PALEMBANG_API = "https://cctv.palembang.go.id/api/cctv"
 PALEMBANG_STREAM = "https://cctv.palembang.go.id/api/cctv/{id}/playback/index.m3u8"
 ATCS_API = "https://atcsindonesia.com/api/cctv"
-ATCS_SKIP = {"palembang-cctv", "binamarga-tol-cctv"}  # sudah dicakup sumber dedicated
+ATCS_SKIP = {"palembang-cctv", "binamarga-tol-cctv"}
 OPENCCTV_REGIONS = [("https://opencctv.org/cameras/indonesia/sumatera-selatan", "Tol Palindra", "Palindra "),
                     ("https://opencctv.org/cameras/indonesia/lampung", "Tol Lampung", "Lampung ")]
 MAX_FAILS, TIMEOUT, WORKERS, HIST = 3, 12, 10, 30
@@ -47,8 +47,12 @@ def http_get(u, timeout=TIMEOUT, max_bytes=300000, retries=2):
     last = None
     for a in range(retries + 1):
         try:
-            with urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA, "Referer": referer(u), "Accept": "*/*"}), timeout=timeout, context=SSL_CTX) as r:
-                return r.status, r.read(max_bytes)
+            req = urllib.request.Request(u, headers={"User-Agent": UA, "Referer": referer(u), "Accept": "*/*", "Accept-Encoding": "gzip"})
+            with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as r:
+                raw = r.read(max_bytes)
+                if r.headers.get("Content-Encoding") == "gzip":
+                    raw = gzip.decompress(raw)
+                return r.status, raw
         except urllib.error.HTTPError as e:
             try: b = e.read(2048)
             except Exception: b = b""
@@ -108,7 +112,8 @@ def scrape_palembang(limit=None):
     return out
 
 def scrape_atcs(limit=None):
-    st, b = http_get(ATCS_API, timeout=40, max_bytes=12000000)
+    # payload ATCS besar (>12MB); baca penuh + gzip agar tidak terpotong
+    st, b = http_get(ATCS_API, timeout=60, max_bytes=64000000)
     if st != 200: raise RuntimeError(f"atcs {st}")
     data = json.loads(b.decode("utf-8", "ignore")).get("data", [])
     if not data: raise RuntimeError("atcs kosong")
@@ -117,7 +122,6 @@ def scrape_atcs(limit=None):
         if "palembang" not in str(c.get("city", "")).lower(): continue
         if c.get("source") in ATCS_SKIP: continue
         url = c.get("streamingUrl") or c.get("streamingUrlPrimary") or c.get("streamingUrlSecondary") or ""
-        url = url.split("?")[0] if TOKEN_RE.search(url) else url
         if not stable(url): continue
         lat = c.get("latitude", c.get("lat")); lng = c.get("longitude", c.get("lng"))
         out.append({"key": f"atcs-{c.get('id')}", "name": (c.get("title") or c.get("id")).strip(), "group": "Palembang",
