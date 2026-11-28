@@ -15,7 +15,7 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 PALEMBANG_API = "https://cctv.palembang.go.id/api/cctv"
 PALEMBANG_STREAM = "https://cctv.palembang.go.id/api/cctv/{id}/playback/index.m3u8"
 ATCS_API = "https://atcsindonesia.com/api/cctv"
-ATCS_SKIP = {"palembang-cctv", "binamarga-tol-cctv"}
+ATCS_SKIP = {"palembang-cctv"}  # duplikat API pemkot; binamarga-tol DIPAKAI (cakupan KM baru)
 OPENCCTV_REGIONS = [("https://opencctv.org/cameras/indonesia/sumatera-selatan", "Tol Palindra", "Palindra "),
                     ("https://opencctv.org/cameras/indonesia/lampung", "Tol Lampung", "Lampung ")]
 MAX_FAILS, TIMEOUT, WORKERS, HIST = 3, 12, 10, 30
@@ -38,8 +38,22 @@ def wib_now(): return datetime.now(timezone(timedelta(hours=7))).strftime("%d %b
 def norm(s): return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
 def logo(k): return f"{RAW_BASE}/thumbs/{k}.jpg"
 def referer(u): return "https://cctv.palembang.go.id/" if "palembang.go.id" in u else "https://opencctv.org/"
+def _private(host):
+    h = host.split(":")[0].lower()
+    if h in ("localhost", "127.0.0.1", "0.0.0.0", "::1"): return True
+    if h.startswith(("10.", "192.168.", "169.254.")): return True
+    if h.startswith("172."):
+        try:
+            second = int(h.split(".")[1])
+            if 16 <= second <= 31: return True
+        except Exception: pass
+    return False
 def stable(u):
-    return bool(u) and u.lower().startswith(("http://", "https://")) and "opencctv.org" not in urlsplit(u).netloc.lower() and not TOKEN_RE.search(u)
+    if not u or not u.lower().startswith(("http://", "https://")): return False
+    host = urlsplit(u).netloc
+    if "opencctv.org" in host.lower() or _private(host): return False
+    if TOKEN_RE.search(u): return False
+    return True
 def spark(rec): return "".join("▰" if x else "▱" for x in rec[-14:]) or "—"
 def flap(rec): return sum(1 for a, b in zip(rec, rec[1:]) if a != b)
 
@@ -50,8 +64,7 @@ def http_get(u, timeout=TIMEOUT, max_bytes=300000, retries=2):
             req = urllib.request.Request(u, headers={"User-Agent": UA, "Referer": referer(u), "Accept": "*/*", "Accept-Encoding": "gzip"})
             with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as r:
                 raw = r.read(max_bytes)
-                if r.headers.get("Content-Encoding") == "gzip":
-                    raw = gzip.decompress(raw)
+                if r.headers.get("Content-Encoding") == "gzip": raw = gzip.decompress(raw)
                 return r.status, raw
         except urllib.error.HTTPError as e:
             try: b = e.read(2048)
@@ -112,7 +125,6 @@ def scrape_palembang(limit=None):
     return out
 
 def scrape_atcs(limit=None):
-    # payload ATCS besar (>12MB); baca penuh + gzip agar tidak terpotong
     st, b = http_get(ATCS_API, timeout=60, max_bytes=64000000)
     if st != 200: raise RuntimeError(f"atcs {st}")
     data = json.loads(b.decode("utf-8", "ignore")).get("data", [])
@@ -124,7 +136,7 @@ def scrape_atcs(limit=None):
         url = c.get("streamingUrl") or c.get("streamingUrlPrimary") or c.get("streamingUrlSecondary") or ""
         if not stable(url): continue
         lat = c.get("latitude", c.get("lat")); lng = c.get("longitude", c.get("lng"))
-        out.append({"key": f"atcs-{c.get('id')}", "name": (c.get("title") or c.get("id")).strip(), "group": "Palembang",
+        out.append({"key": f"atcs-{c.get('id')}", "name": (c.get("title") or c.get("id")).strip(), "group": "Tol Palindra" if "tol" in str(c.get("source","")) else "Palembang",
                     "url": url, "lat": lat, "lng": lng,
                     "extra": [f"#EXTVLCOPT:http-user-agent={UA}", "#EXTVLCOPT:http-referrer=https://atcsindonesia.com/"]})
         if limit and len(out) >= limit: break
@@ -238,11 +250,15 @@ def merge(es, cat):
         e = from_cat(i); bk[k] = e; es.append(e); rep.append((e["name"], "NEW", "sumber"))
     return rep
 
+def _namekey(n):
+    return re.sub(r"\bkm\b", "", norm(n)).strip()
 def dedup(es):
-    seen, kept, rem = {}, [], []
+    seen, seenname, kept, rem = {}, {}, [], []
     for e in es:
-        if e["url"] in seen: rem.append((e, f"duplikat {seen[e['url']]}")); continue
-        seen[e["url"]] = e["name"]; kept.append(e)
+        nk = _namekey(e["name"])
+        if e["url"] in seen: rem.append((e, f"duplikat URL {seen[e['url']]}")); continue
+        if nk and nk in seenname: rem.append((e, f"duplikat nama {seenname[nk]}")); continue
+        seen[e["url"]] = e["name"]; seenname[nk] = e["name"]; kept.append(e)
     return kept, rem
 
 def load_hist(p):
