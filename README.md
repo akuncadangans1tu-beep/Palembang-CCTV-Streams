@@ -25,41 +25,57 @@ Playlist CCTV publik **Kota Palembang & koridor tol Sumatera** (HLS stabil), dir
 
 ## 📊 Status Kamera
 <!-- STATUS:START -->
-> 🕒 **28 Nov 2026 09:02 WIB** · **31** kamera · 🟢 29 · 🔴 2
+> 🕒 **28 Nov 2026 09:21 WIB** · **47** kamera · 🟢 45 · 🔴 2
 
 | Kamera | Grup | Status | Uptime | Riwayat | Kualitas |
 |---|---|:--:|:--:|---|:--:|
 | CCTV Benteng Kuto Besak | Alang-Alang Lebar | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | 704x576 |
-| CCTV Lampu Merah Kol Atmo | Alang-Alang Lebar | 🔴 | 75% | ▰▰▱▰▰▰▰▰▰▰▰▰▰▱ | 704x576 |
-| CCTV Simpang Angkatan 45 | Alang-Alang Lebar | 🟢 | 95% | ▰▰▰▰▰▰▱▰▰▰▰▰▰▰ | 704x576 |
-| CCTV Simpang Macan Lindungan | Alang-Alang Lebar | 🟢 | 85% | ▰▱▰▰▰▰▰▰▰▰▰▰▰▰ | 704x576 |
-| CCTV Simpang Polda | Alang-Alang Lebar | 🟢 | 85% | ▱▰▱▰▰▰▰▰▰▰▰▰▰▰ | 704x576 |
-| CCTV Masjid Agung | Bukitkecil | 🟢 | 80% | ▱▰▰▰▰▱▱▰▰▰▰▰▰▰ | 1920x1080 |
-| CCTV SP Samsat | Bukitkecil | 🟢 | 85% | ▱▰▰▰▰▰▱▰▰▰▰▰▱▰ | 1920x1080 |
-| CCTV KM 12 | Ilir Timur Dua | 🟢 | 70% | ▰▰▱▰▰▰▰▰▰▰▰▰▱▰ | 704x576 |
-| CCTV Darma Agung | Ilir Timur Tiga | 🟢 | 100% | ▰▰▰▰▰▰ | 704x576 |
-| CCTV Lapangan Parkir Pasar 16 | Ilir Timur Tiga | 🟢 | 95% | ▰▰▰▰▰▰▱▰▰▰▰▰▰▰ | 704x576 |
-| CCTV SP Charitas | Ilir Timur Tiga | 🟢 | 90% | ▰▰▰▰▰▰▰▰▰▰▰▰▱▰ | 1920x1080 |
-| CCTV Pasar 16 | Jakabaring | 🟢 | 80% | ▰▰▰▰▰▰▰▱▰▰▰▰▱▰ | 704x576 |
-| CCTV Plaza 7 Ulu | Jakabaring | 🔴 | 85% | ▰▰▱▰▰▰▰▰▰▰▰▰▱▱ | 704x576 |
+| CCTV Lampu Merah Kol Atmo | Alang-Alang Lebar | 🟢 | 76% | ▰▱▰▰▰▰▰▰▰▰▰▰▱▰ | 704x576 |
+| CCTV Simpang Angkatan 45 | Alang-Alang Lebar | 🔴 | 90% | ▰▰▰▰▰▱▰▰▰▰▰▰▰▱ | 704x576 |
+| CCTV Simpang Macan Lindungan | Alang-Alang Lebar | 🟢 | 86% | ▱▰▰▰▰▰▰▰▰▰▰▰▰▰ | 704x576 |
+| CCTV Simpang Polda | Alang-Alang Lebar | 🟢 | 86% | ▰▱▰▰▰▰▰▰▰▰▰▰▰▰ | 704x576 |
+| CCTV Masjid Agung | Bukitkecil | 🟢 | 81% | ▰▰▰▰▱▱▰▰▰▰▰▰▰▰ | 1920x1080 |
+| CCTV SP Samsat | Bukitkecil | 🟢 | 86% | ▰▰▰▰▰▱▰▰▰▰▰▱▰▰ | 1920x1080 |
+| CCTV KM 12 | Ilir Timur Dua | 🟢 | 71% | ▰▱▰▰▰▰▰▰▰▰▰▱▰▰ | 704x576 |
+| CCTV Darma Agung | Ilir Timur Tiga | 🟢 | 100% | ▰▰▰▰▰▰▰ | 704x576 |
+| CCTV Lapangan Parkir Pasar 16 | Ilir Timur Tiga | 🔴 | 90% | ▰▰▰▰▰▱▰▰▰▰▰▰▰▱ | 704x576 |
+| CCTV SP Charitas | Ilir Timur Tiga | 🟢 | 90% | ▰▰▰▰▰▰▰▰▰▰▰▱▰▰ | 1920x1080 |
+| CCTV Pasar 16 | Jakabaring | 🟢 | 81% | ▰▰▰▰▰▰▱▰▰▰▰▱▰▰ | 704x576 |
+| CCTV Plaza 7 Ulu | Jakabaring | 🟢 | 86% | ▰▱▰▰▰▰▰▰▰▰▰▱▱▰ | 704x576 |
+| Gerbang Pintu Masuk Terminal Alang-Alang Lebar | Palembang | 🟢 | 100% | ▰ | 1280x720 |
 | Lampung 180+000 A | Tol Lampung | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
-| Lampung 180+000 B | Tol Lampung | 🟢 | 95% | ▰▰▰▰▰▰▰▰▰▰▰▱▰▰ | — |
+| Lampung 180+000 B | Tol Lampung | 🟢 | 95% | ▰▰▰▰▰▰▰▰▰▰▱▰▰▰ | — |
 | Lampung 181+000 A | Tol Lampung | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
-| Lampung 181+000 B | Tol Lampung | 🟢 | 95% | ▰▰▰▰▰▰▰▰▰▰▰▱▰▰ | — |
-| Palindra 01+600 A | Tol Palindra | 🟢 | 95% | ▰▰▰▰▰▰▰▰▰▱▰▰▰▰ | — |
+| Lampung 181+000 B | Tol Lampung | 🟢 | 95% | ▰▰▰▰▰▰▰▰▰▰▱▰▰▰ | — |
+| Palindra 01+600 A | Tol Palindra | 🟢 | 95% | ▰▰▰▰▰▰▰▰▱▰▰▰▰▰ | — |
 | Palindra 01+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | Palindra 02+600 A | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | Palindra 02+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | Palindra 03+600 A | Tol Palindra | 🟢 | 95% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | Palindra 03+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
-| Palindra 04+600 B | Tol Palindra | 🟢 | 95% | ▰▰▱▰▰▰▰▰▰▰▰▰▰▰ | — |
+| Palindra 04+600 B | Tol Palindra | 🟢 | 95% | ▰▱▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | Palindra 05+600 A | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | Palindra 05+600 B | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
 | PALINDRA Gate Pemulutan | Tol Palindra | 🟢 | 100% | ▰▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
-| PALINDRA GT Indralaya | Tol Palindra | 🟢 | 90% | ▰▱▰▰▰▰▰▰▰▰▰▱▰▰ | — |
-| PALINDRA GT KTM RAMBUTAN | Tol Palindra | 🟢 | 95% | ▰▱▰▰▰▰▰▰▰▰▰▰▰▰ | — |
-| PALINDRA IC KTM | Tol Palindra | 🟢 | 95% | ▰▱▰▰▰▰▰▰▰▰▰▰▰▰ | — |
-| PALINDRA IC Pemulutan | Tol Palindra | 🟢 | 95% | ▰▱▰▰▰▰▰▰▰▰▰▰▰▰ | — |
+| PALINDRA GT Indralaya | Tol Palindra | 🟢 | 90% | ▱▰▰▰▰▰▰▰▰▰▱▰▰▰ | — |
+| PALINDRA GT KTM RAMBUTAN | Tol Palindra | 🟢 | 95% | ▱▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
+| PALINDRA IC KTM | Tol Palindra | 🟢 | 95% | ▱▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
+| PALINDRA IC Pemulutan | Tol Palindra | 🟢 | 95% | ▱▰▰▰▰▰▰▰▰▰▰▰▰▰ | — |
+| Tol Palembang Indralaya - PALINDRA Gate Palembang | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA Gate Pemulutan | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA GT Indralaya | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA GT KTM RAMBUTAN | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA IC KTM | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA IC Pemulutan | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA KM 01+600 A | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA KM 01+600 B | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA KM 05+600 A | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA KM 10+000 A | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA KM 10+000 B | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA KM 14+700 A | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA KM 14+700 B | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA KM 18+300 A | Tol Palindra | 🟢 | 100% | ▰ | — |
+| Tol Palembang Indralaya - PALINDRA KM 18+300 B | Tol Palindra | 🟢 | 100% | ▰ | — |
 <!-- STATUS:END -->
 
 ## 🖼️ Visual

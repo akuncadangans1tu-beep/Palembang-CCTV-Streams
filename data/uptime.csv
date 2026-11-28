@@ -673,3 +673,50 @@ date_utc,hour_utc,key,name,group,online,resolution,bandwidth_kbps
 2026-11-28,02,oc-105285,PALINDRA GT KTM RAMBUTAN,Tol Palindra,1,,
 2026-11-28,02,oc-105286,PALINDRA IC KTM,Tol Palindra,1,,
 2026-11-28,02,oc-105287,PALINDRA IC Pemulutan,Tol Palindra,1,,
+2026-11-28,02,plb-CCTV-BKB-02,CCTV Benteng Kuto Besak,Alang-Alang Lebar,1,704x576,312
+2026-11-28,02,plb-CCTV-MANDIRI-38,CCTV Lampu Merah Kol Atmo,Alang-Alang Lebar,1,704x576,292
+2026-11-28,02,plb-CCTV-SIMPANG-ANGKATAN-45-05,CCTV Simpang Angkatan 45,Alang-Alang Lebar,0,704x576,309
+2026-11-28,02,plb-CCTV-SIMPANG-4-MACANLINDUNGAN-04,CCTV Simpang Macan Lindungan,Alang-Alang Lebar,1,704x576,309
+2026-11-28,02,plb-CCTV-SIMPANG-POLDA-03,CCTV Simpang Polda,Alang-Alang Lebar,1,704x576,305
+2026-11-28,02,plb-CCTV-MASJID-AGUNG-09,CCTV Masjid Agung,Bukitkecil,1,1920x1080,5911
+2026-11-28,02,plb-CCTV-SPSAMSAT-21,CCTV SP Samsat,Bukitkecil,1,1920x1080,5079
+2026-11-28,02,plb-CCTV-KM12-13,CCTV KM 12,Ilir Timur Dua,1,704x576,285
+2026-11-28,02,plb-CCTV-DA-24,CCTV Darma Agung,Ilir Timur Tiga,1,704x576,307
+2026-11-28,02,plb-CCTV-PASAR16-25,CCTV Lapangan Parkir Pasar 16,Ilir Timur Tiga,0,704x576,309
+2026-11-28,02,plb-CCTV-CHARITAS-08,CCTV SP Charitas,Ilir Timur Tiga,1,1920x1080,5925
+2026-11-28,02,plb-CCTV-P16-36,CCTV Pasar 16,Jakabaring,1,704x576,311
+2026-11-28,02,plb-CCTV-PLAZA7-ULU-20,CCTV Plaza 7 Ulu,Jakabaring,1,704x576,287
+2026-11-28,02,oc-105303,Lampung 180+000 A,Tol Lampung,1,,
+2026-11-28,02,oc-105304,Lampung 180+000 B,Tol Lampung,1,,
+2026-11-28,02,oc-105305,Lampung 181+000 A,Tol Lampung,1,,
+2026-11-28,02,oc-105306,Lampung 181+000 B,Tol Lampung,1,,
+2026-11-28,02,oc-105274,Palindra 01+600 A,Tol Palindra,1,,
+2026-11-28,02,oc-105275,Palindra 01+600 B,Tol Palindra,1,,
+2026-11-28,02,oc-105276,Palindra 02+600 A,Tol Palindra,1,,
+2026-11-28,02,oc-105277,Palindra 02+600 B,Tol Palindra,1,,
+2026-11-28,02,oc-105278,Palindra 03+600 A,Tol Palindra,1,,
+2026-11-28,02,oc-105279,Palindra 03+600 B,Tol Palindra,1,,
+2026-11-28,02,oc-105280,Palindra 04+600 B,Tol Palindra,1,,
+2026-11-28,02,oc-105281,Palindra 05+600 A,Tol Palindra,1,,
+2026-11-28,02,oc-105282,Palindra 05+600 B,Tol Palindra,1,,
+2026-11-28,02,oc-105283,PALINDRA Gate Pemulutan,Tol Palindra,1,,
+2026-11-28,02,oc-105284,PALINDRA GT Indralaya,Tol Palindra,1,,
+2026-11-28,02,oc-105285,PALINDRA GT KTM RAMBUTAN,Tol Palindra,1,,
+2026-11-28,02,oc-105286,PALINDRA IC KTM,Tol Palindra,1,,
+2026-11-28,02,oc-105287,PALINDRA IC Pemulutan,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-1,Tol Palembang Indralaya - PALINDRA Gate Palembang,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-11,Tol Palembang Indralaya - PALINDRA KM 10+000 A,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-12,Tol Palembang Indralaya - PALINDRA KM 10+000 B,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-13,Tol Palembang Indralaya - PALINDRA KM 14+700 A,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-14,Tol Palembang Indralaya - PALINDRA KM 14+700 B,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-15,Tol Palembang Indralaya - PALINDRA KM 18+300 A,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-16,Tol Palembang Indralaya - PALINDRA KM 18+300 B,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-2,Tol Palembang Indralaya - PALINDRA Gate Pemulutan,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-3,Tol Palembang Indralaya - PALINDRA GT Indralaya,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-4,Tol Palembang Indralaya - PALINDRA GT KTM RAMBUTAN,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-5,Tol Palembang Indralaya - PALINDRA IC KTM,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-6,Tol Palembang Indralaya - PALINDRA IC Pemulutan,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-7,Tol Palembang Indralaya - PALINDRA KM 01+600 A,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-8,Tol Palembang Indralaya - PALINDRA KM 01+600 B,Tol Palindra,1,,
+2026-11-28,02,atcs-binamarga-tol-palembang-indralaya-9,Tol Palembang Indralaya - PALINDRA KM 05+600 A,Tol Palindra,1,,
+2026-11-28,02,atcs-kemenhub-terminal-aal-pintu-masuk,Gerbang Pintu Masuk Terminal Alang-Alang Lebar,Palembang,1,1280x720,1793

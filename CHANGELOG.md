@@ -17,6 +17,63 @@
 - 🆕 **NEW**: CCTV Kambang Iwak — sumber
 - 🆕 **NEW**: CCTV DEPAN DISDUKCAPIL — sumber
 - 🆕 **NEW**: CCTV Punti Kayu — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA Gate Palembang — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA KM 05+600 B — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA KM 10+000 A — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA KM 10+000 B — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA KM 14+700 A — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA KM 14+700 B — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA KM 18+300 A — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA KM 18+300 B — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA Gate Pemulutan — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA GT Indralaya — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA GT KTM RAMBUTAN — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA IC KTM — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA IC Pemulutan — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA KM 01+600 A — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA KM 01+600 B — sumber
+- 🆕 **NEW**: Tol Palembang Indralaya - PALINDRA KM 05+600 A — sumber
+- 🆕 **NEW**: Gerbang Pintu Masuk Terminal Alang-Alang Lebar — sumber
+- 🆕 **NEW**: CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PTA Palembang — sumber
+- 🆕 **NEW**: CCTV PTSP PTA Palembang — sumber
+- ❌ **REMOVED**: CCTV Bank Sumsel Atmo — baru tapi mati
+- ❌ **REMOVED**: CCTV JL VETERAN — baru tapi mati
+- ❌ **REMOVED**: CCTV SP BOM BARU — baru tapi mati
+- ❌ **REMOVED**: CCTV SP DPRD PROV — baru tapi mati
+- ❌ **REMOVED**: CCTV SP BANDARA — baru tapi mati
+- ❌ **REMOVED**: CCTV SP Soekarno Hatta — baru tapi mati
+- ❌ **REMOVED**: CCTV JL VETERAN 1 — baru tapi mati
+- ❌ **REMOVED**: CCTV TAMAN SISWA — baru tapi mati
+- ❌ **REMOVED**: CCTV Jl Tembesu — baru tapi mati
+- ❌ **REMOVED**: CCTV JL VETERAN 2 — baru tapi mati
+- ❌ **REMOVED**: CCTV SP Parameswara — baru tapi mati
+- ❌ **REMOVED**: CCTV Kebun Sayur — baru tapi mati
+- ❌ **REMOVED**: CCTV SP IP — baru tapi mati
+- ❌ **REMOVED**: CCTV Cinde — baru tapi mati
+- ❌ **REMOVED**: CCTV Kambang Iwak — baru tapi mati
+- ❌ **REMOVED**: CCTV DEPAN DISDUKCAPIL — baru tapi mati
+- ❌ **REMOVED**: CCTV Punti Kayu — baru tapi mati
+- ❌ **REMOVED**: Tol Palembang Indralaya - PALINDRA KM 05+600 B — baru tapi mati
+- ❌ **REMOVED**: CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PTA Palembang — baru tapi mati
+- ❌ **REMOVED**: CCTV PTSP PTA Palembang — baru tapi mati
+## 2026-11-28
+- 🆕 **NEW**: CCTV Bank Sumsel Atmo — sumber
+- 🆕 **NEW**: CCTV JL VETERAN — sumber
+- 🆕 **NEW**: CCTV SP BOM BARU — sumber
+- 🆕 **NEW**: CCTV SP DPRD PROV — sumber
+- 🆕 **NEW**: CCTV SP BANDARA — sumber
+- 🆕 **NEW**: CCTV SP Soekarno Hatta — sumber
+- 🆕 **NEW**: CCTV JL VETERAN 1 — sumber
+- 🆕 **NEW**: CCTV TAMAN SISWA — sumber
+- 🆕 **NEW**: CCTV Jl Tembesu — sumber
+- 🆕 **NEW**: CCTV JL VETERAN 2 — sumber
+- 🆕 **NEW**: CCTV SP Parameswara — sumber
+- 🆕 **NEW**: CCTV Kebun Sayur — sumber
+- 🆕 **NEW**: CCTV SP IP — sumber
+- 🆕 **NEW**: CCTV Cinde — sumber
+- 🆕 **NEW**: CCTV Kambang Iwak — sumber
+- 🆕 **NEW**: CCTV DEPAN DISDUKCAPIL — sumber
+- 🆕 **NEW**: CCTV Punti Kayu — sumber
 - 🆕 **NEW**: Gerbang Pintu Masuk Terminal Alang-Alang Lebar — sumber
 - 🆕 **NEW**: CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PTA Palembang — sumber
 - 🆕 **NEW**: CCTV PTSP PTA Palembang — sumber
