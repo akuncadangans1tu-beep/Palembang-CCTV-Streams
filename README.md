@@ -90,7 +90,7 @@ Playlist CCTV publik **Kota Palembang & koridor tol Sumatera** (HLS stabil), dir
 ![Postcard](assets/postcard.jpg)
 
 ## 📦 Data & laporan
-[UPTIME.md](UPTIME.md) · [CHANGELOG.md](CHANGELOG.md) · [feed.xml](feed.xml) (RSS) · [data/uptime.csv](data/uptime.csv) · [status.json](status.json) · [playlist.json](playlist.json) · [REPORT.md](REPORT.md)
+[UPTIME.md](UPTIME.md) · [HEALTH.md](HEALTH.md) · [WOW.md](WOW.md) · [CHANGELOG.md](CHANGELOG.md) · [feed.xml](feed.xml) (RSS) · [data/uptime.csv](data/uptime.csv) · [status.json](status.json) · [playlist.json](playlist.json) · [REPORT.md](REPORT.md) · [VERSION](VERSION) · [streams.m3u8.sha256](streams.m3u8.sha256)
 
 ## 🚀 Fitur
 Auto-check 3×/hari + grace 3 hari; thumbnail mingguan; dataset uptime per jam; leaderboard & sparkline; deteksi flapping; statistik kualitas; mirror jsDelivr; release bulanan + rotasi data; RSS; auto-issue kamera mati; mudik-mode.
