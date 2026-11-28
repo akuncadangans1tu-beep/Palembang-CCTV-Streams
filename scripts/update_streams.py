@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""CCTV Palembang + tol Sumatera + atcsindonesia. Output: streams.m3u8, playlist.json, status.json,
-history.json, data/uptime.csv, UPTIME.md, CHANGELOG.md, feed.xml, REPORT.md, removed.json, GAPS.md,
-README(STATUS+LINKS+GAPS). Mode: --thumbs, --lint, --rotate. Python 3.9+."""
-import argparse, concurrent.futures as cf, csv, gzip, json, os, re, ssl, subprocess, sys, time
+"""CCTV Palembang + tol Sumatera + atcsindonesia (hardened). Python 3.9+."""
+import argparse, concurrent.futures as cf, csv, gzip, ipaddress, json, os, re, ssl, subprocess, sys, time, zlib
 import urllib.error, urllib.request
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -15,11 +13,12 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 PALEMBANG_API = "https://cctv.palembang.go.id/api/cctv"
 PALEMBANG_STREAM = "https://cctv.palembang.go.id/api/cctv/{id}/playback/index.m3u8"
 ATCS_API = "https://atcsindonesia.com/api/cctv"
-ATCS_SKIP = {"palembang-cctv"}  # duplikat API pemkot; binamarga-tol DIPAKAI (cakupan KM baru)
+ATCS_SKIP = {"palembang-cctv"}
 OPENCCTV_REGIONS = [("https://opencctv.org/cameras/indonesia/sumatera-selatan", "Tol Palindra", "Palindra "),
                     ("https://opencctv.org/cameras/indonesia/lampung", "Tol Lampung", "Lampung ")]
 MAX_FAILS, TIMEOUT, WORKERS, HIST = 3, 12, 10, 30
-SSL_CTX = ssl.create_default_context(); SSL_CTX.check_hostname = False; SSL_CTX.verify_mode = ssl.CERT_NONE
+SSL_CTX = ssl.create_default_context()  # verified default (CWE-295)
+ALLOW_INSECURE = ("palembang.go.id",)   # fallback interop cert pemkot (intentional, dismiss alert)
 TOKEN_RE = re.compile(r"[?&](token|expires?|expiration|signature|sig|auth|hdnts|hdnea|policy|key-pair-id|exp)=", re.I)
 RS, RE_ = "<!-- STATUS:START -->", "<!-- STATUS:END -->"
 LS, LE = "<!-- LINKS:START -->", "<!-- LINKS:END -->"
@@ -28,49 +27,77 @@ HEAD = ["date_utc", "hour_utc", "key", "name", "group", "online", "resolution", 
 KECAMATAN = ["Bukit Kecil", "Ilir Barat I", "Ilir Barat II", "Ilir Timur I", "Ilir Timur II", "Ilir Timur Tiga",
              "Kemuning", "Kertapati", "Plaju", "Sako", "Seberang Ulu I", "Seberang Ulu II",
              "Sematang Borang", "Sukarami", "Gandus", "Jakabaring", "Kalidoni", "Seberang Ulu Tiga"]
-RUAS_TOL = [("Tol Palindra", "Palembang - Indralaya (Sumsel)"),
-            ("Tol Lampung", "Bakauheni - Terbanggi Besar & sekitarnya"),
-            ("Tol Kayu Agung - Palembang", "Kayu Agung - Palembang"),
-            ("Tol Pematang Panggang - Kayu Agung", "Pematang Panggang - Kayu Agung")]
+RUAS_TOL = [("Tol Palindra", "Palembang - Indralaya (Sumsel)"), ("Tol Lampung", "Bakauheni - Terbanggi Besar"),
+            ("Tol Kayu Agung - Palembang", "Kayu Agung - Palembang"), ("Tol Pematang Panggang - Kayu Agung", "PPKA")]
 
 def now_iso(): return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 def wib_now(): return datetime.now(timezone(timedelta(hours=7))).strftime("%d %b %Y %H:%M WIB")
 def norm(s): return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
 def logo(k): return f"{RAW_BASE}/thumbs/{k}.jpg"
-def referer(u): return "https://cctv.palembang.go.id/" if "palembang.go.id" in u else "https://opencctv.org/"
-def _private(host):
-    h = host.split(":")[0].lower()
-    if h in ("localhost", "127.0.0.1", "0.0.0.0", "::1"): return True
-    if h.startswith(("10.", "192.168.", "169.254.")): return True
-    if h.startswith("172."):
-        try:
-            second = int(h.split(".")[1])
-            if 16 <= second <= 31: return True
-        except Exception: pass
-    return False
+def _host(u): return urlsplit(u).netloc.split(":")[0].lower()
+def _insecure_ok(h): return any(h == d or h.endswith("." + d) for d in ALLOW_INSECURE)
+def _is_private(h):
+    try:
+        ip = ipaddress.ip_address(h)
+        return ip.is_private or ip.is_loopback or ip.is_link_local or ip.is_reserved or ip.is_multicast
+    except ValueError:
+        return h in ("localhost",) or h.endswith((".localhost", ".internal", ".local"))
+def referer(u):
+    h = _host(u)
+    if h == "palembang.go.id" or h.endswith(".palembang.go.id"): return "https://cctv.palembang.go.id/"
+    return "https://opencctv.org/"
 def stable(u):
     if not u or not u.lower().startswith(("http://", "https://")): return False
-    host = urlsplit(u).netloc
-    if "opencctv.org" in host.lower() or _private(host): return False
+    h = _host(u)
+    if not h or _is_private(h): return False
+    if h == "opencctv.org" or h.endswith(".opencctv.org"): return False
     if TOKEN_RE.search(u): return False
     return True
 def spark(rec): return "".join("▰" if x else "▱" for x in rec[-14:]) or "—"
 def flap(rec): return sum(1 for a, b in zip(rec, rec[1:]) if a != b)
+def csv_safe(v):
+    s = str(v)
+    return "'" + s if s and s[0] in "=+-@\t\r" else s
+
+def _read_capped(r, limit):
+    buf = bytearray()
+    while len(buf) < limit:
+        c = r.read(min(65536, limit - len(buf)))
+        if not c: break
+        buf += c
+    return bytes(buf)
+def _gunzip_capped(raw, limit):
+    d = zlib.decompressobj(16 + zlib.MAX_WBITS)
+    out = d.decompress(raw, limit)
+    if d.unconsumed_tail or not d.eof: raise ValueError("gzip melebihi batas (bomb?)")
+    return out
 
 def http_get(u, timeout=TIMEOUT, max_bytes=300000, retries=2):
+    if not stable(u): raise ValueError("URL diblokir (SSRF/invalid)")
     last = None
     for a in range(retries + 1):
         try:
             req = urllib.request.Request(u, headers={"User-Agent": UA, "Referer": referer(u), "Accept": "*/*", "Accept-Encoding": "gzip"})
             with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as r:
-                raw = r.read(max_bytes)
-                if r.headers.get("Content-Encoding") == "gzip": raw = gzip.decompress(raw)
+                raw = _read_capped(r, max_bytes)
+                if r.headers.get("Content-Encoding") == "gzip": raw = _gunzip_capped(raw, max_bytes)
                 return r.status, raw
         except urllib.error.HTTPError as e:
             try: b = e.read(2048)
             except Exception: b = b""
             if e.code in (500, 502, 503, 504) and a < retries: last = e; time.sleep(1.5 * (a + 1)); continue
             return e.code, b
+        except ssl.SSLError as e:
+            if _insecure_ok(_host(u)):
+                ctx = ssl.create_default_context(); ctx.check_hostname = False; ctx.verify_mode = ssl.CERT_NONE
+                try:
+                    with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
+                        raw = _read_capped(r, max_bytes)
+                        if r.headers.get("Content-Encoding") == "gzip": raw = _gunzip_capped(raw, max_bytes)
+                        return r.status, raw
+                except Exception as e2: last = e2
+            else: last = e
+            if a < retries: time.sleep(1.5 * (a + 1))
         except Exception as e:
             last = e
             if a < retries: time.sleep(1.5 * (a + 1))
@@ -80,6 +107,7 @@ def uris(t): return [l.strip() for l in t.splitlines() if l.strip() and not l.st
 
 def check(u, timeout=TIMEOUT):
     meta = {}
+    if not stable(u): return False, "URL diblokir (SSRF)", meta
     try:
         st, b = http_get(u, timeout)
         if st != 200: return False, f"HTTP {st}", meta
@@ -136,7 +164,8 @@ def scrape_atcs(limit=None):
         url = c.get("streamingUrl") or c.get("streamingUrlPrimary") or c.get("streamingUrlSecondary") or ""
         if not stable(url): continue
         lat = c.get("latitude", c.get("lat")); lng = c.get("longitude", c.get("lng"))
-        out.append({"key": f"atcs-{c.get('id')}", "name": (c.get("title") or c.get("id")).strip(), "group": "Tol Palindra" if "tol" in str(c.get("source","")) else "Palembang",
+        out.append({"key": f"atcs-{c.get('id')}", "name": (c.get("title") or c.get("id")).strip(),
+                    "group": "Tol Palindra" if "tol" in str(c.get("source", "")) else "Palembang",
                     "url": url, "lat": lat, "lng": lng,
                     "extra": [f"#EXTVLCOPT:http-user-agent={UA}", "#EXTVLCOPT:http-referrer=https://atcsindonesia.com/"]})
         if limit and len(out) >= limit: break
@@ -250,8 +279,7 @@ def merge(es, cat):
         e = from_cat(i); bk[k] = e; es.append(e); rep.append((e["name"], "NEW", "sumber"))
     return rep
 
-def _namekey(n):
-    return re.sub(r"\bkm\b", "", norm(n)).strip()
+def _namekey(n): return re.sub(r"\bkm\b", "", norm(n)).strip()
 def dedup(es):
     seen, seenname, kept, rem = {}, {}, [], []
     for e in es:
@@ -286,7 +314,6 @@ def normalize_csv(p):
         elif len(r) == 7: out.append([r[0], "00", r[1], r[2], r[3], r[4], r[5], r[6]])
     with p.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f); w.writerow(HEAD); w.writerows(out)
-    print(f"[✓] normalisasi CSV: {len(out)} baris")
 
 def dataset(kept, res, qual):
     Path("data").mkdir(parents=True, exist_ok=True); p = Path("data/uptime.csv")
@@ -297,8 +324,9 @@ def dataset(kept, res, qual):
         n = datetime.now(timezone.utc)
         for e in kept:
             q = qual.get(e["key"], {})
-            w.writerow([n.strftime("%Y-%m-%d"), n.strftime("%H"), e["key"], e["name"], e["attrs"].get("group-title", ""),
-                        int(res.get(e["key"], (False, ""))[0]), q.get("resolution") or "", q.get("bandwidth_kbps") or ""])
+            w.writerow([n.strftime("%Y-%m-%d"), n.strftime("%H"), csv_safe(e["key"]), csv_safe(e["name"]),
+                        csv_safe(e["attrs"].get("group-title", "")), int(res.get(e["key"], (False, ""))[0]),
+                        q.get("resolution") or "", q.get("bandwidth_kbps") or ""])
 
 def hourly():
     p = Path("data/uptime.csv")
@@ -320,7 +348,7 @@ def uptime_md(kept, res, hist, qual):
     for e in rows[-10:][::-1]:
         h = hist.get(e["key"], {}); L.append(f"| {e['name']} | {h.get('uptime_pct',0)}% | {spark(h.get('recent',[]))} |")
     fl = [e for e in kept if flap(hist.get(e["key"], {}).get("recent", [])) >= 6]
-    L += ["", "## 🔁 Flapping (hidup-mati terus)"] + ([f"- {e['name']} ({flap(hist[e['key']]['recent'])} transisi)" for e in fl] or ["- (tidak ada)"])
+    L += ["", "## 🔁 Flapping"] + ([f"- {e['name']} ({flap(hist[e['key']]['recent'])} transisi)" for e in fl] or ["- (tidak ada)"])
     rc = {}; tb = 0
     for e in kept:
         q = qual.get(e["key"], {}); rc[q.get("resolution") or "?"] = rc.get(q.get("resolution") or "?", 0) + 1; tb += q.get("bandwidth_kbps") or 0
@@ -335,30 +363,21 @@ def gaps(groups):
     ek = [k for k in KECAMATAN if k not in ck]
     ct = [n for n, _ in RUAS_TOL if any(n in g for g in groups)]
     et = [(n, d) for n, d in RUAS_TOL if n not in ct]
-    L = [f"# 🗺️ Area Belum Tercakup — {wib_now()}", "",
-         f"_Playlist mencakup **{len(ck)}**/{len(KECAMATAN)} kecamatan Palembang & **{len(ct)}**/{len(RUAS_TOL)} ruas tol._", ""]
+    L = [f"# 🗺️ Area Belum Tercakup — {wib_now()}", "", f"_Cakupan **{len(ck)}**/{len(KECAMATAN)} kecamatan & **{len(ct)}**/{len(RUAS_TOL)} ruas tol._", ""]
     if ek:
-        L.append(f"## 🏘️ Kecamatan tanpa kamera ({len(ek)})")
-        L += [f"- [ ] **{k}**" for k in ek]
-        L += ["", "_Tahu CCTV publik resmi di sini? Buka issue `Usul kamera baru`._"]
-    else:
-        L.append("## 🎉 Semua kecamatan Palembang tercakup!")
+        L.append(f"## 🏘️ Kecamatan tanpa kamera ({len(ek)})"); L += [f"- [ ] **{k}**" for k in ek]
+    else: L.append("## 🎉 Semua kecamatan tercakup!")
     L.append("")
     if et:
-        L.append(f"## 🛣️ Ruas tol tanpa kamera ({len(et)})")
-        L += [f"- [ ] **{n}** — {d}" for n, d in et]
-        L += ["", "_Tahu portal CCTV publik ruas ini? Buka issue `Usul kamera baru`._"]
-    else:
-        L.append("## 🎉 Semua ruas tol target tercakup!")
-    L += ["", "## Cara bantu mengisi", "", "1. Issues → New issue → Usul kamera baru.", "2. Sertakan URL `.m3u8` + sumber resmi.", "3. Maintainer verifikasi & tambah.", "", "_Hanya kamera publik & legal._"]
+        L.append(f"## 🛣️ Ruas tol tanpa kamera ({len(et)})"); L += [f"- [ ] **{n}** — {d}" for n, d in et]
+    else: L.append("## 🎉 Semua ruas tol tercakup!")
+    L += ["", "## Cara bantu", "1. Issues → Usul kamera baru.", "2. URL .m3u8 + sumber resmi.", "3. Maintainer verifikasi.", "", "_Hanya kamera publik & legal._"]
     Path("GAPS.md").write_text("\n".join(L) + "\n", encoding="utf-8")
     p = Path("README.md")
     if p.exists():
         t = p.read_text(encoding="utf-8")
         if GS in t and GE in t:
-            summ = f"📍 **{len(ek)} kecamatan** & **{len(et)} ruas tol** belum tercakup. [Detail & cara bantu →](GAPS.md)"
-            p.write_text(t.split(GS, 1)[0] + GS + "\n" + summ + "\n" + GE + t.split(GE, 1)[1], encoding="utf-8")
-    print(f"[✓] GAPS: {len(ek)} kecamatan + {len(et)} ruas kosong")
+            p.write_text(t.split(GS, 1)[0] + GS + f"\n📍 **{len(ek)} kecamatan** & **{len(et)} ruas tol** belum tercakup. [Detail →](GAPS.md)\n" + GE + t.split(GE, 1)[1], encoding="utf-8")
 
 def changelog(rep):
     p = Path("CHANGELOG.md"); old = p.read_text(encoding="utf-8") if p.exists() else "# Changelog\n"
@@ -369,16 +388,12 @@ def changelog(rep):
         if s in ic: L.append(f"- {ic[s]} **{s}**: {n} — {note}")
     if len(L) == 1: L.append("- (tidak ada perubahan)")
     p.write_text("# Changelog\n" + "\n".join(L) + "\n" + "\n## ".join(body.split("\n## ")[:40]), encoding="utf-8")
-    return L
 
 def feed(rep, summary):
     ic = {"NEW": "🆕", "REMOVED": "❌", "UPDATED": "🔁", "MIGRATED": "🔁"}
-    entries = []
-    for n, s, note in rep:
-        if s in ic:
-            entries.append(f"<entry><title>{ic[s]} {s}: {n}</title><id>urn:{REPO}:{n}:{s}</id><updated>{now_iso()}</updated><summary>{note}</summary></entry>")
-    xml = f'<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>{REPO} CCTV</title><id>urn:{REPO}</id><updated>{now_iso()}</updated><link href="https://github.com/{REPO}"/>' + "".join(entries[:20]) + "</feed>"
-    Path("feed.xml").write_text(xml, encoding="utf-8")
+    e = [f"<entry><title>{ic[s]} {s}: {n}</title><id>urn:{REPO}:{n}:{s}</id><updated>{now_iso()}</updated><summary>{note}</summary></entry>"
+         for n, s, note in rep if s in ic]
+    Path("feed.xml").write_text(f'<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>{REPO} CCTV</title><id>urn:{REPO}</id><updated>{now_iso()}</updated><link href="https://github.com/{REPO}"/>' + "".join(e[:20]) + "</feed>", encoding="utf-8")
 
 def status_block(kept, res, hist, qual):
     live = sum(1 for e in kept if res.get(e["key"], (False, ""))[0])
@@ -396,7 +411,7 @@ def links_block(repo):
     return "\n".join([f"[![Update]({gh}/actions/workflows/update-streams.yml/badge.svg)]({gh}/actions/workflows/update-streams.yml)",
         f"[![Kamera](https://img.shields.io/badge/dynamic/json?url={sr}&query=%24.summary.total&label=kamera&color=blue)]({gh}/blob/main/status.json)",
         f"[![Live](https://img.shields.io/badge/dynamic/json?url={sr}&query=%24.summary.live&label=live&color=brightgreen)]({gh}/blob/main/status.json)",
-        "", "```text", raw, "```", "", f"Mirror CDN (lebih cepat): `{jsd}`", "",
+        "", "```text", raw, "```", "", f"Mirror CDN: `{jsd}`", "",
         f"![QR](https://api.qrserver.com/v1/create-qr-code/?size=220x220&data={quote(raw, safe='')})"])
 
 def upd_readme(kept, res, hist, qual):
@@ -441,8 +456,7 @@ def rotate(days=60):
     keep, arch = [], {}
     with p.open(encoding="utf-8") as f:
         rd = csv.reader(f); head = next(rd)
-        for r in rd:
-            (keep if r[0] >= cut else arch.setdefault(r[0][:7], [])).append(r)
+        for r in rd: (keep if r[0] >= cut else arch.setdefault(r[0][:7], [])).append(r)
     Path("data/archive").mkdir(parents=True, exist_ok=True)
     for mo, rows in arch.items():
         ap = Path(f"data/archive/uptime-{mo}.csv"); new = not ap.exists()
@@ -452,7 +466,6 @@ def rotate(days=60):
             w.writerows(rows)
     with p.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f); w.writerow(head); w.writerows(keep)
-    print(f"[✓] rotate: {len(keep)} aktif, {sum(len(v) for v in arch.values())} diarsip")
 
 def main():
     ap = argparse.ArgumentParser()
@@ -472,21 +485,12 @@ def main():
     hist = load_hist(a.history); es = parse_m3u(a.playlist)
     print(f"[i] lama {len(es)}")
     cat, sok = {}, {"palembang": False, "opencctv": False, "atcs": False}
-    try:
-        it = scrape_palembang(a.limit)
-        for x in it: cat[x["key"]] = x
-        sok["palembang"] = True; print(f"[+] palembang {len(it)}")
-    except Exception as e: print("[!] palembang", e)
-    try:
-        it = scrape_atcs(a.limit)
-        for x in it: cat[x["key"]] = x
-        sok["atcs"] = True; print(f"[+] atcsindonesia {len(it)}")
-    except Exception as e: print("[!] atcs", e)
-    try:
-        it = scrape_opencctv(a.limit, a.workers)
-        for x in it: cat[x["key"]] = x
-        sok["opencctv"] = True; print(f"[+] opencctv {len(it)}")
-    except Exception as e: print("[!] opencctv", e)
+    for name, fn in (("palembang", scrape_palembang), ("atcs", scrape_atcs), ("opencctv", scrape_opencctv)):
+        try:
+            it = fn(a.limit) if name != "opencctv" else fn(a.limit, a.workers)
+            for x in it: cat[x["key"]] = x
+            sok[name] = True; print(f"[+] {name} {len(it)}")
+        except Exception as e: print(f"[!] {name}", e)
     rep = merge(es, cat); es, dup = dedup(es)
     for e, w in dup: rep.append((e["name"], "REMOVED", w)); state.pop(e["key"], None); hist.pop(e["key"], None)
     for e in es:
