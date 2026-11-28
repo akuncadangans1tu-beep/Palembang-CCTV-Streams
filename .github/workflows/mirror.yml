@@ -1,7 +1,8 @@
 name: Mirror
 on:
-  schedule: [{cron: "30 22 * * *"}]   # 05:30 WIB, setelah update harian
+  schedule: [{cron: "30 22 * * *"}]
   workflow_dispatch:
+permissions: {contents: read}
 jobs:
   mirror:
     runs-on: ubuntu-latest
@@ -11,21 +12,19 @@ jobs:
       - name: Mirror ke GitLab
         env:
           TOKEN: ${{ secrets.GITLAB_TOKEN }}
-          TARGET: ${{ secrets.GITLAB_REPO }}   # mis. https://gitlab.com/username/repo.git
+          TARGET: ${{ secrets.GITLAB_REPO }}
         run: |
-          if [ -z "$TOKEN" ] || [ -z "$TARGET" ]; then echo "skip gitlab (secret belum diset)"; exit 0; fi
+          if [ -z "$TOKEN" ] || [ -z "$TARGET" ]; then echo "skip gitlab"; exit 0; fi
           URL=$(echo "$TARGET" | sed "s|https://|https://oauth2:${TOKEN}@|")
           git remote add gl "$URL" 2>/dev/null || git remote set-url gl "$URL"
           git push --force gl HEAD:refs/heads/main
-          echo "✓ gitlab mirrored"
       - name: Mirror ke Codeberg
         env:
           TOKEN: ${{ secrets.CODEBERG_TOKEN }}
-          TARGET: ${{ secrets.CODEBERG_REPO }} # mis. https://codeberg.org/username/repo.git
+          TARGET: ${{ secrets.CODEBERG_REPO }}
           USER: ${{ secrets.CODEBERG_USER }}
         run: |
-          if [ -z "$TOKEN" ] || [ -z "$TARGET" ]; then echo "skip codeberg (secret belum diset)"; exit 0; fi
+          if [ -z "$TOKEN" ] || [ -z "$TARGET" ]; then echo "skip codeberg"; exit 0; fi
           URL=$(echo "$TARGET" | sed "s|https://|https://${USER}:${TOKEN}@|")
           git remote add cb "$URL" 2>/dev/null || git remote set-url cb "$URL"
           git push --force cb HEAD:refs/heads/main
-          echo "✓ codeberg mirrored"
