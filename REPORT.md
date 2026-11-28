@@ -1,6 +1,6 @@
-# Laporan — 2026-11-28T10:41:41Z
+# Laporan — 2026-11-28T10:53:49Z
 
-- **50** · 🟢50 · 🔴0 · hapus 17
+- **50** · 🟢41 · 🔴9 · hapus 17
 
 | Nama | Status | Ket |
 |---|---|---|
@@ -19,11 +19,17 @@
 | CCTV SP IP | 🆕 NEW | sumber |
 | CCTV Cinde | 🆕 NEW | sumber |
 | CCTV Kambang Iwak | 🆕 NEW | sumber |
-| CCTV DEPAN DISDUKCAPIL | 🆕 NEW | sumber |
-| CCTV Punti Kayu | 🆕 NEW | sumber |
-| Tol Palembang Indralaya - PALINDRA KM 05+600 B | 🆕 NEW | sumber |
 | CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PTA Palembang | 🆕 NEW | sumber |
 | CCTV PTSP PTA Palembang | 🆕 NEW | sumber |
+| CCTV Simpang Angkatan 45 | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV Simpang Macan Lindungan | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV Simpang Polda | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV SP Samsat | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV Punti Kayu | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV Lapangan Parkir Pasar 16 | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV SP Charitas | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV Pasar 16 | ⚠️ FAIL | segmen 404 (1/3) |
+| CCTV Plaza 7 Ulu | ⚠️ FAIL | segmen 404 (1/3) |
 | CCTV Bank Sumsel Atmo | ❌ REMOVED | baru tapi mati |
 | CCTV JL VETERAN | ❌ REMOVED | baru tapi mati |
 | CCTV SP BOM BARU | ❌ REMOVED | baru tapi mati |

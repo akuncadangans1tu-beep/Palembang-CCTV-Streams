@@ -1,21 +1,32 @@
 📹 *PALEMBANG CCTV — LAPORAN HARIAN*
-🕒 28 Nov 2026 17:41 WIB
-✅ Live: *50* | 🔴 Gangguan: *0* | Total: *50*
+🕒 28 Nov 2026 17:53 WIB
+✅ Live: *41* | 🔴 Gangguan: *9* | Total: *50*
+
+🔴 *Sedang gangguan:*
+• CCTV Simpang Angkatan 45 (Alang-Alang Lebar)
+• CCTV Simpang Macan Lindungan (Alang-Alang Lebar)
+• CCTV Simpang Polda (Alang-Alang Lebar)
+• CCTV SP Samsat (Bukitkecil)
+• CCTV Punti Kayu (Gandus)
+• CCTV Lapangan Parkir Pasar 16 (Ilir Timur Tiga)
+• CCTV SP Charitas (Ilir Timur Tiga)
+• CCTV Pasar 16 (Jakabaring)
+• …dan 1 lainnya
 
 🟢 *Live sekarang:*
 • CCTV Benteng Kuto Besak
 • CCTV Lampu Merah Kol Atmo
-• CCTV Simpang Angkatan 45
-• CCTV Simpang Macan Lindungan
-• CCTV Simpang Polda
 • CCTV Masjid Agung
-• CCTV SP Samsat
+• CCTV DEPAN DISDUKCAPIL
 • CCTV KM 12
 • CCTV Darma Agung
-• CCTV Lapangan Parkir Pasar 16
-• CCTV SP Charitas
-• CCTV Pasar 16
-• …dan 38 lainnya
+• Gerbang Pintu Masuk Terminal Alang-Alang Lebar
+• Lampung 180+000 A
+• Lampung 180+000 B
+• Lampung 181+000 A
+• Lampung 181+000 B
+• Palindra 01+600 A
+• …dan 29 lainnya
 
 🔗 _Playlist HLS:_
 https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/streams.m3u8

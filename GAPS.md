@@ -1,8 +1,8 @@
-# 🗺️ Area Belum Tercakup — 28 Nov 2026 17:41 WIB
+# 🗺️ Area Belum Tercakup — 28 Nov 2026 17:53 WIB
 
-_Playlist saat ini mencakup **3** dari 18 kecamatan di Palembang, dan **2** ruas tol._
+_Cakupan **3**/18 kecamatan & **2**/4 ruas tol._
 
-## 🏘️ Kecamatan Palembang tanpa kamera (15)
+## 🏘️ Kecamatan tanpa kamera (15)
 - [ ] **Bukit Kecil**
 - [ ] **Ilir Barat I**
 - [ ] **Ilir Barat II**
@@ -19,18 +19,13 @@ _Playlist saat ini mencakup **3** dari 18 kecamatan di Palembang, dan **2** ruas
 - [ ] **Kalidoni**
 - [ ] **Seberang Ulu Tiga**
 
-_Kalau kamu tahu CCTV publik resmi (Diskominfo / Dishub / portal pemkot) di kecamatan ini, buka issue `Usul kamera baru`._
-
 ## 🛣️ Ruas tol tanpa kamera (2)
-- [ ] **Tol Kayu Agung - Palembang** — Kayu Agung - Palembang (Baki)
+- [ ] **Tol Kayu Agung - Palembang** — Kayu Agung - Palembang
 - [ ] **Tol Pematang Panggang - Kayu Agung** — PPKA
 
-_Kalau kamu tahu portal CCTV publik ruas tol ini (Hutama Karya / Jasamarga / Pemprov), buka issue `Usul kamera baru`._
+## Cara bantu
+1. Issues → Usul kamera baru.
+2. URL .m3u8 + sumber resmi.
+3. Maintainer verifikasi.
 
-## Cara bantu mengisi kekosongan
-
-1. Buka **Issues → New issue → Usul kamera baru**.
-2. Sertakan URL `.m3u8` dan sumber resminya.
-3. Maintainer verifikasi & tambahkan ke playlist.
-
-_Hanya kamera publik & legal. Kamera pribadi (rumah/kantor) tidak diterima._
+_Hanya kamera publik & legal._
