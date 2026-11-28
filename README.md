@@ -9,6 +9,7 @@
 [![Update](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/actions/workflows/update-streams.yml/badge.svg)](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/actions/workflows/update-streams.yml)
 [![Kamera](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fakuncadangans1tu-beep%2FPalembang-CCTV-Streams%2Fmain%2Fstatus.json&query=%24.summary.total&label=kamera&color=blue)](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/blob/main/status.json)
 [![Live](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fakuncadangans1tu-beep%2FPalembang-CCTV-Streams%2Fmain%2Fstatus.json&query=%24.summary.live&label=live&color=brightgreen)](https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/blob/main/status.json)
+[![Archived](https://img.shields.io/badge/Wayback-archived-orange)](https://web.archive.org/web/*/https://github.com/akuncadangans1tu-beep/Palembang-CCTV-Streams)
 
 ```text
 https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/streams.m3u8
@@ -90,7 +91,7 @@ Playlist CCTV publik **Kota Palembang & koridor tol Sumatera** (HLS stabil), dir
 ![Postcard](assets/postcard.jpg)
 
 ## 📦 Data & laporan
-[UPTIME.md](UPTIME.md) · [HEALTH.md](HEALTH.md) · [WOW.md](WOW.md) · [CHANGELOG.md](CHANGELOG.md) · [feed.xml](feed.xml) (RSS) · [data/uptime.csv](data/uptime.csv) · [status.json](status.json) · [playlist.json](playlist.json) · [REPORT.md](REPORT.md) · [VERSION](VERSION) · [streams.m3u8.sha256](streams.m3u8.sha256)
+[UPTIME.md](UPTIME.md) · [HEALTH.md](HEALTH.md) · [WOW.md](WOW.md) · [CHANGELOG.md](CHANGELOG.md) · [feed.xml](feed.xml) (RSS) · [data/uptime.csv](data/uptime.csv) · [status.json](status.json) · [playlist.json](playlist.json) · [REPORT.md](REPORT.md) · [VERSION](VERSION) · [streams.m3u8.sha256](streams.m3u8.sha256) · [ARCHIVE.md](ARCHIVE.md)
 
 ## 🚀 Fitur
 Auto-check 3×/hari + grace 3 hari; thumbnail mingguan; dataset uptime per jam; leaderboard & sparkline; deteksi flapping; statistik kualitas; mirror jsDelivr; release bulanan + rotasi data; RSS; auto-issue kamera mati; mudik-mode.
