@@ -1,0 +1,17 @@
+name: Issue Stream Check
+on:
+  issues: {types: [opened, edited]}
+  schedule: [{cron: "0 21 * * *"}]   # 04:00 WIB harian
+  workflow_dispatch:
+permissions: {issues: write, contents: read}
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Cek URL di issue usulan
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/check_issue_streams.py
