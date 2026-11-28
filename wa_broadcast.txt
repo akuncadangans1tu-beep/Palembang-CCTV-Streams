@@ -1,6 +1,12 @@
 📹 *PALEMBANG CCTV — LAPORAN HARIAN*
-🕒 28 Nov 2026 07:20 WIB
-✅ Live: *31* | 🔴 Gangguan: *0* | Total: *31*
+🕒 28 Nov 2026 08:23 WIB
+✅ Live: *28* | 🔴 Gangguan: *4* | Total: *32*
+
+🔴 *Sedang gangguan:*
+• CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PA Palembang (Palembang)
+• Lampung 180+000 B (Tol Lampung)
+• Lampung 181+000 B (Tol Lampung)
+• PALINDRA GT Indralaya (Tol Palindra)
 
 🟢 *Live sekarang:*
 • CCTV Benteng Kuto Besak
@@ -15,7 +21,7 @@
 • CCTV Lapangan Parkir Pasar 16
 • CCTV SP Charitas
 • CCTV Pasar 16
-• …dan 19 lainnya
+• …dan 16 lainnya
 
 🔗 _Playlist HLS:_
 https://raw.githubusercontent.com/akuncadangans1tu-beep/Palembang-CCTV-Streams/main/streams.m3u8

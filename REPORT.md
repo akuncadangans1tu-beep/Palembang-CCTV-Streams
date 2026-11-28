@@ -1,6 +1,6 @@
-# Laporan — 2026-11-28T00:20:31Z
+# Laporan — 2026-11-28T01:23:58Z
 
-- **31** · 🟢31 · 🔴0 · hapus 17
+- **32** · 🟢28 · 🔴4 · hapus 17
 
 | Nama | Status | Ket |
 |---|---|---|
@@ -21,6 +21,10 @@
 | CCTV Kambang Iwak | 🆕 NEW | sumber |
 | CCTV DEPAN DISDUKCAPIL | 🆕 NEW | sumber |
 | CCTV Punti Kayu | 🆕 NEW | sumber |
+| CCTV KANTIN/MUSHOLA/HALAMAN PARKIR PA Palembang | ⚠️ FAIL | HTTP 403 (1/3) |
+| Lampung 180+000 B | ⚠️ FAIL | segmen 404 (1/3) |
+| Lampung 181+000 B | ⚠️ FAIL | segmen 404 (1/3) |
+| PALINDRA GT Indralaya | ⚠️ FAIL | segmen 404 (1/3) |
 | CCTV Bank Sumsel Atmo | ❌ REMOVED | baru tapi mati |
 | CCTV JL VETERAN | ❌ REMOVED | baru tapi mati |
 | CCTV SP BOM BARU | ❌ REMOVED | baru tapi mati |
